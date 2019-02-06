@@ -1,0 +1,6 @@
+framework module Pods_PurdueClass {
+  umbrella header "Pods-PurdueClass-umbrella.h"
+
+  export *
+  module * { export * }
+}

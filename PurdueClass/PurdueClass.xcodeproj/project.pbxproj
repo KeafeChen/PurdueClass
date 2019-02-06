@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184014130906A3620F1026C3 /* Pods_PurdueClass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB5FB171544398C9D6300CA /* Pods_PurdueClass.framework */; };
 		DBAA475A220B233500AB0F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA4759220B233500AB0F5F /* AppDelegate.swift */; };
 		DBAA475C220B233600AB0F5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA475B220B233600AB0F5F /* ViewController.swift */; };
 		DBAA475F220B233600AB0F5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBAA475D220B233600AB0F5F /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1CB5FB171544398C9D6300CA /* Pods_PurdueClass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PurdueClass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE73CFC0FBD646067DC4775E /* Pods-PurdueClass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueClass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PurdueClass/Pods-PurdueClass.debug.xcconfig"; sourceTree = "<group>"; };
+		B0E55A0BC322F5F7E99B2354 /* Pods-PurdueClass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueClass.release.xcconfig"; path = "Pods/Target Support Files/Pods-PurdueClass/Pods-PurdueClass.release.xcconfig"; sourceTree = "<group>"; };
 		DBAA4756220B233500AB0F5F /* PurdueClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PurdueClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBAA4759220B233500AB0F5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBAA475B220B233600AB0F5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184014130906A3620F1026C3 /* Pods_PurdueClass.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B71F669DF22C9C2B3625C153 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CB5FB171544398C9D6300CA /* Pods_PurdueClass.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC687E531B8EBE9B4C316A0B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AE73CFC0FBD646067DC4775E /* Pods-PurdueClass.debug.xcconfig */,
+				B0E55A0BC322F5F7E99B2354 /* Pods-PurdueClass.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DBAA474D220B233500AB0F5F = {
 			isa = PBXGroup;
 			children = (
 				DBAA4758220B233500AB0F5F /* PurdueClass */,
 				DBAA4757220B233500AB0F5F /* Products */,
+				CC687E531B8EBE9B4C316A0B /* Pods */,
+				B71F669DF22C9C2B3625C153 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBAA4768220B233600AB0F5F /* Build configuration list for PBXNativeTarget "PurdueClass" */;
 			buildPhases = (
+				6E68066E6A6C91FB21DB798A /* [CP] Check Pods Manifest.lock */,
 				DBAA4752220B233500AB0F5F /* Sources */,
 				DBAA4753220B233500AB0F5F /* Frameworks */,
 				DBAA4754220B233500AB0F5F /* Resources */,
+				7EA18CDE76E929420A0E66A5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6E68066E6A6C91FB21DB798A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PurdueClass-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EA18CDE76E929420A0E66A5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PurdueClass/Pods-PurdueClass-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PurdueClass/Pods-PurdueClass-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DBAA4752220B233500AB0F5F /* Sources */ = {
@@ -280,10 +357,18 @@
 		};
 		DBAA4769220B233600AB0F5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE73CFC0FBD646067DC4775E /* Pods-PurdueClass.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				COPY_HEADERS_RUN_UNIFDEF = NO;
 				DEVELOPMENT_TEAM = 2662NUG884;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Moya\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Result\"",
+				);
 				INFOPLIST_FILE = PurdueClass/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -293,15 +378,24 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(PODS_ROOT)/** ${SRCROOT}/**";
 			};
 			name = Debug;
 		};
 		DBAA476A220B233600AB0F5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0E55A0BC322F5F7E99B2354 /* Pods-PurdueClass.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				COPY_HEADERS_RUN_UNIFDEF = NO;
 				DEVELOPMENT_TEAM = 2662NUG884;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Moya\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Result\"",
+				);
 				INFOPLIST_FILE = PurdueClass/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -311,6 +405,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(PODS_ROOT)/**";
 			};
 			name = Release;
 		};
