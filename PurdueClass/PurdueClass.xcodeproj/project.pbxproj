@@ -13,6 +13,7 @@
 		DBAA475F220B233600AB0F5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBAA475D220B233600AB0F5F /* Main.storyboard */; };
 		DBAA4761220B233600AB0F5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBAA4760220B233600AB0F5F /* Assets.xcassets */; };
 		DBAA4764220B233600AB0F5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBAA4762220B233600AB0F5F /* LaunchScreen.storyboard */; };
+		DBC1C9DB220B3BD2009EDF1E /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC1C9DA220B3BD2009EDF1E /* HomePage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DBAA4760220B233600AB0F5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBAA4763220B233600AB0F5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBAA4765220B233600AB0F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBC1C9DA220B3BD2009EDF1E /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				DBAA4759220B233500AB0F5F /* AppDelegate.swift */,
 				DBAA475B220B233600AB0F5F /* ViewController.swift */,
 				DBAA475D220B233600AB0F5F /* Main.storyboard */,
+				DBC1C9DA220B3BD2009EDF1E /* HomePage.swift */,
 				DBAA4760220B233600AB0F5F /* Assets.xcassets */,
 				DBAA4762220B233600AB0F5F /* LaunchScreen.storyboard */,
 				DBAA4765220B233600AB0F5F /* Info.plist */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBAA475C220B233600AB0F5F /* ViewController.swift in Sources */,
+				DBC1C9DB220B3BD2009EDF1E /* HomePage.swift in Sources */,
 				DBAA475A220B233500AB0F5F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,7 +382,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(PODS_ROOT)/** ${SRCROOT}/**";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = (
+					"$(PODS_ROOT)/**",
+					"${SRCROOT}/**",
+				);
 			};
 			name = Debug;
 		};
