@@ -32,11 +32,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var Test: UILabel!
     
     
-    @IBAction func LoginButton(_ sender: Any) {
+    @IBAction func LoginButton(_ sender: UIButton) {
         let username:String! = Username.text
         let password:String! = Password.text
         if username == "" || password == ""{
-
+            let button = sender
+            if (button.tag != 1){
+                return
+            }
+            
             let alert = UIAlertController(title: "Sorry", message:"You have to Enter the username and password First", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
             self.present(alert, animated: true){}
