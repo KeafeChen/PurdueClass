@@ -33,6 +33,10 @@ class SignUp: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    let dispatchGroup = DispatchGroup()
+    var check = false
+    
+    
     @IBAction func SignUpButton(_ sender: Any) {
         //let username:String! = Username.text
         //let password:String! = Password.text
@@ -50,34 +54,20 @@ class SignUp: UIViewController {
             self.present(alert, animated: true){}
         }else{
             
-            let objectMapper = AWSDynamoDBObjectMapper.default()
-            let queryExpression = AWSDynamoDBQueryExpression()
+            self.check = false
+            checkExist()
             
-            let userid:String = Username.text!
-            queryExpression.keyConditionExpression = "#userId = :userId"
-            queryExpression.expressionAttributeNames = [
-                "#userId": "userId",
-            ]
-            queryExpression.expressionAttributeValues = [
-                ":userId": userid,
-            ]
             
-            var check = true
-            var res = objectMapper.load(Account.self, hashKey: userid, rangeKey:nil).continueWith(block: { (task:AWSTask<AnyObject>!) -> Any? in
-                if let error = task.error as NSError? {
-                    print("The request failed. Error: \(error)")
-                } else if let resultBook = task.result as? Account {
-                    print("result \(String(describing: resultBook._userId))")
-                    check = false
-                    return false
+            dispatchGroup.notify(queue: .main){
+                if(self.check){
+                    let alert = UIAlertController(title: "Sorry", message:"Your username has already been registered. Please change another username.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
+                    self.present(alert, animated: true){}
                 }else{
-                    print("did not find the match")
-                    return true
+                    self.postToDB()
                 }
-                return false
-            })
+            }
             
-            print("result check \(check)")
         }
     }
     
@@ -149,6 +139,44 @@ class SignUp: UIViewController {
         let vc : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "home_page") as UIViewController
         self.present(vc, animated: true, completion: nil)
         
+    }
+    
+    
+    func checkExist(){
+        dispatchGroup.enter()
+        let objectMapper = AWSDynamoDBObjectMapper.default()
+        let queryExpression = AWSDynamoDBQueryExpression()
+        
+        let userid:String = Username.text!
+        queryExpression.keyConditionExpression = "#userId = :userId"
+        queryExpression.expressionAttributeNames = [
+            "#userId": "userId",
+        ]
+        queryExpression.expressionAttributeValues = [
+            ":userId": userid,
+        ]
+        
+        objectMapper.query(Account.self, expression: queryExpression, completionHandler:
+            {(response: AWSDynamoDBPaginatedOutput?, error:Error?) -> Void in
+                if let error = error{
+                    print("Amazon Sever error \(error)")
+                    return
+                }
+                DispatchQueue.main.async {
+                    print("querying")
+                    if(response != nil){
+                        print("we got response")
+                        if(response?.items.count == 0){
+                            print("it was 0")
+                        }else{
+                            self.check = true
+                            print("we already have that user")
+                        }
+                    }
+                    self.dispatchGroup.leave()
+                }
+        }
+        )
     }
     /*
     // MARK: - Navigation
