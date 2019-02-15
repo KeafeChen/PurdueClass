@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         self.LoginButton.layer.cornerRadius = 20
         self.RegisterButton.layer.cornerRadius = 20
         self.ForgetButton.layer.cornerRadius = 20
-
+        view.addBackground()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -31,7 +31,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var Test: UILabel!
     
-
     
     @IBAction func LoginButton(_ sender: Any) {
         let username:String! = Username.text

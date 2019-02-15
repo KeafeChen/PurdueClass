@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		184014130906A3620F1026C3 /* Pods_PurdueClass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB5FB171544398C9D6300CA /* Pods_PurdueClass.framework */; };
+		CC3D557C2216424D008A4446 /* LayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3D557B2216424D008A4446 /* LayoutExtension.swift */; };
 		DB57CB55220B94FE001342E9 /* ClassInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB57CB54220B94FE001342E9 /* ClassInformation.swift */; };
 		DBAA475A220B233500AB0F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA4759220B233500AB0F5F /* AppDelegate.swift */; };
 		DBAA475C220B233600AB0F5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA475B220B233600AB0F5F /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 		1CB5FB171544398C9D6300CA /* Pods_PurdueClass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PurdueClass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE73CFC0FBD646067DC4775E /* Pods-PurdueClass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueClass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PurdueClass/Pods-PurdueClass.debug.xcconfig"; sourceTree = "<group>"; };
 		B0E55A0BC322F5F7E99B2354 /* Pods-PurdueClass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueClass.release.xcconfig"; path = "Pods/Target Support Files/Pods-PurdueClass/Pods-PurdueClass.release.xcconfig"; sourceTree = "<group>"; };
+		CC3D557B2216424D008A4446 /* LayoutExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutExtension.swift; sourceTree = "<group>"; };
 		DB57CB54220B94FE001342E9 /* ClassInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassInformation.swift; sourceTree = "<group>"; };
 		DBAA4756220B233500AB0F5F /* PurdueClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PurdueClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBAA4759220B233500AB0F5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				F2DBEC6D22152FF90029AF2E /* SignUp.swift */,
 				F2DBEC6B221525630029AF2E /* ForgetPassword.swift */,
 				DBAA475D220B233600AB0F5F /* Main.storyboard */,
+				CC3D557B2216424D008A4446 /* LayoutExtension.swift */,
 				DB57CB54220B94FE001342E9 /* ClassInformation.swift */,
 				DBC1C9DA220B3BD2009EDF1E /* HomePage.swift */,
 				DBAA4760220B233600AB0F5F /* Assets.xcassets */,
@@ -268,6 +271,7 @@
 				DBC1C9DB220B3BD2009EDF1E /* HomePage.swift in Sources */,
 				DBAA475A220B233500AB0F5F /* AppDelegate.swift in Sources */,
 				F2DBEC6C221525630029AF2E /* ForgetPassword.swift in Sources */,
+				CC3D557C2216424D008A4446 /* LayoutExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,7 +436,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(PODS_ROOT)/** ${SRCROOT}/**";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = (
+					"$(PODS_ROOT)/**",
+					"${SRCROOT}/**",
+				);
 			};
 			name = Debug;
 		};

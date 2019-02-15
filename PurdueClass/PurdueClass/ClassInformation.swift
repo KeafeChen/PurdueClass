@@ -16,7 +16,7 @@ class ClassInformation: UIViewController {
     @IBOutlet var categoryButtons: [UIButton]!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.addBackground()    
         // Do any additional setup after loading the view.
     }
     enum Categories: String{

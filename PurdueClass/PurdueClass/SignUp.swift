@@ -15,9 +15,14 @@ class SignUp: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.SignButton.layer.cornerRadius = 20
-
+        view.addBackground()	
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named:"Background"))
         // Do any additional setup after loading the view.
     }
+    
+    
+    
+    
     
     @IBOutlet weak var Username: UITextField!
     @IBOutlet weak var Password: UITextField!
