@@ -7,16 +7,27 @@
 //
 
 import UIKit
-
+import AWSAuthCore
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var isInitialized = false;
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        return true
+        
+        let didFinishLaunching = AWSSignInManager.sharedInstance().interceptApplication(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        if(!isInitialized){
+            AWSSignInManager.sharedInstance().resumeSession(completionHandler: {
+                (result: Any?, error: Error?) in
+                //    print("Result: \(result) \n Error:\(error)")
+                })
+            isInitialized = true
+        }
+        return didFinishLaunching
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

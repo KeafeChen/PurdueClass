@@ -18,6 +18,7 @@ target 'PurdueClass' do
      pod 'AWSElasticLoadBalancing'
      pod 'AWSIoT'
      pod 'AWSKinesis'
+     pod 'AWSAuthCore'
      pod 'AWSLambda'
      pod 'AWSMachineLearning'
      pod 'AWSMobileAnalytics'

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AWSDynamoDB
+import AWSCore
 
 class SignUp: UIViewController {
 
@@ -42,12 +44,112 @@ class SignUp: UIViewController {
             let alert = UIAlertController(title: "Sorry", message:"You have to Enter the username and password First", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
             self.present(alert, animated: true){}
-        } else {
-            //let showing = "Username: \(username!), Password:\(password!), "
-            //Information.text = showing
+        } else if Password.text != C_Password.text {
+            let alert = UIAlertController(title: "Sorry", message:"Your password and confirmed password are not matched.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
+            self.present(alert, animated: true){}
+        }else{
+            
+            let objectMapper = AWSDynamoDBObjectMapper.default()
+            let queryExpression = AWSDynamoDBQueryExpression()
+            
+            let userid:String = Username.text!
+            queryExpression.keyConditionExpression = "#userId = :userId"
+            queryExpression.expressionAttributeNames = [
+                "#userId": "userId",
+            ]
+            queryExpression.expressionAttributeValues = [
+                ":userId": userid,
+            ]
+            
+            var check = true
+            var res = objectMapper.load(Account.self, hashKey: userid, rangeKey:nil).continueWith(block: { (task:AWSTask<AnyObject>!) -> Any? in
+                if let error = task.error as NSError? {
+                    print("The request failed. Error: \(error)")
+                } else if let resultBook = task.result as? Account {
+                    print("result \(String(describing: resultBook._userId))")
+                    check = false
+                    return false
+                }else{
+                    print("did not find the match")
+                    return true
+                }
+                return false
+            })
+            
+            print("result check \(check)")
         }
     }
+    
+    func postToDB(){
+        let userid:String = Username.text!
+        let passwd:String = Password.text!
+        let question:String = SecurityQ.text!
+        let answer:String = Answer.text!
+        
+        let objectMapper = AWSDynamoDBObjectMapper.default()
+        
+        let itemToCreate:Account = Account()
+        
+        itemToCreate._userId = userid
+        itemToCreate._password = passwd
+        itemToCreate._question = question
+        itemToCreate._answer = answer
+        
+        print("userid: \(itemToCreate._userId!), password: \(itemToCreate._password!), question: \(itemToCreate._question!), answer: \(itemToCreate._answer!)")
+        objectMapper.save(itemToCreate, completionHandler:{(error: Error?) -> Void in
+            if let error = error{
+                print("Amazon DynamoDB Save Error: \(error)")
+                return
+            }
+            print("User data updated or saved initially")
+            
+        })
+        
+    }
+    
+    func checkExistAndPost(){
+        let objectMapper = AWSDynamoDBObjectMapper.default()
+        let queryExpression = AWSDynamoDBQueryExpression()
+        
+        let userid:String = Username.text!
+        queryExpression.keyConditionExpression = "#userId = :userId"
+        queryExpression.expressionAttributeNames = [
+            "#userId": "userId",
+        ]
+        queryExpression.expressionAttributeValues = [
+            ":userId": userid,
+        ]
+        
+        var check = true
+        objectMapper.load(Account.self, hashKey: userid, rangeKey:nil).continueWith(block: { (task:AWSTask<AnyObject>!) -> Any? in
+            if let error = task.error as NSError? {
+                print("The request failed. Error: \(error)")
+            } else if let resultBook = task.result as? Account {
+                print("result \(String(describing: resultBook._userId))")
+                let alert = UIAlertController(title: "Sorry", message:"Your username has already been registered. Please Change another one. ", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
+                self.present(alert, animated: true){}
+                check = false
+            }else{
+                print("did not find the match")
+                self.changeToMain()
+            }
+            return nil
+        })
 
+        
+        print("result check \(check)")
+
+    }
+
+    
+    func changeToMain(){
+        let mainStoryboard = UIStoryboard(name: "Storyboard", bundle: Bundle.main)
+        let vc : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "home_page") as UIViewController
+        self.present(vc, animated: true, completion: nil)
+        
+    }
     /*
     // MARK: - Navigation
 

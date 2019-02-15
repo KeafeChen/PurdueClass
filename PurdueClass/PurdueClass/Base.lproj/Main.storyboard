@@ -46,8 +46,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="LoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n5L-Dz-VWp"/>
-                                    <segue destination="kJw-AZ-Xft" kind="show" id="csg-zo-OKm"/>
+                                    <segue destination="kJw-AZ-Xft" kind="show" id="D2m-ZM-k4T"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aB1-Ds-1VF">
@@ -73,7 +72,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="LoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yrP-x5-E7L"/>
+                                    <action selector="LoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XbO-6s-Jd8"/>
                                     <segue destination="Yq5-mm-hD5" kind="show" identifier="" id="8mm-aM-Fl9"/>
                                 </connections>
                             </button>
@@ -257,7 +256,6 @@
                                 </state>
                                 <connections>
                                     <action selector="SignUpButton:" destination="kJw-AZ-Xft" eventType="touchUpInside" id="dEP-Ns-6tn"/>
-                                    <segue destination="Yq5-mm-hD5" kind="show" identifier="signuptohome" id="QtJ-yu-4RW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbz-GL-0uU">
@@ -374,8 +372,8 @@
         <!--Home Page-->
         <scene sceneID="YF1-Mk-y0y">
             <objects>
-                <viewController id="Yq5-mm-hD5" customClass="HomePage" customModule="PurdueClass" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dgJ-EO-ojM">
+                <viewController storyboardIdentifier="home_page" id="Yq5-mm-hD5" customClass="HomePage" customModule="PurdueClass" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="home_page" id="dgJ-EO-ojM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -602,6 +600,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QtJ-yu-4RW"/>
+        <segue reference="8mm-aM-Fl9"/>
     </inferredMetricsTieBreakers>
 </document>
