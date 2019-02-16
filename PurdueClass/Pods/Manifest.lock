@@ -29,6 +29,9 @@ PODS:
     - AWSCore (= 2.9.0)
   - AWSMobileAnalytics (2.9.0):
     - AWSCore (= 2.9.0)
+  - AWSMobileClient (2.9.0):
+    - AWSAuthCore (= 2.9.0)
+    - AWSCognitoIdentityProvider (= 2.9.0)
   - AWSS3 (2.9.0):
     - AWSCore (= 2.9.0)
   - AWSSES (2.9.0):
@@ -60,6 +63,7 @@ DEPENDENCIES:
   - AWSLambda
   - AWSMachineLearning
   - AWSMobileAnalytics
+  - AWSMobileClient
   - AWSS3
   - AWSSES
   - AWSSimpleDB
@@ -85,6 +89,7 @@ SPEC REPOS:
     - AWSLambda
     - AWSMachineLearning
     - AWSMobileAnalytics
+    - AWSMobileClient
     - AWSS3
     - AWSSES
     - AWSSimpleDB
@@ -110,6 +115,7 @@ SPEC CHECKSUMS:
   AWSLambda: 89811ddff8a9047a4d837348957f6db543b7fad5
   AWSMachineLearning: 85fb7fd31cd38134b1c495dd9920d3a647257823
   AWSMobileAnalytics: bb35c5b00bc8e87d876cb765d3c023ef06c2ef14
+  AWSMobileClient: 10d8af23cd169d38fecccbc5908e15110fe09087
   AWSS3: 09697145dad965a40d68fa4e57e8c473c463d1ce
   AWSSES: c6498ffb1fd74d26c058e52d48276061c71d7e97
   AWSSimpleDB: 85d008599da85c61a2289638ef51f0635bec93ef
@@ -118,6 +124,6 @@ SPEC CHECKSUMS:
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
 
-PODFILE CHECKSUM: e7cdf5b383aacaa46018c3711b74ce989e625d88
+PODFILE CHECKSUM: 01e1213b2bde3009751f316ca46fd1ba30cdc58f
 
 COCOAPODS: 1.5.3

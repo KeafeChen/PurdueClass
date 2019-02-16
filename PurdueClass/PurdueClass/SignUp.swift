@@ -17,7 +17,12 @@ class SignUp: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.SignButton.layer.cornerRadius = 20
-
+        let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
+                                                                identityPoolId:"us-east-1:b3912726-6290-4b03-9457-021d6d836bea")
+        
+        let configuration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:credentialsProvider)
+        
+        AWSServiceManager.default().defaultServiceConfiguration = configuration
         // Do any additional setup after loading the view.
     }
     
@@ -67,7 +72,6 @@ class SignUp: UIViewController {
                     self.postToDB()
                 }
             }
-            
         }
     }
     

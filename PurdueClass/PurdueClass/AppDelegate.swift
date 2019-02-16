@@ -8,6 +8,7 @@
 
 import UIKit
 import AWSAuthCore
+import AWSMobileClient
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -18,16 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let didFinishLaunching = AWSSignInManager.sharedInstance().interceptApplication(application, didFinishLaunchingWithOptions: launchOptions)
-        
-        if(!isInitialized){
-            AWSSignInManager.sharedInstance().resumeSession(completionHandler: {
-                (result: Any?, error: Error?) in
-                //    print("Result: \(result) \n Error:\(error)")
-                })
-            isInitialized = true
-        }
-        return didFinishLaunching
+        return AWSMobileClient.sharedInstance().interceptApplication(
+            application,
+            didFinishLaunchingWithOptions: launchOptions)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
