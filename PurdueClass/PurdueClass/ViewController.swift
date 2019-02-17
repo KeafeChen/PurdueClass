@@ -22,13 +22,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var ForgetButton: UIButton!
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.LoginButton.layer.cornerRadius = 20
         self.RegisterButton.layer.cornerRadius = 20
         self.ForgetButton.layer.cornerRadius = 20
-        
         let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
                                                                 identityPoolId:"us-east-1:b3912726-6290-4b03-9457-021d6d836bea")
         
