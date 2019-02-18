@@ -9,7 +9,7 @@
 import UIKit
 import AWSDynamoDB
 
-typealias ResponseCompletion = ([AWSDynamoDBObjectModel & AWSDynamoDBModeling]) -> ()
+//typealias ResponseCompletion = ([AWSDynamoDBObjectModel & AWSDynamoDBModeling]) -> ()
 
 class SearchResultVC: UIViewController {
     let dispatchGroup = DispatchGroup()
@@ -21,26 +21,31 @@ class SearchResultVC: UIViewController {
     var professor:String?
     
     @IBOutlet weak var courseLabel: UILabel!
-    @IBOutlet weak var courseContent: UILabel!
-    
+    @IBOutlet weak var course_name: UITextView!
+    @IBOutlet weak var semester_name: UITextView!
+    @IBOutlet weak var department_name: UITextView!
+    @IBOutlet weak var professor_name: UITextView!
+    @IBOutlet weak var description_name: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        courseContent.isHidden = true
-        courseLabel.isHidden = true
         
         self.scanTest{ (scanArray) in
             for scanItem in scanArray{
                 if let item = scanItem as? BackendCourseInfo {
                     print(item)
+                    self.course_name.text = item.course
+                    self.semester_name.text = item.semester
+                    self.department_name.text = item.department
+                    self.professor_name.text = item.professor
+                    self.description_name.text = item.detail
                 }
             }
         }
+        
     }
     
     
     @IBAction func goBack(_ sender: Any) {
-        courseContent.isHidden = true
         dismiss(animated: true, completion: nil)
     }
     

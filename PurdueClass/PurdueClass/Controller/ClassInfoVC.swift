@@ -22,6 +22,8 @@ var user_course:String!
 var user_professor:String!
 var user_title:String!
 
+typealias ResponseCompletion = ([AWSDynamoDBObjectModel & AWSDynamoDBModeling]) -> ()
+
 class ClassInfoVC: UIViewController {
     
     var categoryList: [String]!
@@ -46,6 +48,7 @@ class ClassInfoVC: UIViewController {
     
     var textToUpdate: String!
     var categryToUpdate: String!
+    let dispatchGroup = DispatchGroup()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -147,7 +150,6 @@ class ClassInfoVC: UIViewController {
     }
     
     
-    
     @IBAction func cancel0(_ sender: Any) {
         SemesterText.setTitle(nil, for: .normal)
         user_semester = nil
@@ -190,9 +192,15 @@ class ClassInfoVC: UIViewController {
         stackview3.arrangedSubviews[4].isHidden = true
     }
     
-    
     @IBAction func prepareSearch(_ sender: Any) {
-        performSegue(withIdentifier: "toSearchResult", sender: self)
+        self.scanTest{ (scanArray) in
+            
+            for scanItem in scanArray{
+                if let item = scanItem as? BackendCourseInfo {
+                    print(item)
+                }
+            }
+        }
     }
     
     
@@ -200,7 +208,7 @@ class ClassInfoVC: UIViewController {
         if let searchVC = segue.destination as? SearchVC {
             searchVC.searchKey = segue.identifier
         }
-        
+        /*
         if let searchResultVC = segue.destination as? SearchResultVC{
             searchResultVC.semester = user_semester
             searchResultVC.department = user_department
@@ -208,33 +216,107 @@ class ClassInfoVC: UIViewController {
             searchResultVC.course_title = user_title
             searchResultVC.professor = user_professor
         }
+ */
     }
-    
-    
-    func postToDB(){
-        let userid:String = "JD"
-        let passwd:String = "1"
-        let question:String = "1"
-        let answer:String = "1"
+
+    func scanTest(completion: @escaping ResponseCompletion){
         
+        dispatchGroup.enter()
         let objectMapper = AWSDynamoDBObjectMapper.default()
+        let scanExpression = AWSDynamoDBScanExpression()
         
-        let itemToCreate:Account = Account()
         
-        itemToCreate._userId = userid
-        itemToCreate._password = passwd
-        itemToCreate._question = question
-        itemToCreate._answer = answer
+        var localDictionary: [String: Any] = [:]
+        var localFilterExpression: String? = nil
         
-        print("userid: \(itemToCreate._userId!), password: \(itemToCreate._password!), question: \(itemToCreate._question!), answer: \(itemToCreate._answer!)")
-        objectMapper.save(itemToCreate, completionHandler:{(error: Error?) -> Void in
-            if let error = error{
-                print("Amazon DynamoDB Save Error: \(error)")
-                return
+        
+        if self.CourseText.currentTitle == nil {
+            localFilterExpression = "attribute_exists(course) "
+        }
+        else {
+            localFilterExpression = "course = :course "
+            localDictionary.updateValue(self.CourseText.currentTitle!, forKey: ":course")
+        }
+        
+        if self.DepartmentText.currentTitle == nil{
+            if localFilterExpression != nil {
+                localFilterExpression?.append("AND ")
             }
-            print("User data updated or saved initially")
+            localFilterExpression?.append("attribute_exists(department) ")
+        }
+        else{
+            if localFilterExpression != nil {
+                localFilterExpression?.append("AND ")
+            }
+            localFilterExpression?.append("department = :department ")
+            localDictionary.updateValue(self.DepartmentText.currentTitle!, forKey: ":department")
+        }
+        
+        if self.SemesterText.currentTitle == nil{
+            if localFilterExpression != nil {
+                localFilterExpression?.append("AND ")
+            }
+            localFilterExpression?.append("attribute_exists(semester) ")
+        }
+        else{
+            if localFilterExpression != nil {
+                localFilterExpression?.append("AND ")
+            }
+            localFilterExpression?.append("semester = :semester ")
+            localDictionary.updateValue(self.SemesterText.currentTitle!, forKey: ":semester")
+        }
+        
+        if self.TitleText.currentTitle == nil{
+            if localFilterExpression != nil {
+                localFilterExpression?.append("AND ")
+            }
+            localFilterExpression?.append("attribute_exists(title) ")
+        }
+        else{
+            if localFilterExpression != nil {
+                localFilterExpression?.append("AND ")
+            }
+            localFilterExpression?.append("title = :title ")
+            localDictionary.updateValue(self.TitleText.currentTitle!, forKey: ":title")
+        }
+        
+        if self.ProfessorText.currentTitle == nil{
+            if localFilterExpression != nil {
+                localFilterExpression?.append("AND ")
+            }
+            localFilterExpression?.append("attribute_exists(professor) ")
+        }
+        else{
+            if localFilterExpression != nil {
+                localFilterExpression?.append("AND ")
+            }
+            localFilterExpression?.append("professor = :professor ")
+            localDictionary.updateValue(self.ProfessorText.currentTitle!, forKey: ":professor")
+        }
+        
+        if localDictionary.count != 0 {
+            scanExpression.expressionAttributeValues = localDictionary
+        }
+        
+        scanExpression.filterExpression = localFilterExpression
+        print(scanExpression.expressionAttributeValues)
+        print(scanExpression.filterExpression)
+        
+        objectMapper.scan(BackendCourseInfo.self, expression: scanExpression, completionHandler:
+            {(task: AWSDynamoDBPaginatedOutput?, error:Error?) -> Void in
+                if let error = error {
+                    print("The request failed. Error: \(error)")
+                    return
+                }
+                DispatchQueue.main.async {
+                    if let scanArray = task?.items {
+                        completion(scanArray)
+                    }
+                    self.dispatchGroup.leave()
+                }
         })
     }
     
+   
 }
 
