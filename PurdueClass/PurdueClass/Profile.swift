@@ -1,24 +1,41 @@
 //
-//  HomePage.swift
+//  Profile.swift
 //  PurdueClass
 //
-//  Created by Keafe Chen on 2019/2/6.
+//  Created by SH on 2/18/19.
 //  Copyright © 2019 Qifeng Chen. All rights reserved.
 //
 
 import UIKit
 
-class HomePage: UIViewController {
+class Profile: UIViewController {
+
+    @IBOutlet weak var UsernameDisplay: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.isHidden = true
         // Do any additional setup after loading the view.
+        UsernameDisplay.insertText(UserDefaults.standard.string(forKey: "username")!)
     }
     
+    
+    @IBAction func HomeButton(_ sender: Any) {
+    }
+    
+    @IBAction func ClassButton(_ sender: Any) {
+    }
+    @IBAction func LogoutButton(_ sender: Any) {
+        UserDefaults.standard.removeObject(forKey: "username")
+    }
+    
+    
+    @IBAction func ChangePassword(_ sender: Any) {
+    }
+    
+    
+    
+    
 
-    
-    
     /*
     // MARK: - Navigation
 

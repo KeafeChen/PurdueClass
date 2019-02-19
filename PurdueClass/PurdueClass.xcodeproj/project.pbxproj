@@ -16,7 +16,12 @@
 		DBAA4761220B233600AB0F5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBAA4760220B233600AB0F5F /* Assets.xcassets */; };
 		DBAA4764220B233600AB0F5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBAA4762220B233600AB0F5F /* LaunchScreen.storyboard */; };
 		DBC1C9DB220B3BD2009EDF1E /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC1C9DA220B3BD2009EDF1E /* HomePage.swift */; };
+<<<<<<< HEAD
 		DBD262352218ED64007F3766 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD262342218ED64007F3766 /* Account.swift */; };
+=======
+		F23A7019221B718C004375EF /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23A7018221B718C004375EF /* Profile.swift */; };
+		F23A701B221B9D5D004375EF /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23A701A221B9D5D004375EF /* ChangePassword.swift */; };
+>>>>>>> 756d411... auto login & profile & change password
 		F2DBEC6C221525630029AF2E /* ForgetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DBEC6B221525630029AF2E /* ForgetPassword.swift */; };
 		F2DBEC6E22152FF90029AF2E /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DBEC6D22152FF90029AF2E /* SignUp.swift */; };
 /* End PBXBuildFile section */
@@ -35,7 +40,12 @@
 		DBAA4763220B233600AB0F5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBAA4765220B233600AB0F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBC1C9DA220B3BD2009EDF1E /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		DBD262342218ED64007F3766 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = "../../../../../Downloads/CS307-Project35-integration-lib-aws-my-sample-app-ios-swift (1)/AmazonAws/Models/NoSQL/Account.swift"; sourceTree = "<group>"; };
+=======
+		F23A7018221B718C004375EF /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		F23A701A221B9D5D004375EF /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
+>>>>>>> 756d411... auto login & profile & change password
 		F2DBEC6B221525630029AF2E /* ForgetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassword.swift; sourceTree = "<group>"; };
 		F2DBEC6D22152FF90029AF2E /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +104,8 @@
 				DBAA475B220B233600AB0F5F /* ViewController.swift */,
 				F2DBEC6D22152FF90029AF2E /* SignUp.swift */,
 				F2DBEC6B221525630029AF2E /* ForgetPassword.swift */,
+				F23A701A221B9D5D004375EF /* ChangePassword.swift */,
+				F23A7018221B718C004375EF /* Profile.swift */,
 				DBAA475D220B233600AB0F5F /* Main.storyboard */,
 				DB57CB54220B94FE001342E9 /* ClassInformation.swift */,
 				DBD262342218ED64007F3766 /* Account.swift */,
@@ -273,7 +285,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				DBAA475C220B233600AB0F5F /* ViewController.swift in Sources */,
+=======
+				DBAA475C220B233600AB0F5F /* Login.swift in Sources */,
+				F23A701B221B9D5D004375EF /* ChangePassword.swift in Sources */,
+				F23A7019221B718C004375EF /* Profile.swift in Sources */,
+>>>>>>> 756d411... auto login & profile & change password
 				F2DBEC6E22152FF90029AF2E /* SignUp.swift in Sources */,
 				DB57CB55220B94FE001342E9 /* ClassInformation.swift in Sources */,
 				DBC1C9DB220B3BD2009EDF1E /* HomePage.swift in Sources */,
@@ -428,7 +446,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_HEADERS_RUN_UNIFDEF = NO;
-				DEVELOPMENT_TEAM = 2662NUG884;
+				DEVELOPMENT_TEAM = 72MBMQHRJP;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire\"",
@@ -440,7 +458,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Qifeng-Chen";
+				PRODUCT_BUNDLE_IDENTIFIER = "Shunqiao-Huang";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -458,7 +476,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_HEADERS_RUN_UNIFDEF = NO;
-				DEVELOPMENT_TEAM = 2662NUG884;
+				DEVELOPMENT_TEAM = 72MBMQHRJP;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire\"",
@@ -470,7 +488,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Qifeng-Chen";
+				PRODUCT_BUNDLE_IDENTIFIER = "Shunqiao-Huang";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

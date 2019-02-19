@@ -13,6 +13,10 @@ import AWSCore
 class SignUp: UIViewController {
 
     @IBOutlet weak var SignButton: UIButton!
+
+    
+    @IBOutlet weak var select: UIButton!
+    @IBOutlet weak var selections: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,13 +28,18 @@ class SignUp: UIViewController {
         
         AWSServiceManager.default().defaultServiceConfiguration = configuration
         // Do any additional setup after loading the view.
+        selections.isHidden = true
+
     }
     
     @IBOutlet weak var Username: UITextField!
     @IBOutlet weak var Password: UITextField!
     @IBOutlet weak var C_Password: UITextField!
-    @IBOutlet weak var SecurityQ: UITextField!
     @IBOutlet weak var Answer: UITextField!
+    
+    let seq = ["What's your father's first name", "What's your mather's first name"]
+    
+    var question = ""
     
     @IBOutlet weak var Information: UILabel!
     
@@ -42,18 +51,45 @@ class SignUp: UIViewController {
     var check = false
     
     
+    @IBAction func selectquestion(_ sender: Any) {
+        if selections.isHidden{
+            animate(toogle: true)
+        } else {
+            animate(toogle: false)
+        }
+    }
+    
+    
+    func animate(toogle: Bool){
+        if toogle {
+            UIView.animate(withDuration: 0.3){
+                self.selections.isHidden = false
+            }
+        } else {
+            UIView.animate(withDuration: 0.3){
+                self.selections.isHidden = true
+            }
+        }
+    }
+    
+    
+    
     @IBAction func SignUpButton(_ sender: Any) {
-        //let username:String! = Username.text
-        //let password:String! = Password.text
-        //let c_password:String! = C_Password.text
-        //let answer:String! = Answer.text
+        let username:String! = Username.text
+        let password:String! = Password.text
+        let c_password:String! = C_Password.text
+        let answer:String! = Answer.text
         
-        if Username.text == "" || Password.text == ""
-            || C_Password.text == "" || Answer.text == ""{
+        if username == "" || password == ""
+            || c_password == "" || answer == ""{
             let alert = UIAlertController(title: "Sorry", message:"You have to Enter the username and password First", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
             self.present(alert, animated: true){}
-        } else if Password.text != C_Password.text {
+        } else if password.count < 8 {
+            let alert = UIAlertController(title: "Sorry", message:"Password must be 8 characters at least", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
+            self.present(alert, animated: true){}
+        } else if password != c_password {
             let alert = UIAlertController(title: "Sorry", message:"Your password and confirmed password are not matched.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
             self.present(alert, animated: true){}
@@ -78,7 +114,6 @@ class SignUp: UIViewController {
     func postToDB(){
         let userid:String = Username.text!
         let passwd:String = Password.text!
-        let question:String = SecurityQ.text!
         let answer:String = Answer.text!
         
         let objectMapper = AWSDynamoDBObjectMapper.default()
@@ -97,39 +132,13 @@ class SignUp: UIViewController {
                 return
             }
             print("User data updated or saved initially")
-            
-        })
-        
-    }
-    
-    func checkExistAndPost(){
-        let objectMapper = AWSDynamoDBObjectMapper.default()
-        let queryExpression = AWSDynamoDBQueryExpression()
-        
-        let userid:String = Username.text!
-        queryExpression.keyConditionExpression = "#userId = :userId"
-        queryExpression.expressionAttributeNames = [
-            "#userId": "userId",
-        ]
-        queryExpression.expressionAttributeValues = [
-            ":userId": userid,
-        ]
-        
-        var check = true
-        objectMapper.load(Account.self, hashKey: userid, rangeKey:nil).continueWith(block: { (task:AWSTask<AnyObject>!) -> Any? in
-            if let error = task.error as NSError? {
-                print("The request failed. Error: \(error)")
-            } else if let resultBook = task.result as? Account {
-                print("result \(String(describing: resultBook._userId))")
-                let alert = UIAlertController(title: "Sorry", message:"Your username has already been registered. Please Change another one. ", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
-                self.present(alert, animated: true){}
-                check = false
-            }else{
-                print("did not find the match")
-                self.changeToMain()
+
+            DispatchQueue.main.async {
+                UserDefaults.standard.set(userid, forKey: "username")
+                let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                let vc : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "home_page") as UIViewController
+                self.present(vc, animated: true, completion: nil)
             }
-            return nil
         })
 
         
@@ -137,13 +146,6 @@ class SignUp: UIViewController {
 
     }
 
-    
-    func changeToMain(){
-        let mainStoryboard = UIStoryboard(name: "Storyboard", bundle: Bundle.main)
-        let vc : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "home_page") as UIViewController
-        self.present(vc, animated: true, completion: nil)
-        
-    }
     
     
     func checkExist(){
@@ -192,4 +194,22 @@ class SignUp: UIViewController {
     }
     */
 
+}
+
+extension SignUp: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return seq.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)-> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = seq[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        select.setTitle("\(seq[indexPath.row])", for: .normal)
+        self.question = "\(seq[indexPath.row])"
+        print(self.question)
+        animate(toogle: false)
+    }
 }
