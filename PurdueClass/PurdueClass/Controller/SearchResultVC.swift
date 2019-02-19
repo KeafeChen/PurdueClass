@@ -45,6 +45,12 @@ class SearchResultVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func rateMyProfessor(_ sender: Any) {
+        let index = self.professor_value.range(of: " ")
+        let first_name = self.professor_value.prefix(upTo: index!.lowerBound)
+        let last_name = self.professor_value.suffix(from: index!.upperBound)
+        UIApplication.shared.openURL(NSURL(string: "https://www.ratemyprofessors.com/search.jsp?query=\(first_name)+\(last_name)")! as URL)
+    }
     
     
 }

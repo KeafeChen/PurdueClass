@@ -30,7 +30,7 @@ class ClassInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("select the table view")
         myIndex = indexPath.row
         print("\(myIndex)")
@@ -80,6 +80,7 @@ class ClassInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     let dispatchGroup = DispatchGroup()
     
     override func viewDidLoad() {
+        self.classTable.allowsSelection = true
         super.viewDidLoad()
         classTable.delegate = self
         let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
