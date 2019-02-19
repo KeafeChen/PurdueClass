@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		184014130906A3620F1026C3 /* Pods_PurdueClass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB5FB171544398C9D6300CA /* Pods_PurdueClass.framework */; };
+		DB4DA69B221B8D14008126E5 /* ClassesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4DA69A221B8D14008126E5 /* ClassesTableViewCell.swift */; };
 		DB57CB55220B94FE001342E9 /* ClassInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB57CB54220B94FE001342E9 /* ClassInfoVC.swift */; };
 		DBAA475A220B233500AB0F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA4759220B233500AB0F5F /* AppDelegate.swift */; };
 		DBAA475C220B233600AB0F5F /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA475B220B233600AB0F5F /* LogInVC.swift */; };
@@ -28,6 +29,7 @@
 		1CB5FB171544398C9D6300CA /* Pods_PurdueClass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PurdueClass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE73CFC0FBD646067DC4775E /* Pods-PurdueClass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueClass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PurdueClass/Pods-PurdueClass.debug.xcconfig"; sourceTree = "<group>"; };
 		B0E55A0BC322F5F7E99B2354 /* Pods-PurdueClass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueClass.release.xcconfig"; path = "Pods/Target Support Files/Pods-PurdueClass/Pods-PurdueClass.release.xcconfig"; sourceTree = "<group>"; };
+		DB4DA69A221B8D14008126E5 /* ClassesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesTableViewCell.swift; sourceTree = "<group>"; };
 		DB57CB54220B94FE001342E9 /* ClassInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassInfoVC.swift; sourceTree = "<group>"; };
 		DBAA4756220B233500AB0F5F /* PurdueClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PurdueClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBAA4759220B233500AB0F5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				E430E3312210E40D006F2847 /* View */,
 				E430E32F2210E3E5006F2847 /* Controller */,
 				DBAA475D220B233600AB0F5F /* Main.storyboard */,
+				DB4DA69A221B8D14008126E5 /* ClassesTableViewCell.swift */,
 				DBAA4760220B233600AB0F5F /* Assets.xcassets */,
 				DBAA4762220B233600AB0F5F /* LaunchScreen.storyboard */,
 				E43840EA2218E00B009AABA6 /* awsconfiguration.json */,
@@ -314,6 +317,7 @@
 				E4AD04B12218FC2E00B7EADD /* Account.swift in Sources */,
 				E4AF29B02210C63F001C1B40 /* SearchResultVC.swift in Sources */,
 				DBC1C9DB220B3BD2009EDF1E /* HomeVC.swift in Sources */,
+				DB4DA69B221B8D14008126E5 /* ClassesTableViewCell.swift in Sources */,
 				DBAA475A220B233500AB0F5F /* AppDelegate.swift in Sources */,
 				E4ADC95B2215B54B003D7933 /* Data.swift in Sources */,
 			);

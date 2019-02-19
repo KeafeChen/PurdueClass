@@ -24,10 +24,39 @@ var user_title:String!
 
 typealias ResponseCompletion = ([AWSDynamoDBObjectModel & AWSDynamoDBModeling]) -> ()
 
-class ClassInfoVC: UIViewController {
+class ClassInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var classTable: UITableView!
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        print("select the table view")
+        myIndex = indexPath.row
+        print("\(myIndex)")
+        self.performSegue(withIdentifier: "toSearchResultVC", sender: self)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
+    var myIndex = 0
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "classes", for: indexPath)
+        
+        let text = self.data[indexPath.row]
+        cell.textLabel?.text = text
+        return cell
+    }
+    
     
     var categoryList: [String]!
     
+    var data: [String] = []
+    var result: [BackendCourseInfo] = []
+
     @IBOutlet var categoryButtons: [UIButton]!
     
     @IBOutlet weak var SemesterText: UIButton!
@@ -52,7 +81,7 @@ class ClassInfoVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        classTable.delegate = self
         let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
                                                                 identityPoolId:"us-east-1:b3912726-6290-4b03-9457-021d6d836bea")
         
@@ -80,7 +109,6 @@ class ClassInfoVC: UIViewController {
         CourseText.setTitle(user_course, for: .normal)
         ProfessorText.setTitle(user_professor, for: .normal)
         TitleText.setTitle(user_title, for: .normal)
-        
         
         
         stackview1.arrangedSubviews[0].isHidden = (SemesterText.currentTitle == nil)
@@ -193,14 +221,12 @@ class ClassInfoVC: UIViewController {
     }
     
     @IBAction func prepareSearch(_ sender: Any) {
+        self.result = []
         self.scanTest{ (scanArray) in
-            
-            for scanItem in scanArray{
-                if let item = scanItem as? BackendCourseInfo {
-                    print(item)
-                }
-            }
+            print("insdie scanTest")
+            print(self.result)
         }
+
     }
     
     
@@ -208,17 +234,17 @@ class ClassInfoVC: UIViewController {
         if let searchVC = segue.destination as? SearchVC {
             searchVC.searchKey = segue.identifier
         }
-        /*
+      
         if let searchResultVC = segue.destination as? SearchResultVC{
-            searchResultVC.semester = user_semester
-            searchResultVC.department = user_department
-            searchResultVC.course = user_course
-            searchResultVC.course_title = user_title
-            searchResultVC.professor = user_professor
+            searchResultVC.semester_value = self.result[myIndex].semester!
+            searchResultVC.department_value = self.result[myIndex].department!
+            searchResultVC.course_value = self.result[myIndex].course!
+            searchResultVC.professor_value = self.result[myIndex].professor!
+            searchResultVC.detail_value = self.result[myIndex].detail!
         }
- */
+ 
     }
-
+    
     func scanTest(completion: @escaping ResponseCompletion){
         
         dispatchGroup.enter()
@@ -310,9 +336,17 @@ class ClassInfoVC: UIViewController {
                 }
                 DispatchQueue.main.async {
                     if let scanArray = task?.items {
+                        for scanItem in scanArray{
+                            if let item = scanItem as? BackendCourseInfo {
+                                self.data.append(item.course!)
+                                self.result.append(item)
+                            }
+                        }
+                        self.classTable.dataSource = self
+                        self.classTable.reloadData()
+                        self.dispatchGroup.leave()
                         completion(scanArray)
                     }
-                    self.dispatchGroup.leave()
                 }
         })
     }

@@ -176,7 +176,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Profile"/>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="da7-rC-zSR">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="da7-rC-zSR">
                                 <rect key="frame" x="5" y="57" width="128.5" height="234"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Semester" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOe-8s-TFr">
@@ -331,7 +331,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="jHN-M4-aEV">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="jHN-M4-aEV">
                                 <rect key="frame" x="133.5" y="57" width="211.5" height="234"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEg-oG-EPP">
@@ -391,7 +391,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="8Dk-Ke-bvn">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="8Dk-Ke-bvn">
                                 <rect key="frame" x="345" y="65" width="30" height="214"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HjW-Wh-lyb">
@@ -447,13 +447,28 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKy-wE-jrE">
-                                <rect key="frame" x="159" y="549" width="48" height="30"/>
+                                <rect key="frame" x="159" y="289" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Search"/>
                                 <connections>
                                     <action selector="prepareSearch:" destination="8Zp-Qt-WIh" eventType="touchUpInside" id="Qli-SK-Kif"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1NN-Cc-qOY">
+                                <rect key="frame" x="2" y="327" width="373" height="263"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="classes" id="xf3-7Y-kEw" customClass="ClassesTableViewCell" customModule="PurdueClass" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="373" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xf3-7Y-kEw" id="aXj-Qu-eaa">
+                                            <rect key="frame" x="0.0" y="0.0" width="373" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -463,9 +478,9 @@
                             <constraint firstItem="8Dk-Ke-bvn" firstAttribute="leading" secondItem="jHN-M4-aEV" secondAttribute="trailing" id="9QV-rw-NsD"/>
                             <constraint firstItem="jHN-M4-aEV" firstAttribute="leading" secondItem="da7-rC-zSR" secondAttribute="trailing" id="LIJ-9O-cZg"/>
                             <constraint firstItem="DCG-6i-Ega" firstAttribute="trailing" secondItem="C8S-S9-W2T" secondAttribute="trailing" id="W3C-Tx-jxS"/>
-                            <constraint firstItem="jHN-M4-aEV" firstAttribute="top" secondItem="DCG-6i-Ega" secondAttribute="top" constant="211" id="dpo-mw-MzE"/>
-                            <constraint firstItem="8Dk-Ke-bvn" firstAttribute="top" secondItem="DCG-6i-Ega" secondAttribute="top" constant="219" id="g01-wM-lyH"/>
-                            <constraint firstItem="da7-rC-zSR" firstAttribute="top" secondItem="DCG-6i-Ega" secondAttribute="top" constant="211" id="kQK-nO-rjS"/>
+                            <constraint firstItem="jHN-M4-aEV" firstAttribute="top" secondItem="DCG-6i-Ega" secondAttribute="top" constant="37" id="dpo-mw-MzE"/>
+                            <constraint firstItem="8Dk-Ke-bvn" firstAttribute="top" secondItem="DCG-6i-Ega" secondAttribute="top" constant="45" id="g01-wM-lyH"/>
+                            <constraint firstItem="da7-rC-zSR" firstAttribute="top" secondItem="DCG-6i-Ega" secondAttribute="top" constant="37" id="kQK-nO-rjS"/>
                             <constraint firstItem="DCG-6i-Ega" firstAttribute="trailing" secondItem="jHN-M4-aEV" secondAttribute="trailing" constant="30" id="s81-uH-I5y"/>
                             <constraint firstItem="C8S-S9-W2T" firstAttribute="top" secondItem="DCG-6i-Ega" secondAttribute="top" id="uQW-Mh-Tfu"/>
                         </constraints>
@@ -483,6 +498,7 @@
                         <outlet property="SemesterText" destination="YEg-oG-EPP" id="Idr-kh-qpd"/>
                         <outlet property="TitleLabel" destination="J2J-J9-eDL" id="7md-wg-NVY"/>
                         <outlet property="TitleText" destination="vYA-fB-7Sl" id="GTh-aP-zeO"/>
+                        <outlet property="classTable" destination="1NN-Cc-qOY" id="CNg-8X-bC8"/>
                         <outlet property="stackview1" destination="da7-rC-zSR" id="BeY-uR-Qvr"/>
                         <outlet property="stackview2" destination="jHN-M4-aEV" id="gT5-l5-yYP"/>
                         <outlet property="stackview3" destination="8Dk-Ke-bvn" id="NoP-ho-eGR"/>
@@ -491,17 +507,18 @@
                         <outletCollection property="categoryButtons" destination="oOz-Fg-61W" collectionClass="NSMutableArray" id="ADM-Aw-95E"/>
                         <outletCollection property="categoryButtons" destination="dvC-X9-jjG" collectionClass="NSMutableArray" id="KjM-p9-day"/>
                         <outletCollection property="categoryButtons" destination="7ko-Cs-Dei" collectionClass="NSMutableArray" id="TOb-Uu-oIe"/>
+                        <segue destination="nC0-aM-EhT" kind="show" identifier="toSearchResultVC" id="vSV-zH-gc6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVd-G3-XtY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5180" y="133.5832083958021"/>
+            <point key="canvasLocation" x="5145" y="114"/>
         </scene>
         <!--Search ResultVC-->
         <scene sceneID="1XV-zs-PcS">
             <objects>
-                <viewController id="nC0-aM-EhT" customClass="SearchResultVC" customModule="PurdueClass" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Zpi-Gs-Mh0">
+                <viewController storyboardIdentifier="SearchResultVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nC0-aM-EhT" customClass="SearchResultVC" customModule="PurdueClass" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="performSegue" id="Zpi-Gs-Mh0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -702,7 +719,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="ybb-sk-hZw"/>
-        <segue reference="2C7-Rn-hbW"/>
+        <segue reference="h2x-NZ-xjZ"/>
         <segue reference="bkQ-vz-8gw"/>
     </inferredMetricsTieBreakers>
 </document>
