@@ -24,10 +24,9 @@ var user_title:String!
 
 typealias ResponseCompletion = ([AWSDynamoDBObjectModel & AWSDynamoDBModeling]) -> ()
 
-class ClassInformation: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    
+class ClassInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var classTable: UITableView!
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -57,7 +56,7 @@ class ClassInformation: UIViewController, UITableViewDelegate, UITableViewDataSo
     
     var data: [String] = []
     var result: [BackendCourseInfo] = []
-    
+
     @IBOutlet var categoryButtons: [UIButton]!
     
     @IBOutlet weak var SemesterText: UIButton!
@@ -146,6 +145,16 @@ class ClassInformation: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     
+    @IBAction func categoryTapped(_ sender: Any) {
+        categoryButtons.forEach { (button) in
+            UIView.animate(withDuration: 0.3, animations: {
+                button.isHidden = !button.isHidden
+                self.view.layoutIfNeeded()
+            })
+            
+        }
+    }
+    
     @IBAction func SemesterTextSegue(_ sender: Any) {
         performSegue(withIdentifier: "searchForSemester", sender: self)
     }
@@ -218,15 +227,15 @@ class ClassInformation: UIViewController, UITableViewDelegate, UITableViewDataSo
             print("insdie scanTest")
             print(self.result)
         }
-        
+
     }
     
-    /*
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let searchVC = segue.destination as? SearchVC {
             searchVC.searchKey = segue.identifier
         }
-        
+      
         if let searchResultVC = segue.destination as? SearchResultVC{
             searchResultVC.semester_value = self.result[myIndex].semester!
             searchResultVC.department_value = self.result[myIndex].department!
@@ -234,9 +243,9 @@ class ClassInformation: UIViewController, UITableViewDelegate, UITableViewDataSo
             searchResultVC.professor_value = self.result[myIndex].professor!
             searchResultVC.detail_value = self.result[myIndex].detail!
         }
-        
+ 
     }
-    */
+    
     func scanTest(completion: @escaping ResponseCompletion){
         
         dispatchGroup.enter()
@@ -343,6 +352,6 @@ class ClassInformation: UIViewController, UITableViewDelegate, UITableViewDataSo
         })
     }
     
-    
+   
 }
 
