@@ -11,48 +11,69 @@ import AWSDynamoDB
 import AWSCore
 
 class SignUp: UIViewController {
-
+    
     @IBOutlet weak var SignButton: UIButton!
     
+    
     @IBOutlet weak var select: UIButton!
-
     @IBOutlet weak var selections: UITableView!
-    let dispatchGroup = DispatchGroup()
-    var check = false
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.SignButton.layer.cornerRadius = 20
-        view.addBackground()
         let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
                                                                 identityPoolId:"us-east-1:b3912726-6290-4b03-9457-021d6d836bea")
         
         let configuration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:credentialsProvider)
         
-        self.selections.reloadData()
         AWSServiceManager.default().defaultServiceConfiguration = configuration
         // Do any additional setup after loading the view.
         selections.isHidden = true
-        //self.view.backgroundColor = UIColor(patternImage: UIImage(named:"Background"))
-        // Do any additional setup after loading the view.
+        
     }
-    
-    
-    
-    
     
     @IBOutlet weak var Username: UITextField!
     @IBOutlet weak var Password: UITextField!
     @IBOutlet weak var C_Password: UITextField!
     @IBOutlet weak var Answer: UITextField!
+    
     let seq = ["What's your father's first name", "What's your mather's first name"]
+    
     var question = ""
-
+    
     @IBOutlet weak var Information: UILabel!
     
     @IBAction func BackButton(_ sender: Any) {
-        
         self.dismiss(animated: true, completion: nil)
     }
+    
+    let dispatchGroup = DispatchGroup()
+    var check = false
+    
+    
+    @IBAction func selectquestion(_ sender: Any) {
+        if selections.isHidden{
+            animate(toogle: true)
+        } else {
+            animate(toogle: false)
+        }
+    }
+
+    
+    func animate(toogle: Bool){
+        if toogle {
+            UIView.animate(withDuration: 0.3){
+                self.selections.isHidden = false
+            }
+        } else {
+            UIView.animate(withDuration: 0.3){
+                self.selections.isHidden = true
+            }
+        }
+    }
+    
+    
     
     @IBAction func SignUpButton(_ sender: Any) {
         let username:String! = Username.text
@@ -78,6 +99,7 @@ class SignUp: UIViewController {
             self.check = false
             checkExist()
             
+            
             dispatchGroup.notify(queue: .main){
                 if(self.check){
                     let alert = UIAlertController(title: "Sorry", message:"Your username has already been registered. Please change another username.", preferredStyle: .alert)
@@ -89,25 +111,7 @@ class SignUp: UIViewController {
             }
         }
     }
-    @IBAction func selectquestion(_ sender: Any) {
-        if selections.isHidden{
-            animate(toogle: true)
-        } else {
-            animate(toogle: false)
-        }
-    }
     
-    func animate(toogle: Bool){
-        if toogle {
-            UIView.animate(withDuration: 0.3){
-                self.selections.isHidden = false
-            }
-        } else {
-            UIView.animate(withDuration: 0.3){
-                self.selections.isHidden = true
-            }
-        }
-    }
     func postToDB(){
         let userid:String = Username.text!
         let passwd:String = Password.text!
@@ -142,6 +146,8 @@ class SignUp: UIViewController {
         print("result check \(check)")
         
     }
+    
+    
     
     func checkExist(){
         dispatchGroup.enter()
@@ -179,7 +185,16 @@ class SignUp: UIViewController {
         }
         )
     }
-
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 extension SignUp: UITableViewDelegate, UITableViewDataSource {
@@ -189,7 +204,6 @@ extension SignUp: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)-> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = seq[indexPath.row]
-        print("did\n\n\n\n")
         return cell
     }
     
