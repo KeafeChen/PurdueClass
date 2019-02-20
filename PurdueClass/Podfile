@@ -10,8 +10,10 @@ target 'PurdueClass' do
   # Pods for PurdueClass
   	pod 'Moya', '~> 12.0'
 	pod 'AWSAutoScaling'
+	pod 'AWSMobileClient'
      pod 'AWSCloudWatch'
      pod 'AWSCognito'
+     pod 'AWSAuthCore'
      pod 'AWSCognitoIdentityProvider'
      pod 'AWSDynamoDB'
      pod 'AWSEC2'

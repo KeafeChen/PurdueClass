@@ -16,6 +16,9 @@
 		DBAA4761220B233600AB0F5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBAA4760220B233600AB0F5F /* Assets.xcassets */; };
 		DBAA4764220B233600AB0F5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBAA4762220B233600AB0F5F /* LaunchScreen.storyboard */; };
 		DBC1C9DB220B3BD2009EDF1E /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC1C9DA220B3BD2009EDF1E /* HomePage.swift */; };
+		DBF6C69F221CC3FF00349B64 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF6C69E221CC3FF00349B64 /* Account.swift */; };
+		DBF6C6A3221CCBD300349B64 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = DBF6C6A2221CCBD200349B64 /* awsconfiguration.json */; };
+		DBF6C6A5221CCC1100349B64 /* BackendCourseInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF6C6A4221CCC1100349B64 /* BackendCourseInfo.swift */; };
 		F2DBEC6C221525630029AF2E /* ForgetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DBEC6B221525630029AF2E /* ForgetPassword.swift */; };
 		F2DBEC6E22152FF90029AF2E /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DBEC6D22152FF90029AF2E /* SignUp.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +37,9 @@
 		DBAA4763220B233600AB0F5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBAA4765220B233600AB0F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBC1C9DA220B3BD2009EDF1E /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		DBF6C69E221CC3FF00349B64 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		DBF6C6A2221CCBD200349B64 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = "../../../../../Downloads/PurdueClass-SearchQuery 2/PurdueClass/PurdueClass/awsconfiguration.json"; sourceTree = "<group>"; };
+		DBF6C6A4221CCC1100349B64 /* BackendCourseInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendCourseInfo.swift; sourceTree = "<group>"; };
 		F2DBEC6B221525630029AF2E /* ForgetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassword.swift; sourceTree = "<group>"; };
 		F2DBEC6D22152FF90029AF2E /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,11 +99,14 @@
 				F2DBEC6D22152FF90029AF2E /* SignUp.swift */,
 				F2DBEC6B221525630029AF2E /* ForgetPassword.swift */,
 				DBAA475D220B233600AB0F5F /* Main.storyboard */,
+				DBF6C69E221CC3FF00349B64 /* Account.swift */,
 				CC3D557B2216424D008A4446 /* LayoutExtension.swift */,
+				DBF6C6A4221CCC1100349B64 /* BackendCourseInfo.swift */,
 				DB57CB54220B94FE001342E9 /* ClassInformation.swift */,
 				DBC1C9DA220B3BD2009EDF1E /* HomePage.swift */,
 				DBAA4760220B233600AB0F5F /* Assets.xcassets */,
 				DBAA4762220B233600AB0F5F /* LaunchScreen.storyboard */,
+				DBF6C6A2221CCBD200349B64 /* awsconfiguration.json */,
 				DBAA4765220B233600AB0F5F /* Info.plist */,
 			);
 			path = PurdueClass;
@@ -163,6 +172,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBF6C6A3221CCBD300349B64 /* awsconfiguration.json in Resources */,
 				DBAA4764220B233600AB0F5F /* LaunchScreen.storyboard in Resources */,
 				DBAA4761220B233600AB0F5F /* Assets.xcassets in Resources */,
 				DBAA475F220B233600AB0F5F /* Main.storyboard in Resources */,
@@ -203,6 +213,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PurdueClass/Pods-PurdueClass-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSAutoScaling/AWSAutoScaling.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCloudWatch/AWSCloudWatch.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCognito/AWSCognito.framework",
@@ -217,6 +228,7 @@
 				"${BUILT_PRODUCTS_DIR}/AWSLambda/AWSLambda.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSMachineLearning/AWSMachineLearning.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSMobileAnalytics/AWSMobileAnalytics.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSS3/AWSS3.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSSES/AWSSES.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSSNS/AWSSNS.framework",
@@ -230,6 +242,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAutoScaling.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCloudWatch.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognito.framework",
@@ -244,6 +257,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSLambda.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMachineLearning.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileAnalytics.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSS3.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSSES.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSSNS.framework",
@@ -265,11 +279,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBF6C6A5221CCC1100349B64 /* BackendCourseInfo.swift in Sources */,
 				DBAA475C220B233600AB0F5F /* ViewController.swift in Sources */,
 				F2DBEC6E22152FF90029AF2E /* SignUp.swift in Sources */,
 				DB57CB55220B94FE001342E9 /* ClassInformation.swift in Sources */,
 				DBC1C9DB220B3BD2009EDF1E /* HomePage.swift in Sources */,
 				DBAA475A220B233500AB0F5F /* AppDelegate.swift in Sources */,
+				DBF6C69F221CC3FF00349B64 /* Account.swift in Sources */,
 				F2DBEC6C221525630029AF2E /* ForgetPassword.swift in Sources */,
 				CC3D557C2216424D008A4446 /* LayoutExtension.swift in Sources */,
 			);

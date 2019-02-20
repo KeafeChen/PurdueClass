@@ -7,16 +7,34 @@
 //
 
 import UIKit
-
+import AWSAuthCore
+import AWSMobileClient
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var isInitialized = false;
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        return true
+        AWSDDLog.add(AWSDDTTYLogger.sharedInstance)
+        AWSDDLog.sharedInstance.logLevel = .info
+        
+        return AWSMobileClient.sharedInstance().interceptApplication(
+            application,
+            didFinishLaunchingWithOptions: launchOptions)    }
+    
+    func check(){
+        if UserDefaults.standard.value(forKey: "username") != nil{
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let vc : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "home_page") as UIViewController
+            let navVC = UINavigationController(rootViewController: vc)
+            let share = UIApplication.shared.delegate as? AppDelegate
+            share?.window?.rootViewController = navVC
+            share?.window?.makeKeyAndVisible()
+            
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
