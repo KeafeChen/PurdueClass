@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        check()
         // Override point for customization after application launch.
         AWSDDLog.add(AWSDDTTYLogger.sharedInstance)
         AWSDDLog.sharedInstance.logLevel = .info
@@ -29,11 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if UserDefaults.standard.value(forKey: "username") != nil{
             let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
             let vc : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "home_page") as UIViewController
-            let navVC = UINavigationController(rootViewController: vc)
+            //let navVC = UINavigationController(rootViewController: vc)
             let share = UIApplication.shared.delegate as? AppDelegate
-            share?.window?.rootViewController = navVC
+            share?.window?.rootViewController = vc //navVC
             share?.window?.makeKeyAndVisible()
-            
         }
     }
 
