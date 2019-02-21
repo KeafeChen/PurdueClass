@@ -220,7 +220,7 @@ class ForgetPassword: UIViewController, UITextFieldDelegate {
             DispatchQueue.main.async {
                 UserDefaults.standard.set(username, forKey: "username")
                 let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-                let vc : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "home_page") as UIViewController
+                let vc : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "home_with_tabbar") as UIViewController
                 self.present(vc, animated: true, completion: nil)
             }
         })

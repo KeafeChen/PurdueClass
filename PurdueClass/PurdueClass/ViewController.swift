@@ -99,7 +99,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     DispatchQueue.main.async {
                         UserDefaults.standard.set(username, forKey: "username")
                         let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-                        let vc : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "home_with_tabbar") as! UITabBarController
+                        let vc : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "home_with_tabbar") as! UIViewController
                         self.present(vc, animated: true, completion: nil)
                     }
                 }else if (self.check == 0){
