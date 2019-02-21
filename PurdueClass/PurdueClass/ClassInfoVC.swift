@@ -221,12 +221,41 @@ class ClassInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         stackview2.arrangedSubviews[4].isHidden = true
         stackview3.arrangedSubviews[4].isHidden = true
     }
-    
+    func checkFilter() -> Bool{
+        for i in 0...4{
+            if(stackview1.arrangedSubviews[i].isHidden == false ||
+                stackview1.arrangedSubviews[i].isHidden == false ||
+                stackview1.arrangedSubviews[i].isHidden == false){
+                return true
+            }
+        }
+        return false
+    }
+    var haveResult = false;
     @IBAction func prepareSearch(_ sender: Any) {
+        self.haveResult = false;
         self.result = []
-        self.scanTest{ (scanArray) in
-            print("insdie scanTest")
-            print(self.result)
+        self.data = []
+        self.classTable.dataSource = self
+        if(self.checkFilter()){
+            self.classTable.reloadData()
+            self.scanTest{ (scanArray) in
+                print("inside the completion")
+                print(self.result)
+                }
+            dispatchGroup.notify(queue: .main){
+                if(!self.haveResult){
+                    let alert = UIAlertController(title: "Sorry", message:"We cannot find any courses based on your current filters. Please select different filters.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
+                    self.present(alert, animated: true){}
+                    return
+                }
+            }
+        }else{
+            let alert = UIAlertController(title: "Sorry", message:"Please at least select one filter.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
+            self.present(alert, animated: true){}
+            return
         }
 
     }
@@ -327,9 +356,6 @@ class ClassInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         }
         
         scanExpression.filterExpression = localFilterExpression
-        print(scanExpression.expressionAttributeValues)
-        print(scanExpression.filterExpression)
-        
         objectMapper.scan(BackendCourseInfo.self, expression: scanExpression, completionHandler:
             {(task: AWSDynamoDBPaginatedOutput?, error:Error?) -> Void in
                 if let error = error {
@@ -339,7 +365,9 @@ class ClassInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
                 DispatchQueue.main.async {
                     if let scanArray = task?.items {
                         for scanItem in scanArray{
+                            self.haveResult = true
                             if let item = scanItem as? BackendCourseInfo {
+                                
                                 self.data.append(item.course!)
                                 self.result.append(item)
                             }
