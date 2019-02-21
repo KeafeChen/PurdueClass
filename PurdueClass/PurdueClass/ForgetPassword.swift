@@ -16,7 +16,7 @@ import AWSSQS
 import AWSSNS
 
 
-class ForgetPassword: UIViewController {
+class ForgetPassword: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var ForgetButton: UIButton!
     
@@ -26,6 +26,14 @@ class ForgetPassword: UIViewController {
     @IBOutlet weak var select: UIButton!
     @IBOutlet weak var selections: UITableView!
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true;
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

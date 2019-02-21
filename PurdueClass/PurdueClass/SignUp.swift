@@ -10,7 +10,7 @@ import UIKit
 import AWSDynamoDB
 import AWSCore
 
-class SignUp: UIViewController {
+class SignUp: UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var SignButton: UIButton!
     
@@ -18,6 +18,14 @@ class SignUp: UIViewController {
     @IBOutlet weak var select: UIButton!
     @IBOutlet weak var selections: UITableView!
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true;
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
