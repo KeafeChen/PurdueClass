@@ -85,14 +85,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func LoginButton(_ sender: Any) {
         let username:String! = Username.text
         let password:String! = Password.text
-        
+        self.check = 0
         if username == "" || password == ""{
             let alert = UIAlertController(title: "Sorry", message:"You have to Enter the username and password First", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
             self.present(alert, animated: true){}
             return
         }else{
-            self.check = 0
             verify()
             
             dispatchGroup.notify(queue: .main){
@@ -100,7 +99,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     DispatchQueue.main.async {
                         UserDefaults.standard.set(username, forKey: "username")
                         let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-                        let vc : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "home_page") as UIViewController
+                        let vc : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "home_with_tabbar") as! UITabBarController
                         self.present(vc, animated: true, completion: nil)
                     }
                 }else if (self.check == 0){
