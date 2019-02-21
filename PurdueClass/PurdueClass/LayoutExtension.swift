@@ -28,5 +28,20 @@ extension UIView {
         
         NSLayoutConstraint.activate([leadingConstraint, trailingConstraint, topConstraint, bottomConstraint])
     }
+    
+
 }
+
+extension UIButton{
+    func addButtonDesign(){
+        self.backgroundColor = UIColor(red:0.98, green:0.78, blue:0.12, alpha:0.7)
+        self.layer.cornerRadius = self.frame.height / 2
+        self.setTitleColor(UIColor.white, for: .normal)
+        self.layer.shadowColor = UIColor.darkGray.cgColor
+        self.layer.shadowRadius = 4
+        self.layer.shadowOpacity = 0.5
+        self.layer.shadowOffset = CGSize(width: 0, height: 0)
+    }
+}
+
 

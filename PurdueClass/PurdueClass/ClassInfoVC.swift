@@ -82,6 +82,7 @@ class ClassInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     override func viewDidLoad() {
         self.classTable.allowsSelection = true
         super.viewDidLoad()
+        self.view.addBackground()
         classTable.delegate = self
         let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
                                                                 identityPoolId:"us-east-1:b3912726-6290-4b03-9457-021d6d836bea")

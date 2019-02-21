@@ -21,7 +21,8 @@ class SignUp: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.SignButton.layer.cornerRadius = 20
+        self.view.addBackground()
+        SignButton.addButtonDesign()
         let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
                                                                 identityPoolId:"us-east-1:b3912726-6290-4b03-9457-021d6d836bea")
         
@@ -30,6 +31,8 @@ class SignUp: UIViewController {
         AWSServiceManager.default().defaultServiceConfiguration = configuration
         // Do any additional setup after loading the view.
         selections.isHidden = true
+        
+        
         
     }
     

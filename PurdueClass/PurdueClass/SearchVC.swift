@@ -25,6 +25,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addBackground()
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self

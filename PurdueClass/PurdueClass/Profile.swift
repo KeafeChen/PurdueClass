@@ -12,8 +12,16 @@ class Profile: UIViewController {
     
     @IBOutlet weak var UsernameDisplay: UITextView!
     
+    @IBOutlet weak var ChangePassword: UIButton!
+    
+    @IBOutlet weak var LogoutButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addBackground()
+        ChangePassword.addButtonDesign()
+        LogoutButton.alpha = 0.7
+        
         // Do any additional setup after loading the view.
         UsernameDisplay.insertText(UserDefaults.standard.string(forKey: "username")!)
     }

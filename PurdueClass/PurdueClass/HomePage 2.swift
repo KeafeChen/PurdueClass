@@ -12,8 +12,10 @@ class HomePage: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addBackground()
         // Do any additional setup after loading the view.
+        
+        //UI
+        self.view.addBackground()
     }
     
 

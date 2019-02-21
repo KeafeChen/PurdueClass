@@ -16,9 +16,14 @@ import AWSSNS
 
 class ChangePassword: UIViewController {
     
+    @IBOutlet weak var DoneButton: UIButton!
+    @IBOutlet weak var CancelButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.addBackground()
+        DoneButton.addButtonDesign()
+        CancelButton.addButtonDesign()
         // Do any additional setup after loading the view.
     }
     
