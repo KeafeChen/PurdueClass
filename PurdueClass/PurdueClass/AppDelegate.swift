@@ -15,8 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var isInitialized = false;
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        tabbar()
+        
         check()
         // Override point for customization after application launch.
         AWSDDLog.add(AWSDDTTYLogger.sharedInstance)
@@ -26,10 +27,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             application,
             didFinishLaunchingWithOptions: launchOptions)    }
     
+    func tabbar(){
+        UITabBar.appearance().barTintColor = UIColor.darkGray
+        UITabBar.appearance().tintColor = UIColor.red
+    }
+    
     func check(){
         if UserDefaults.standard.value(forKey: "username") != nil{
             let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-            let vc : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "home_page") as UIViewController
+            let vc : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "home_with_tabbar") as UIViewController
             //let navVC = UINavigationController(rootViewController: vc)
             let share = UIApplication.shared.delegate as? AppDelegate
             share?.window?.rootViewController = vc //navVC

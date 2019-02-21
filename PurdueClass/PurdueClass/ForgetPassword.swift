@@ -29,7 +29,8 @@ class ForgetPassword: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.ForgetButton.layer.cornerRadius = 20
+        self.view.addBackground()
+        ForgetButton.addButtonDesign()
         // Do any additional setup after loading the view.
         selections.isHidden = true
         

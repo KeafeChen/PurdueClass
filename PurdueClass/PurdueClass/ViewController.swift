@@ -17,16 +17,45 @@ import AWSSNS
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var Username: UITextField!
+    @IBOutlet weak var Password: UITextField!
     @IBOutlet weak var LoginButton: UIButton!
     @IBOutlet weak var RegisterButton: UIButton!
     @IBOutlet weak var ForgetButton: UIButton!
-  
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.LoginButton.alpha = 0.0
+        self.RegisterButton.alpha = 0.0
+        self.ForgetButton.alpha = 0.0
+        self.Username.alpha = 0.0
+        self.Password.alpha = 0.0
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //For textfield
+        UIView.animate(withDuration: 1, animations: {
+            self.Username.alpha = 0.7
+            self.Password.alpha = 0.7
+        }, completion:nil)
+        
+        UIView.animate(withDuration: 2, animations: {
+            self.LoginButton.alpha = 0.7
+            self.RegisterButton.alpha = 0.7
+            self.ForgetButton.alpha = 0.7
+            self.LoginButton.addButtonDesign()
+            self.RegisterButton.addButtonDesign()
+            self.ForgetButton.addButtonDesign()
+            
+        }, completion:nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.LoginButton.layer.cornerRadius = 20
-        self.RegisterButton.layer.cornerRadius = 20
-        self.ForgetButton.layer.cornerRadius = 20
+        self.view.addBackground()
         let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
                                                                 identityPoolId:"us-east-1:b3912726-6290-4b03-9457-021d6d836bea")
         
@@ -36,8 +65,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    @IBOutlet weak var Username: UITextField!
-    @IBOutlet weak var Password: UITextField!
+
     
     @IBOutlet weak var Test: UILabel!
     

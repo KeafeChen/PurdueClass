@@ -33,6 +33,7 @@ class SearchResultVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addBackground()
         course_name.text = course_value
         semester_name.text = semester_value
         department_name.text = department_value
