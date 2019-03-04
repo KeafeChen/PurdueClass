@@ -19,6 +19,8 @@ class BackendCourseInfo: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     @objc var semester: String?
     @objc var title: String?
     @objc var detail: String?
+    @objc var hwDescription: String?
+    @objc var hwDue: String?
 
     
  

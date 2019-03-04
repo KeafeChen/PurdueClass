@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -1042,7 +1042,7 @@
 		018076028D1E301AA7EE0E55C425992D /* AWSIoTDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSIoTDataModel.m; path = AWSIoT/AWSIoTDataModel.m; sourceTree = "<group>"; };
 		01818852CC2FE4C2B227BDFD5046A716 /* AWSSES-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AWSSES-prefix.pch"; sourceTree = "<group>"; };
 		01E93E5F4B9A5E428725845391BB3FB6 /* AWSIoTDataService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSIoTDataService.h; path = AWSIoT/AWSIoTDataService.h; sourceTree = "<group>"; };
-		02A970699A9DF3FF519552551EBC6928 /* AWSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AWSCore.framework; path = AWSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		02A970699A9DF3FF519552551EBC6928 /* AWSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03540C25925715E5D9F915687582BBC6 /* AWSDDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSDDAbstractDatabaseLogger.m; path = AWSCore/Logging/AWSDDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
 		0385FE58DF7D6E6D8DCCABD652423EC7 /* AWSMobileAnalyticsIOSPreferences.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSMobileAnalyticsIOSPreferences.h; path = AWSMobileAnalytics/Internal/AWSMobileAnalyticsIOSPreferences.h; sourceTree = "<group>"; };
 		03860E953EC3C3AA09277CA0C20C424D /* AWSAuthCore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AWSAuthCore.modulemap; sourceTree = "<group>"; };
@@ -1087,7 +1087,7 @@
 		0F97ABDB3FC9F9D7962BAF68695511CC /* AWSFirehoseService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSFirehoseService.h; path = AWSKinesis/AWSFirehoseService.h; sourceTree = "<group>"; };
 		0F98E0294C6711844AC0297F809B1078 /* AWSMTLModel+NSCoding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "AWSMTLModel+NSCoding.m"; path = "AWSCore/Mantle/AWSMTLModel+NSCoding.m"; sourceTree = "<group>"; };
 		1005424F08C330E8AB74E7D3716DFB12 /* AWSS3RequestRetryHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSS3RequestRetryHandler.h; path = AWSS3/AWSS3RequestRetryHandler.h; sourceTree = "<group>"; };
-		11CF8BCD09F7D4A8F10028A7622613A0 /* AWSSimpleDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AWSSimpleDB.framework; path = AWSSimpleDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		11CF8BCD09F7D4A8F10028A7622613A0 /* AWSSimpleDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSSimpleDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1223BD02C90FC2CCC9EDF3135F115789 /* AWSMobileAnalyticsEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSMobileAnalyticsEvent.h; path = AWSMobileAnalytics/AWSMobileAnalyticsEvent.h; sourceTree = "<group>"; };
 		1227F343300EBD9E87355E2E266742D6 /* AWSKinesis-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AWSKinesis-dummy.m"; sourceTree = "<group>"; };
 		126EB9AE10CE23842FB6723A69FD9258 /* AWSCognitoIdentityASF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSCognitoIdentityASF.h; path = AWSCognitoIdentityProviderASF/Internal/AWSCognitoIdentityASF.h; sourceTree = "<group>"; };
@@ -1119,7 +1119,7 @@
 		1BAB3229F1B746360CBA3DA88A4BFF70 /* AWSS3TransferUtility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSS3TransferUtility.m; path = AWSS3/AWSS3TransferUtility.m; sourceTree = "<group>"; };
 		1C1553D66FBCDC827BE7537BC399D8B5 /* AWSMobileAnalyticsDefaultSessionClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSMobileAnalyticsDefaultSessionClient.m; path = AWSMobileAnalytics/Internal/AWSMobileAnalyticsDefaultSessionClient.m; sourceTree = "<group>"; };
 		1C238E1841035FE00DFEF56925429FC4 /* AWSMobileAnalyticsUniqueIdGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSMobileAnalyticsUniqueIdGenerator.h; path = AWSMobileAnalytics/Internal/AWSMobileAnalyticsUniqueIdGenerator.h; sourceTree = "<group>"; };
-		1CB9214AE5AEC9BD190B7D796D78AC8E /* AWSElasticLoadBalancing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AWSElasticLoadBalancing.framework; path = AWSElasticLoadBalancing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CB9214AE5AEC9BD190B7D796D78AC8E /* AWSElasticLoadBalancing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSElasticLoadBalancing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D065363FA3C77E483FA7D6CA6591409 /* AWSMobileAnalyticsJSONSerializer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSMobileAnalyticsJSONSerializer.h; path = AWSMobileAnalytics/Internal/AWSMobileAnalyticsJSONSerializer.h; sourceTree = "<group>"; };
 		1D2C5854BC430757F4BB9F7962A7A85B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D78444EF6487BAF8927994FD8DE3301 /* AWSSES-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AWSSES-umbrella.h"; sourceTree = "<group>"; };
@@ -1137,7 +1137,7 @@
 		21440E78D44BA1B5F69B5687B000A875 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		21F234683A5F4EE6ED6E45EE5BC650EB /* AWSDDFileLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSDDFileLogger.m; path = AWSCore/Logging/AWSDDFileLogger.m; sourceTree = "<group>"; };
 		227C893C05C7DB42844511F6D80B5814 /* AWSMobileAnalyticsLifeCycleManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSMobileAnalyticsLifeCycleManager.h; path = AWSMobileAnalytics/Internal/AWSMobileAnalyticsLifeCycleManager.h; sourceTree = "<group>"; };
-		22BD10C534984A1A32C4F0B4950893E2 /* Moya.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Moya.framework; path = Moya.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22BD10C534984A1A32C4F0B4950893E2 /* Moya.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Moya.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C2A92F058CFE9E49C42AA40AE1BD78 /* AWSSTSModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSSTSModel.m; path = AWSCore/STS/AWSSTSModel.m; sourceTree = "<group>"; };
 		22F455D7B0575D8244AC729B49DEEDAB /* AWSMTLValueTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSMTLValueTransformer.m; path = AWSCore/Mantle/AWSMTLValueTransformer.m; sourceTree = "<group>"; };
 		230A4C6AE1A19341E2E5C5CBDA646975 /* Result.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Result.modulemap; sourceTree = "<group>"; };
@@ -1148,7 +1148,7 @@
 		23DD44F74BDC17826E2CDEEA6A17C6D1 /* AWSXMLWriter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSXMLWriter.h; path = AWSCore/XMLWriter/AWSXMLWriter.h; sourceTree = "<group>"; };
 		2400D01AFD86C98C08F56FC0BA402AA4 /* AWSURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSURLRequestSerialization.h; path = AWSCore/Serialization/AWSURLRequestSerialization.h; sourceTree = "<group>"; };
 		240F00A9C6BBAC521EAF3F9F791AE99B /* AWSCognitoConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSCognitoConstants.h; path = AWSCognito/Internal/AWSCognitoConstants.h; sourceTree = "<group>"; };
-		24390EFD555DD124430DFF9724065945 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		24390EFD555DD124430DFF9724065945 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		243D917AA4B3C2BFB7B42AAE24AF81DA /* AWSSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSSerialization.m; path = AWSCore/Serialization/AWSSerialization.m; sourceTree = "<group>"; };
 		25683BA319E708715BE204DF86FFCC43 /* AWSMobileAnalyticsInactiveSessionState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSMobileAnalyticsInactiveSessionState.h; path = AWSMobileAnalytics/Internal/AWSMobileAnalyticsInactiveSessionState.h; sourceTree = "<group>"; };
 		258643F33EA270C1B8471455EE7CF4D1 /* aws_tommath_class.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aws_tommath_class.h; path = AWSCognitoIdentityProvider/Internal/JKBigInteger/LibTomMath/aws_tommath_class.h; sourceTree = "<group>"; };
@@ -1162,12 +1162,12 @@
 		29CF19B73BE909A42EF685AFC9EB5160 /* AWSCognitoConflict_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSCognitoConflict_Internal.h; path = AWSCognito/Internal/AWSCognitoConflict_Internal.h; sourceTree = "<group>"; };
 		29DCDD0F565F8F97C1493629EA00F13E /* AWSS3TransferManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSS3TransferManager.m; path = AWSS3/AWSS3TransferManager.m; sourceTree = "<group>"; };
 		2A053D11FF0F9390536F5C6E0F8377A1 /* AWSSES-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AWSSES-dummy.m"; sourceTree = "<group>"; };
-		2A1224CE983607C9F8993ABEDB3A78AD /* AWSAuthCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AWSAuthCore.framework; path = AWSAuthCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A1224CE983607C9F8993ABEDB3A78AD /* AWSAuthCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSAuthCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA3D472E7D302AAEA435A2C1C381182 /* AWSDDFileLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSDDFileLogger.h; path = AWSCore/Logging/AWSDDFileLogger.h; sourceTree = "<group>"; };
 		2ABCAEE154D0BA14BED7E7067EE6DE75 /* AWSMobileAnalyticsSerializable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSMobileAnalyticsSerializable.h; path = AWSMobileAnalytics/Internal/AWSMobileAnalyticsSerializable.h; sourceTree = "<group>"; };
 		2AEA4C4CC40B65A002E12BC9EB6E3348 /* AWSCognitoSQLiteManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSCognitoSQLiteManager.h; path = AWSCognito/Internal/AWSCognitoSQLiteManager.h; sourceTree = "<group>"; };
 		2B70A99862C66D1C9E25DF9D9B78C012 /* NSValueTransformer+AWSMTLInversionAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSValueTransformer+AWSMTLInversionAdditions.m"; path = "AWSCore/Mantle/NSValueTransformer+AWSMTLInversionAdditions.m"; sourceTree = "<group>"; };
-		2B77E78CE703CBAED85B4A4202E3AE5D /* AWSSNS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AWSSNS.framework; path = AWSSNS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B77E78CE703CBAED85B4A4202E3AE5D /* AWSSNS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSSNS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC90913A6DB140E1A566036EBCD3D7B /* AWSMobileAnalyticsConfiguring.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSMobileAnalyticsConfiguring.h; path = AWSMobileAnalytics/Internal/AWSMobileAnalyticsConfiguring.h; sourceTree = "<group>"; };
 		2C1C5B75F8715DA14E75D9C6281FF5E7 /* AWSIoTService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSIoTService.m; path = AWSIoT/AWSIoTService.m; sourceTree = "<group>"; };
 		2C56A9A720272991105A6479704FEC3A /* AWSCognitoIdentityModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSCognitoIdentityModel.h; path = AWSCore/CognitoIdentity/AWSCognitoIdentityModel.h; sourceTree = "<group>"; };
@@ -1197,7 +1197,7 @@
 		3287234834C6C0DBA6D695C380060494 /* AWSCore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AWSCore.modulemap; sourceTree = "<group>"; };
 		33221358F489CA771D8C8D1D57049F93 /* AWSMobileClient.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AWSMobileClient.xcconfig; sourceTree = "<group>"; };
 		33E70459BF74999195EBEC6657B57D81 /* AWSCancellationToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSCancellationToken.m; path = AWSCore/Bolts/AWSCancellationToken.m; sourceTree = "<group>"; };
-		340D6E6DE5361CE5D7D1196ED5FB6F51 /* AWSCloudWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AWSCloudWatch.framework; path = AWSCloudWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		340D6E6DE5361CE5D7D1196ED5FB6F51 /* AWSCloudWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSCloudWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34153C282AC4716787EF7B4A7778CD31 /* AWSMobileAnalyticsERSResources.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSMobileAnalyticsERSResources.h; path = AWSMobileAnalytics/AWSMobileAnalyticsERS/AWSMobileAnalyticsERSResources.h; sourceTree = "<group>"; };
 		3562508FF7E43196DC76DF67F159091D /* AWSIoT.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AWSIoT.xcconfig; sourceTree = "<group>"; };
 		361084F1FFA5C7AE34E96128854FC745 /* AWSMachineLearningService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSMachineLearningService.h; path = AWSMachineLearning/AWSMachineLearningService.h; sourceTree = "<group>"; };
@@ -1208,7 +1208,7 @@
 		38A808D8250AEAE16416EC3E5D74BC8C /* AWSMobileAnalyticsErrorUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSMobileAnalyticsErrorUtils.m; path = AWSMobileAnalytics/Internal/AWSMobileAnalyticsErrorUtils.m; sourceTree = "<group>"; };
 		3915B66ECC1A2B6F93615275BBF35771 /* AWSKinesisService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSKinesisService.h; path = AWSKinesis/AWSKinesisService.h; sourceTree = "<group>"; };
 		39EBC59D2823A2D01744B530CB8C7400 /* AWSSynchronizedMutableDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSSynchronizedMutableDictionary.h; path = AWSCore/Utility/AWSSynchronizedMutableDictionary.h; sourceTree = "<group>"; };
-		3A401835FDE350462CF977D060128F03 /* AWSMobileClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AWSMobileClient.framework; path = AWSMobileClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A401835FDE350462CF977D060128F03 /* AWSMobileClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSMobileClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AC63B3A10446D01174CB0FE9A2C45EC /* AWSDDLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSDDLog.h; path = AWSCore/Logging/AWSDDLog.h; sourceTree = "<group>"; };
 		3ADB7B1B145881AA475194D567B62340 /* AWSEC2Serializer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSEC2Serializer.h; path = AWSEC2/AWSEC2Serializer.h; sourceTree = "<group>"; };
 		3B153B9C552448BF6DFF080178608E54 /* AWSCloudWatchService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSCloudWatchService.m; path = AWSCloudWatch/AWSCloudWatchService.m; sourceTree = "<group>"; };
@@ -1231,7 +1231,7 @@
 		3DECA5EC83C2616C73B50027600FCF47 /* AWSMobileAnalyticsSDKInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSMobileAnalyticsSDKInfo.h; path = AWSMobileAnalytics/Internal/AWSMobileAnalyticsSDKInfo.h; sourceTree = "<group>"; };
 		3E17B1F0AEEB5971EEFA1C0048294441 /* AWSTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSTask.m; path = AWSCore/Bolts/AWSTask.m; sourceTree = "<group>"; };
 		3E4CED0C70F60C5C0C5CA14093FE6A5B /* AWSMobileAnalyticsIOSConnectivity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSMobileAnalyticsIOSConnectivity.m; path = AWSMobileAnalytics/Internal/AWSMobileAnalyticsIOSConnectivity.m; sourceTree = "<group>"; };
-		3E91E9CAA16B2D28AEBF709FCE54E5A3 /* tommath.c */ = {isa = PBXFileReference; includeInIndex = 1; name = tommath.c; path = AWSCognitoIdentityProvider/Internal/JKBigInteger/LibTomMath/tommath.c; sourceTree = "<group>"; };
+		3E91E9CAA16B2D28AEBF709FCE54E5A3 /* tommath.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = tommath.c; path = AWSCognitoIdentityProvider/Internal/JKBigInteger/LibTomMath/tommath.c; sourceTree = "<group>"; };
 		3EB26D4C39C5876E69423457A67B9F92 /* AWSMobileAnalyticsIOSSystem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSMobileAnalyticsIOSSystem.m; path = AWSMobileAnalytics/Internal/AWSMobileAnalyticsIOSSystem.m; sourceTree = "<group>"; };
 		3ECF202F178F0C6E422F2516AFB1A10C /* AWSCognitoIdentityProvider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AWSCognitoIdentityProvider-umbrella.h"; sourceTree = "<group>"; };
 		3EE1E0477DFAC3E35F6D718EE4376EAD /* AWSFMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSFMDatabase.m; path = AWSCore/FMDB/AWSFMDatabase.m; sourceTree = "<group>"; };
@@ -1246,7 +1246,7 @@
 		42C9AA05C9CB8B06D3515567142200F7 /* AWSKinesis-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AWSKinesis-umbrella.h"; sourceTree = "<group>"; };
 		4337F30148673E5652263C7CD85ED1C5 /* AWSURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSURLRequestSerialization.m; path = AWSCore/Serialization/AWSURLRequestSerialization.m; sourceTree = "<group>"; };
 		4338CE101B90DFC1559E97A5FE8B0FA2 /* AWSSQS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AWSSQS-dummy.m"; sourceTree = "<group>"; };
-		433F2F3146F45A7446500CF1783D223F /* AWSIoT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AWSIoT.framework; path = AWSIoT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		433F2F3146F45A7446500CF1783D223F /* AWSIoT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSIoT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43559A2CD1A2467F059536A5647BD712 /* AWSCognitoIdentityResources.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSCognitoIdentityResources.m; path = AWSCore/CognitoIdentity/AWSCognitoIdentityResources.m; sourceTree = "<group>"; };
 		435EC4E409ED45FCFC93E765A9C86013 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
 		4389B72B221958DD79FD3D277C03850E /* AWSDDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSDDAbstractDatabaseLogger.h; path = AWSCore/Logging/AWSDDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
@@ -1293,7 +1293,7 @@
 		57208522BE5E739DDAB2BE7F183F75A6 /* AWSMobileAnalyticsDefaultConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSMobileAnalyticsDefaultConfiguration.m; path = AWSMobileAnalytics/Internal/AWSMobileAnalyticsDefaultConfiguration.m; sourceTree = "<group>"; };
 		5735D5C4A1CE1CFF9F62BE35241677EE /* AWSIoTCSR.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSIoTCSR.m; path = AWSIoT/Internal/AWSIoTCSR.m; sourceTree = "<group>"; };
 		5793B3177804CB2EFD76795172390951 /* NSError+AWSMTLModelException.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError+AWSMTLModelException.m"; path = "AWSCore/Mantle/NSError+AWSMTLModelException.m"; sourceTree = "<group>"; };
-		57ABBFC75C50C0F17633398EB3FD8956 /* AWSSQS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AWSSQS.framework; path = AWSSQS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57ABBFC75C50C0F17633398EB3FD8956 /* AWSSQS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSSQS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		580FFF8133A37F6D04AA22AAE42A3EEF /* Cancellable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cancellable.swift; path = Sources/Moya/Cancellable.swift; sourceTree = "<group>"; };
 		585450533C47DE5B6F57EF0490215753 /* AWSCognitoIdentityProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSCognitoIdentityProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58E56E932675D83A2A631A4E50F71E0D /* AWSMobileResults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AWSMobileResults.swift; path = AWSAuthSDK/Sources/AWSMobileClient/AWSMobileResults.swift; sourceTree = "<group>"; };
@@ -1305,7 +1305,7 @@
 		59D716CA3D7B74E0CA9BE1EAC02EB811 /* AWSTaskCompletionSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSTaskCompletionSource.h; path = AWSCore/Bolts/AWSTaskCompletionSource.h; sourceTree = "<group>"; };
 		5A303A2F6BB338A1BC0114BCEAA03B6A /* AWSMobileAnalyticsPausedSessionState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSMobileAnalyticsPausedSessionState.h; path = AWSMobileAnalytics/Internal/AWSMobileAnalyticsPausedSessionState.h; sourceTree = "<group>"; };
 		5A4FEC03EE87CF2739A015BBE2081927 /* AWSDynamoDBModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSDynamoDBModel.h; path = AWSDynamoDB/AWSDynamoDBModel.h; sourceTree = "<group>"; };
-		5A76340ADA4F3490A80CA4251E9E18B9 /* AWSAutoScaling.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AWSAutoScaling.framework; path = AWSAutoScaling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A76340ADA4F3490A80CA4251E9E18B9 /* AWSAutoScaling.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSAutoScaling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AB737F6B41032429F4BC476E4F13AF9 /* AWSKinesisModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSKinesisModel.m; path = AWSKinesis/AWSKinesisModel.m; sourceTree = "<group>"; };
 		5ABA4AE016D1CBDDE9324295603B7697 /* AWSMobileAnalyticsDateUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSMobileAnalyticsDateUtils.m; path = AWSMobileAnalytics/Internal/AWSMobileAnalyticsDateUtils.m; sourceTree = "<group>"; };
 		5AF3FB01E30EDEEDBADFD63D31D88D75 /* AWSMobileAnalyticsVirtualMonetizationEventBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSMobileAnalyticsVirtualMonetizationEventBuilder.h; path = AWSMobileAnalytics/AWSMobileAnalyticsVirtualMonetizationEventBuilder.h; sourceTree = "<group>"; };
@@ -1416,7 +1416,7 @@
 		80FCE8341C9833B37CB491C710807336 /* AWSElasticLoadBalancing-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AWSElasticLoadBalancing-dummy.m"; sourceTree = "<group>"; };
 		81967165E0F507AD00F8CCA97486FC16 /* AWSService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSService.m; path = AWSCore/Service/AWSService.m; sourceTree = "<group>"; };
 		8271A430A1CE4CA3B3E347EA34D3DF95 /* AWSMobileAnalyticsConnectivity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSMobileAnalyticsConnectivity.h; path = AWSMobileAnalytics/Internal/AWSMobileAnalyticsConnectivity.h; sourceTree = "<group>"; };
-		829E71C57DD9A9F1F3FD00B10AA78AE2 /* AWSMachineLearning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AWSMachineLearning.framework; path = AWSMachineLearning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		829E71C57DD9A9F1F3FD00B10AA78AE2 /* AWSMachineLearning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSMachineLearning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83223590D9954B5D75407753B7421DD9 /* AWSBolts.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSBolts.m; path = AWSCore/Bolts/AWSBolts.m; sourceTree = "<group>"; };
 		8346A23879394CDCD8BA6923784DE3EB /* AWSFirehoseModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSFirehoseModel.m; path = AWSKinesis/AWSFirehoseModel.m; sourceTree = "<group>"; };
 		834E1351440E87C043AEC4105F866FFB /* aws_tommath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aws_tommath.h; path = AWSCognitoIdentityProvider/Internal/JKBigInteger/LibTomMath/aws_tommath.h; sourceTree = "<group>"; };
@@ -1431,7 +1431,7 @@
 		87127CED4B7BBD763B8BF861A043654C /* AWSAutoScalingResources.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSAutoScalingResources.m; path = AWSAutoScaling/AWSAutoScalingResources.m; sourceTree = "<group>"; };
 		8723C89C7F85E342FCEE75B02BFB1219 /* AWSCloudWatchResources.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSCloudWatchResources.m; path = AWSCloudWatch/AWSCloudWatchResources.m; sourceTree = "<group>"; };
 		877B00610DFB01C744DC518AE62673F7 /* AWSCognitoIdentityProvider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AWSCognitoIdentityProvider-dummy.m"; sourceTree = "<group>"; };
-		88BFC41E4506FB2ED921248130513DEC /* AWSDynamoDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AWSDynamoDB.framework; path = AWSDynamoDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88BFC41E4506FB2ED921248130513DEC /* AWSDynamoDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSDynamoDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89336464E9EB78F7FF264D63DF3CEACB /* AWSSQS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AWSSQS-umbrella.h"; sourceTree = "<group>"; };
 		8934B1ED6DE707395CE63E39ABE30743 /* AWSCognitoIdentity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSCognitoIdentity.h; path = AWSCore/CognitoIdentity/AWSCognitoIdentity.h; sourceTree = "<group>"; };
 		893CF6002D4CA169D5CC0E0A44B9D9D2 /* aws_tommath_superclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aws_tommath_superclass.h; path = AWSCognitoIdentityProvider/Internal/JKBigInteger/LibTomMath/aws_tommath_superclass.h; sourceTree = "<group>"; };
@@ -1577,7 +1577,7 @@
 		B9F2AB2F78F582643418E1D37FA1970F /* AWSCloudWatch.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AWSCloudWatch.modulemap; sourceTree = "<group>"; };
 		BA3FB8C0C046412D0918BAFE59EA05E4 /* URLRequest+Encoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLRequest+Encoding.swift"; path = "Sources/Moya/URLRequest+Encoding.swift"; sourceTree = "<group>"; };
 		BADDCC469674F2B869D2359ED538FB85 /* AWSS3TransferUtility+HeaderHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "AWSS3TransferUtility+HeaderHelper.h"; path = "AWSS3/AWSS3TransferUtility+HeaderHelper.h"; sourceTree = "<group>"; };
-		BC5B7B5F2E85082AB3979A2998B432D0 /* AWSSES.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AWSSES.framework; path = AWSSES.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC5B7B5F2E85082AB3979A2998B432D0 /* AWSSES.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSSES.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC6EA67232152F10D0481D6AEB554799 /* AWSNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSNetworking.h; path = AWSCore/Networking/AWSNetworking.h; sourceTree = "<group>"; };
 		BCB38B74DBA3C20CC978E3F03FE7845A /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
 		BD095F9E3F6E46DD098EB38AF4527720 /* AWSDynamoDBModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSDynamoDBModel.m; path = AWSDynamoDB/AWSDynamoDBModel.m; sourceTree = "<group>"; };
@@ -1599,8 +1599,8 @@
 		C3051A229FF950A757853BA36FD7C5BF /* AWSCognitoIdentityUserPool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSCognitoIdentityUserPool.h; path = AWSCognitoIdentityProvider/AWSCognitoIdentityUserPool.h; sourceTree = "<group>"; };
 		C31EC3398E9599C1EE8C115746546EBF /* AWSCloudWatch-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AWSCloudWatch-umbrella.h"; sourceTree = "<group>"; };
 		C31FC9691E38140464B4E0246638ED8F /* AWSDDDispatchQueueLogFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSDDDispatchQueueLogFormatter.h; path = AWSCore/Logging/Extensions/AWSDDDispatchQueueLogFormatter.h; sourceTree = "<group>"; };
-		C39060C1D23808FBD27E0E7EB635332D /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Result.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3975398F5C23848D13B6A0D67A4B4E9 /* AWSEC2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AWSEC2.framework; path = AWSEC2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C39060C1D23808FBD27E0E7EB635332D /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3975398F5C23848D13B6A0D67A4B4E9 /* AWSEC2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSEC2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3BE6B78B7E20F43992201C9B76D78DD /* AWSMobileAnalytics-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AWSMobileAnalytics-prefix.pch"; sourceTree = "<group>"; };
 		C43C58B0614BE5EA86EA2C82853B065E /* AWSAutoScalingModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSAutoScalingModel.h; path = AWSAutoScaling/AWSAutoScalingModel.h; sourceTree = "<group>"; };
 		C4792F16CF62C378CC8AE57B83B3873B /* FABAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FABAttributes.h; path = AWSCore/Fabric/FABAttributes.h; sourceTree = "<group>"; };
@@ -1614,7 +1614,7 @@
 		C76353B59B88779E16671FD313F3ED4F /* AWSDDOSLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSDDOSLogger.m; path = AWSCore/Logging/AWSDDOSLogger.m; sourceTree = "<group>"; };
 		C8366DA6129B65FE35B2CC1FAED57D7B /* AWSMobileClient-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AWSMobileClient-umbrella.h"; sourceTree = "<group>"; };
 		CAB8894FCD8AC9BC40608F960C6DA9F3 /* AWSAutoScaling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSAutoScaling.h; path = AWSAutoScaling/AWSAutoScaling.h; sourceTree = "<group>"; };
-		CAE968C2CC82F58CFC9964159BE1943F /* AWSCognito.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AWSCognito.framework; path = AWSCognito.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAE968C2CC82F58CFC9964159BE1943F /* AWSCognito.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSCognito.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB32511CB58C96356D77AB773F333BAE /* AWSExecutor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSExecutor.h; path = AWSCore/Bolts/AWSExecutor.h; sourceTree = "<group>"; };
 		CB86D4524F6221CDD1F2EC74344BB22B /* AWSMTLJSONAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSMTLJSONAdapter.h; path = AWSCore/Mantle/AWSMTLJSONAdapter.h; sourceTree = "<group>"; };
 		CBEBE18584DC17AD982090352AD04085 /* AWSSQSResources.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSSQSResources.m; path = AWSSQS/AWSSQSResources.m; sourceTree = "<group>"; };
@@ -1648,7 +1648,7 @@
 		D3BA250B5249673BBF2D248660C84FF5 /* AWSSynchronizedMutableDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSSynchronizedMutableDictionary.m; path = AWSCore/Utility/AWSSynchronizedMutableDictionary.m; sourceTree = "<group>"; };
 		D3EB6F89EEB29B54C143C11CEF4FC6B9 /* AWSCognitoIdentityProviderService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSCognitoIdentityProviderService.m; path = AWSCognitoIdentityProvider/CognitoIdentityProvider/AWSCognitoIdentityProviderService.m; sourceTree = "<group>"; };
 		D45BEE963133394154BB0A9CAD887442 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4609CBDD7E547FAF816D5CA26F2013E /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4609CBDD7E547FAF816D5CA26F2013E /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4A094D04E52728F57E5B0A5496050A1 /* AWSMachineLearning-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AWSMachineLearning-umbrella.h"; sourceTree = "<group>"; };
 		D4B0E9E53EE3A6FD527828B71F75AE7B /* AWSSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSSerialization.h; path = AWSCore/Serialization/AWSSerialization.h; sourceTree = "<group>"; };
 		D509E124868F9F8BD7BC808D0CEEA298 /* AWSMobileAnalyticsService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSMobileAnalyticsService.m; path = AWSMobileAnalytics/AWSMobileAnalyticsService.m; sourceTree = "<group>"; };
@@ -1667,7 +1667,7 @@
 		D98046424250F1F1173A39D61D63C212 /* AWSEXTScope.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSEXTScope.h; path = AWSCore/Mantle/extobjc/AWSEXTScope.h; sourceTree = "<group>"; };
 		D994F8B30104968AF0942BED383557BE /* NSValueTransformer+AWSMTLPredefinedTransformerAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSValueTransformer+AWSMTLPredefinedTransformerAdditions.m"; path = "AWSCore/Mantle/NSValueTransformer+AWSMTLPredefinedTransformerAdditions.m"; sourceTree = "<group>"; };
 		D99BE5060396E80E8ABDC541DAE71C18 /* AWSDDAssertMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSDDAssertMacros.h; path = AWSCore/Logging/AWSDDAssertMacros.h; sourceTree = "<group>"; };
-		D9BD8B5CBE47FDC232ED692F4F268076 /* AWSMobileAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AWSMobileAnalytics.framework; path = AWSMobileAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9BD8B5CBE47FDC232ED692F4F268076 /* AWSMobileAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSMobileAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F183953BF2109870BDA814A0071B55 /* AWSFMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSFMDatabasePool.h; path = AWSCore/FMDB/AWSFMDatabasePool.h; sourceTree = "<group>"; };
 		DA1E5770ECCB121CF96EA6F217693E55 /* AWSCognitoIdentityProviderResources.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSCognitoIdentityProviderResources.m; path = AWSCognitoIdentityProvider/CognitoIdentityProvider/AWSCognitoIdentityProviderResources.m; sourceTree = "<group>"; };
 		DA5327975051D597D33DC4BC321AB128 /* AWSMQTTDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSMQTTDecoder.h; path = AWSIoT/Internal/MQTTSDK/AWSMQTTDecoder.h; sourceTree = "<group>"; };
@@ -1679,14 +1679,14 @@
 		DC3A42FBA1A466EC90EB2AA2E5541C2D /* Result-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Result-umbrella.h"; sourceTree = "<group>"; };
 		DC442E3CFBC6DF86F1E2881E5C91D31E /* Fabric+FABKits.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Fabric+FABKits.h"; path = "AWSCore/Fabric/Fabric+FABKits.h"; sourceTree = "<group>"; };
 		DC5CA4A2808A484A042119EE409492FA /* MoyaProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MoyaProvider.swift; path = Sources/Moya/MoyaProvider.swift; sourceTree = "<group>"; };
-		DCBE9E1BE505C45B44F14C23DBC21476 /* AWSLambda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AWSLambda.framework; path = AWSLambda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCBE9E1BE505C45B44F14C23DBC21476 /* AWSLambda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSLambda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCEB4D73E8FC5CA64D2957852CFC45AF /* AWSS3Model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSS3Model.h; path = AWSS3/AWSS3Model.h; sourceTree = "<group>"; };
 		DCF831FEBF581CE4BE5C5C7750B2F1BE /* AWSDDLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSDDLog.m; path = AWSCore/Logging/AWSDDLog.m; sourceTree = "<group>"; };
 		DD1C8A3AE58895B82A4DCAD61FC208AD /* AWSMobileAnalyticsCountDownLatch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSMobileAnalyticsCountDownLatch.m; path = AWSMobileAnalytics/Internal/AWSMobileAnalyticsCountDownLatch.m; sourceTree = "<group>"; };
 		DF03CA1FBB79041D65A67DA827A539A4 /* AWSAutoScalingService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSAutoScalingService.m; path = AWSAutoScaling/AWSAutoScalingService.m; sourceTree = "<group>"; };
 		DF1C7770CDF4682B399D4C230195C1F6 /* AWSMobileAnalyticsSessionStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSMobileAnalyticsSessionStore.h; path = AWSMobileAnalytics/Internal/AWSMobileAnalyticsSessionStore.h; sourceTree = "<group>"; };
 		DF7109352DA91AEFADF633C4666F0DB5 /* AWSAutoScaling-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AWSAutoScaling-dummy.m"; sourceTree = "<group>"; };
-		DF7BC1881B8643F486A3A7CD71E8A2BE /* AWSCognitoIdentityProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AWSCognitoIdentityProvider.framework; path = AWSCognitoIdentityProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF7BC1881B8643F486A3A7CD71E8A2BE /* AWSCognitoIdentityProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSCognitoIdentityProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E019ABE073DEF61DAC11E919021AAC2D /* AWSMQTTMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSMQTTMessage.h; path = AWSIoT/Internal/MQTTSDK/AWSMQTTMessage.h; sourceTree = "<group>"; };
 		E0C55CAFF8C3936E1AB5ECB376B4E5D3 /* AWSIoTManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSIoTManager.m; path = AWSIoT/AWSIoTManager.m; sourceTree = "<group>"; };
 		E0EFE0FEB418599072C134612BD3D580 /* AWSFirehose.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSFirehose.h; path = AWSKinesis/AWSFirehose.h; sourceTree = "<group>"; };
@@ -1697,7 +1697,7 @@
 		E26991D1D095331291BA960B28B04E20 /* AWSS3TransferUtilityTasks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSS3TransferUtilityTasks.h; path = AWSS3/AWSS3TransferUtilityTasks.h; sourceTree = "<group>"; };
 		E2C38F2BC7258F571326E10B547F26A1 /* AWSCognito-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AWSCognito-prefix.pch"; sourceTree = "<group>"; };
 		E2E3B645BC1CBBA47D975534D3057459 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		E2F94DEDECA1280A40ABFA24DC5E1FB1 /* AWSKinesis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AWSKinesis.framework; path = AWSKinesis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2F94DEDECA1280A40ABFA24DC5E1FB1 /* AWSKinesis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSKinesis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E323F843C79D094A7307AEF01C79DFE6 /* AWSAbstractKinesisRecorder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSAbstractKinesisRecorder.h; path = AWSKinesis/AWSAbstractKinesisRecorder.h; sourceTree = "<group>"; };
 		E342E88FE00C5916799C3822BDA6DB32 /* AWSMobileAnalyticsInactiveSessionState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSMobileAnalyticsInactiveSessionState.m; path = AWSMobileAnalytics/Internal/AWSMobileAnalyticsInactiveSessionState.m; sourceTree = "<group>"; };
 		E384B3C6296257599F12A874CE06E61E /* AWSSQS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AWSSQS.xcconfig; sourceTree = "<group>"; };
@@ -1723,7 +1723,7 @@
 		E9E8AC9D3EAA6A8C9C8AF39830DC604D /* Result.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Result.xcconfig; sourceTree = "<group>"; };
 		E9EC7155A6AD616D9467B9E7E4ADA761 /* AWSSNS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AWSSNS-dummy.m"; sourceTree = "<group>"; };
 		EA1D10DA65EE871991C7A3511B6DBD90 /* AWSDynamoDBRequestRetryHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSDynamoDBRequestRetryHandler.m; path = AWSDynamoDB/AWSDynamoDBRequestRetryHandler.m; sourceTree = "<group>"; };
-		EAB442B47131602710ABB474AAC7D343 /* AWSS3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AWSS3.framework; path = AWSS3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAB442B47131602710ABB474AAC7D343 /* AWSS3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSS3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBA3C2F465144006469D8F7AC9CFD879 /* AWSS3.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSS3.h; path = AWSS3/AWSS3.h; sourceTree = "<group>"; };
 		EBE928F9CA6A893E941A271C389707A3 /* AWSEC2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AWSEC2.modulemap; sourceTree = "<group>"; };
 		EC03DA7DE79CCCD384ADC9CB3BA4B210 /* Pods-PurdueClass-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PurdueClass-resources.sh"; sourceTree = "<group>"; };
@@ -1744,7 +1744,7 @@
 		F0D62463429BBBF2AAC3663EC21A1A61 /* AWSLambdaService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSLambdaService.h; path = AWSLambda/AWSLambdaService.h; sourceTree = "<group>"; };
 		F0E76879F2680B013C3FEDA9FD4500F0 /* AWSCognitoSyncModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSCognitoSyncModel.m; path = AWSCognito/CognitoSync/AWSCognitoSyncModel.m; sourceTree = "<group>"; };
 		F0EE615B7947C38BE42BD58521A06947 /* Pods-PurdueClass-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PurdueClass-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F11B3AA27F805A0C8B61EBCD5C690D09 /* Pods_PurdueClass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PurdueClass.framework; path = "Pods-PurdueClass.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F11B3AA27F805A0C8B61EBCD5C690D09 /* Pods_PurdueClass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PurdueClass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A1A5184ECCE27BB94776C4F5E4F94C /* AWSKinesisRequestRetryHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSKinesisRequestRetryHandler.m; path = AWSKinesis/AWSKinesisRequestRetryHandler.m; sourceTree = "<group>"; };
 		F2078067E45F4E750A30DCFF67B1886E /* AWSMTLManagedObjectAdapter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSMTLManagedObjectAdapter.m; path = AWSCore/Mantle/AWSMTLManagedObjectAdapter.m; sourceTree = "<group>"; };
 		F218C148D77A6814A5EBE1D589450305 /* AWSDDDispatchQueueLogFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSDDDispatchQueueLogFormatter.m; path = AWSCore/Logging/Extensions/AWSDDDispatchQueueLogFormatter.m; sourceTree = "<group>"; };
@@ -1784,7 +1784,7 @@
 		FAFDAB2FE9FD11C00600A47C32EE3054 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
 		FBBB8E393F2E7BE98584FA41BB53502B /* AWSCancellationToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSCancellationToken.h; path = AWSCore/Bolts/AWSCancellationToken.h; sourceTree = "<group>"; };
 		FC8D231405446B5350F1B6C80B1DC030 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		FDD62A1AA9F5974718756A85878F8B39 /* AWSCognitoIdentityProviderASF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AWSCognitoIdentityProviderASF.framework; path = AWSCognitoIdentityProviderASF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDD62A1AA9F5974718756A85878F8B39 /* AWSCognitoIdentityProviderASF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSCognitoIdentityProviderASF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE3C9E575A51311739FC261070ECA791 /* AWSSRWebSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AWSSRWebSocket.h; path = AWSIoT/Internal/SocketRocket/AWSSRWebSocket.h; sourceTree = "<group>"; };
 		FF0426106C5C005EBFA61B78A4522F4B /* AWSLambda.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AWSLambda.xcconfig; sourceTree = "<group>"; };
 		FFBC5748F32B451552499D8E95FD075F /* AWSEC2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AWSEC2-dummy.m"; sourceTree = "<group>"; };
@@ -2204,7 +2204,6 @@
 				D994F8B30104968AF0942BED383557BE /* NSValueTransformer+AWSMTLPredefinedTransformerAdditions.m */,
 				67DF8229AC62B4F58F916265162498D1 /* Support Files */,
 			);
-			name = AWSCore;
 			path = AWSCore;
 			sourceTree = "<group>";
 		};
@@ -2330,7 +2329,6 @@
 				6E57D919150727AB174CE7A9975DDE72 /* AWSMobileAnalyticsWriter.m */,
 				C44CCA365A51049518BB96FC520C095C /* Support Files */,
 			);
-			name = AWSMobileAnalytics;
 			path = AWSMobileAnalytics;
 			sourceTree = "<group>";
 		};
@@ -2343,7 +2341,6 @@
 				1A0F59091DBE43B128FB9244538B3EC1 /* ResultProtocol.swift */,
 				C7FBAD7F875F6B3229122F887AD93B10 /* Support Files */,
 			);
-			name = Result;
 			path = Result;
 			sourceTree = "<group>";
 		};
@@ -2438,7 +2435,6 @@
 				90818DF9E9B2A3B20FA40ADB5C249924 /* Frameworks */,
 				4C556058EBA46D2213A7F6BB99C024C2 /* Support Files */,
 			);
-			name = AWSCognitoIdentityProviderASF;
 			path = AWSCognitoIdentityProviderASF;
 			sourceTree = "<group>";
 		};
@@ -2454,7 +2450,6 @@
 				069E6432FABD3F49A4E5F15B206FA584 /* AWSMachineLearningService.m */,
 				732F0118E6CFE50A610147DEF153082F /* Support Files */,
 			);
-			name = AWSMachineLearning;
 			path = AWSMachineLearning;
 			sourceTree = "<group>";
 		};
@@ -2516,7 +2511,6 @@
 				5934D92141F635907A4878462B5538EA /* AWSSRWebSocket.m */,
 				8E6A0AE8C9201B598841FE27CE32358C /* Support Files */,
 			);
-			name = AWSIoT;
 			path = AWSIoT;
 			sourceTree = "<group>";
 		};
@@ -2547,7 +2541,6 @@
 				8A88AD92B6316CEF290599AF591C0BD4 /* AWSUserPoolOperationsHandler.swift */,
 				05138321A2FB2CBD7E5C8C93B9CB61B3 /* Support Files */,
 			);
-			name = AWSMobileClient;
 			path = AWSMobileClient;
 			sourceTree = "<group>";
 		};
@@ -2595,7 +2588,6 @@
 				A3BD3E7581550B795472BF333E5477BA /* AWSElasticLoadBalancingService.m */,
 				E5E5D1277C77F145CB66B419CEE00CA8 /* Support Files */,
 			);
-			name = AWSElasticLoadBalancing;
 			path = AWSElasticLoadBalancing;
 			sourceTree = "<group>";
 		};
@@ -2646,7 +2638,6 @@
 				8C5B983D8082F82692163D1D2138EA8E /* AWSKinesisService.m */,
 				11B6779549DF13836B514957CCC9159D /* Support Files */,
 			);
-			name = AWSKinesis;
 			path = AWSKinesis;
 			sourceTree = "<group>";
 		};
@@ -2705,7 +2696,6 @@
 				8A8BD308562217FB4744002EE2504426 /* AWSSESService.m */,
 				9443788535241590B191E46CEBB55852 /* Support Files */,
 			);
-			name = AWSSES;
 			path = AWSSES;
 			sourceTree = "<group>";
 		};
@@ -2721,7 +2711,6 @@
 				DF03CA1FBB79041D65A67DA827A539A4 /* AWSAutoScalingService.m */,
 				33D2679EFD4B77DE9A44F5D2ED96ACB1 /* Support Files */,
 			);
-			name = AWSAutoScaling;
 			path = AWSAutoScaling;
 			sourceTree = "<group>";
 		};
@@ -2731,7 +2720,6 @@
 				7072F45B3117D2ED04EA23D095F12800 /* Core */,
 				42DE9EB6928F8BDF6FC477E339261095 /* Support Files */,
 			);
-			name = Moya;
 			path = Moya;
 			sourceTree = "<group>";
 		};
@@ -2846,7 +2834,6 @@
 				B1FFB540350AF71C46A8EBF6F262ABD2 /* AWSDynamoDBService.m */,
 				A57C3D799D9DE5BAE452DA9B6C80A113 /* Support Files */,
 			);
-			name = AWSDynamoDB;
 			path = AWSDynamoDB;
 			sourceTree = "<group>";
 		};
@@ -2879,7 +2866,6 @@
 				72FCFDF8456D4177F8E398E6D47B5447 /* AWSS3TransferUtilityTasks.m */,
 				EC5B7746589DEA2A3330956F8249B19C /* Support Files */,
 			);
-			name = AWSS3;
 			path = AWSS3;
 			sourceTree = "<group>";
 		};
@@ -2895,7 +2881,6 @@
 				0BBCD458C05DB1103E532E1BA1938880 /* AWSSNSService.m */,
 				DD8D91FF503FC87EBBC4A45080F442ED /* Support Files */,
 			);
-			name = AWSSNS;
 			path = AWSSNS;
 			sourceTree = "<group>";
 		};
@@ -2915,7 +2900,6 @@
 				C5B9CFA1FE300AA22FCBB7FE8758B778 /* AWSLambdaService.m */,
 				340EDCC2F9918379A2656EB78F918DAB /* Support Files */,
 			);
-			name = AWSLambda;
 			path = AWSLambda;
 			sourceTree = "<group>";
 		};
@@ -2965,7 +2949,6 @@
 				3E91E9CAA16B2D28AEBF709FCE54E5A3 /* tommath.c */,
 				83D0573B529E613E35ECCE3F483BB108 /* Support Files */,
 			);
-			name = AWSCognitoIdentityProvider;
 			path = AWSCognitoIdentityProvider;
 			sourceTree = "<group>";
 		};
@@ -2995,7 +2978,6 @@
 				3B153B9C552448BF6DFF080178608E54 /* AWSCloudWatchService.m */,
 				1E1D9B34186D0C8639766670B8B8AAC2 /* Support Files */,
 			);
-			name = AWSCloudWatch;
 			path = AWSCloudWatch;
 			sourceTree = "<group>";
 		};
@@ -3029,7 +3011,6 @@
 				A8DC18ED0B658DA21A7522FD525DD76B /* AWSCognitoUtil.m */,
 				C6C9AF6FCB5448D57CC406B4F8481B89 /* Support Files */,
 			);
-			name = AWSCognito;
 			path = AWSCognito;
 			sourceTree = "<group>";
 		};
@@ -3061,7 +3042,6 @@
 				CE53DF17E17240A9729A1E46F868CD7D /* AWSUIConfiguration.h */,
 				E49701E3D2202C29FB17987A240CF821 /* Support Files */,
 			);
-			name = AWSAuthCore;
 			path = AWSAuthCore;
 			sourceTree = "<group>";
 		};
@@ -3077,7 +3057,6 @@
 				F2395EEFAC21D492EB7DCBDFBF042793 /* AWSSimpleDBService.m */,
 				C2C0DD415551CA688D2357EE5FDCDD71 /* Support Files */,
 			);
-			name = AWSSimpleDB;
 			path = AWSSimpleDB;
 			sourceTree = "<group>";
 		};
@@ -3230,7 +3209,6 @@
 				F486DB3BAFC12C1A743BAEE0162281EC /* AWSEC2Service.m */,
 				AAB3BE8AA457FFE5FCDAD3EEC4BAA702 /* Support Files */,
 			);
-			name = AWSEC2;
 			path = AWSEC2;
 			sourceTree = "<group>";
 		};
@@ -3270,7 +3248,6 @@
 				D1EB774A1CA2B19541DC06C5D9811899 /* Validation.swift */,
 				119865162C2F3CE37CFF8ACD2879B400 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -3286,7 +3263,6 @@
 				8DA66C559B278EBA6CD998D697035C8C /* AWSSQSService.m */,
 				8172C075F78D5B5AF98D26D2371E8D7E /* Support Files */,
 			);
-			name = AWSSQS;
 			path = AWSSQS;
 			sourceTree = "<group>";
 		};
@@ -5309,11 +5285,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSIoT/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSIoT/AWSIoT.modulemap";
 				PRODUCT_MODULE_NAME = AWSIoT;
 				PRODUCT_NAME = AWSIoT;
@@ -5382,8 +5354,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -5406,11 +5377,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSCore/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSCore/AWSCore.modulemap";
 				PRODUCT_MODULE_NAME = AWSCore;
 				PRODUCT_NAME = AWSCore;
@@ -5443,11 +5410,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-PurdueClass/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-PurdueClass/Pods-PurdueClass.modulemap";
 				OTHER_LDFLAGS = "";
@@ -5480,11 +5443,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSEC2/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSEC2/AWSEC2.modulemap";
 				PRODUCT_MODULE_NAME = AWSEC2;
 				PRODUCT_NAME = AWSEC2;
@@ -5516,11 +5475,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSAutoScaling/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSAutoScaling/AWSAutoScaling.modulemap";
 				PRODUCT_MODULE_NAME = AWSAutoScaling;
 				PRODUCT_NAME = AWSAutoScaling;
@@ -5551,11 +5506,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSMobileAnalytics/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSMobileAnalytics/AWSMobileAnalytics.modulemap";
 				PRODUCT_MODULE_NAME = AWSMobileAnalytics;
 				PRODUCT_NAME = AWSMobileAnalytics;
@@ -5586,11 +5537,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSAuthCore/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSAuthCore/AWSAuthCore.modulemap";
 				PRODUCT_MODULE_NAME = AWSAuthCore;
 				PRODUCT_NAME = AWSAuthCore;
@@ -5622,11 +5569,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSMobileAnalytics/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSMobileAnalytics/AWSMobileAnalytics.modulemap";
 				PRODUCT_MODULE_NAME = AWSMobileAnalytics;
 				PRODUCT_NAME = AWSMobileAnalytics;
@@ -5658,11 +5601,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSSimpleDB/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSSimpleDB/AWSSimpleDB.modulemap";
 				PRODUCT_MODULE_NAME = AWSSimpleDB;
 				PRODUCT_NAME = AWSSimpleDB;
@@ -5693,11 +5632,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSAutoScaling/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSAutoScaling/AWSAutoScaling.modulemap";
 				PRODUCT_MODULE_NAME = AWSAutoScaling;
 				PRODUCT_NAME = AWSAutoScaling;
@@ -5729,11 +5664,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSKinesis/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSKinesis/AWSKinesis.modulemap";
 				PRODUCT_MODULE_NAME = AWSKinesis;
 				PRODUCT_NAME = AWSKinesis;
@@ -5765,11 +5696,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSDynamoDB/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSDynamoDB/AWSDynamoDB.modulemap";
 				PRODUCT_MODULE_NAME = AWSDynamoDB;
 				PRODUCT_NAME = AWSDynamoDB;
@@ -5801,11 +5728,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSSNS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSSNS/AWSSNS.modulemap";
 				PRODUCT_MODULE_NAME = AWSSNS;
 				PRODUCT_NAME = AWSSNS;
@@ -5837,11 +5760,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSSES/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSSES/AWSSES.modulemap";
 				PRODUCT_MODULE_NAME = AWSSES;
 				PRODUCT_NAME = AWSSES;
@@ -5872,11 +5791,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSMobileClient/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSMobileClient/AWSMobileClient.modulemap";
 				PRODUCT_MODULE_NAME = AWSMobileClient;
 				PRODUCT_NAME = AWSMobileClient;
@@ -5908,11 +5823,7 @@
 				INFOPLIST_FILE = "Target Support Files/Result/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Result/Result.modulemap";
 				PRODUCT_MODULE_NAME = Result;
 				PRODUCT_NAME = Result;
@@ -5944,11 +5855,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSSNS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSSNS/AWSSNS.modulemap";
 				PRODUCT_MODULE_NAME = AWSSNS;
 				PRODUCT_NAME = AWSSNS;
@@ -5979,11 +5886,7 @@
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				PRODUCT_MODULE_NAME = Alamofire;
 				PRODUCT_NAME = Alamofire;
@@ -6015,11 +5918,7 @@
 				INFOPLIST_FILE = "Target Support Files/Moya/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Moya/Moya.modulemap";
 				PRODUCT_MODULE_NAME = Moya;
 				PRODUCT_NAME = Moya;
@@ -6050,11 +5949,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSMachineLearning/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSMachineLearning/AWSMachineLearning.modulemap";
 				PRODUCT_MODULE_NAME = AWSMachineLearning;
 				PRODUCT_NAME = AWSMachineLearning;
@@ -6086,11 +5981,7 @@
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				PRODUCT_MODULE_NAME = Alamofire;
 				PRODUCT_NAME = Alamofire;
@@ -6121,11 +6012,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSCognitoIdentityProvider/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.modulemap";
 				PRODUCT_MODULE_NAME = AWSCognitoIdentityProvider;
 				PRODUCT_NAME = AWSCognitoIdentityProvider;
@@ -6157,11 +6044,7 @@
 				INFOPLIST_FILE = "Target Support Files/Result/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Result/Result.modulemap";
 				PRODUCT_MODULE_NAME = Result;
 				PRODUCT_NAME = Result;
@@ -6192,11 +6075,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSAuthCore/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSAuthCore/AWSAuthCore.modulemap";
 				PRODUCT_MODULE_NAME = AWSAuthCore;
 				PRODUCT_NAME = AWSAuthCore;
@@ -6227,11 +6106,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSCognito/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSCognito/AWSCognito.modulemap";
 				PRODUCT_MODULE_NAME = AWSCognito;
 				PRODUCT_NAME = AWSCognito;
@@ -6263,11 +6138,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSIoT/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSIoT/AWSIoT.modulemap";
 				PRODUCT_MODULE_NAME = AWSIoT;
 				PRODUCT_NAME = AWSIoT;
@@ -6299,11 +6170,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSElasticLoadBalancing/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSElasticLoadBalancing/AWSElasticLoadBalancing.modulemap";
 				PRODUCT_MODULE_NAME = AWSElasticLoadBalancing;
 				PRODUCT_NAME = AWSElasticLoadBalancing;
@@ -6334,11 +6201,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSElasticLoadBalancing/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSElasticLoadBalancing/AWSElasticLoadBalancing.modulemap";
 				PRODUCT_MODULE_NAME = AWSElasticLoadBalancing;
 				PRODUCT_NAME = AWSElasticLoadBalancing;
@@ -6370,11 +6233,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSSimpleDB/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSSimpleDB/AWSSimpleDB.modulemap";
 				PRODUCT_MODULE_NAME = AWSSimpleDB;
 				PRODUCT_NAME = AWSSimpleDB;
@@ -6406,11 +6265,7 @@
 				INFOPLIST_FILE = "Target Support Files/Moya/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Moya/Moya.modulemap";
 				PRODUCT_MODULE_NAME = Moya;
 				PRODUCT_NAME = Moya;
@@ -6442,11 +6297,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSCloudWatch/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSCloudWatch/AWSCloudWatch.modulemap";
 				PRODUCT_MODULE_NAME = AWSCloudWatch;
 				PRODUCT_NAME = AWSCloudWatch;
@@ -6477,11 +6328,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSSQS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSSQS/AWSSQS.modulemap";
 				PRODUCT_MODULE_NAME = AWSSQS;
 				PRODUCT_NAME = AWSSQS;
@@ -6512,11 +6359,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSDynamoDB/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSDynamoDB/AWSDynamoDB.modulemap";
 				PRODUCT_MODULE_NAME = AWSDynamoDB;
 				PRODUCT_NAME = AWSDynamoDB;
@@ -6547,11 +6390,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSCore/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSCore/AWSCore.modulemap";
 				PRODUCT_MODULE_NAME = AWSCore;
 				PRODUCT_NAME = AWSCore;
@@ -6582,11 +6421,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSLambda/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSLambda/AWSLambda.modulemap";
 				PRODUCT_MODULE_NAME = AWSLambda;
 				PRODUCT_NAME = AWSLambda;
@@ -6617,11 +6452,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSCognitoIdentityProviderASF/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.modulemap";
 				PRODUCT_MODULE_NAME = AWSCognitoIdentityProviderASF;
 				PRODUCT_NAME = AWSCognitoIdentityProviderASF;
@@ -6652,11 +6483,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSMobileClient/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSMobileClient/AWSMobileClient.modulemap";
 				PRODUCT_MODULE_NAME = AWSMobileClient;
 				PRODUCT_NAME = AWSMobileClient;
@@ -6687,11 +6514,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSCloudWatch/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSCloudWatch/AWSCloudWatch.modulemap";
 				PRODUCT_MODULE_NAME = AWSCloudWatch;
 				PRODUCT_NAME = AWSCloudWatch;
@@ -6723,11 +6546,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSKinesis/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSKinesis/AWSKinesis.modulemap";
 				PRODUCT_MODULE_NAME = AWSKinesis;
 				PRODUCT_NAME = AWSKinesis;
@@ -6758,11 +6577,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSS3/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSS3/AWSS3.modulemap";
 				PRODUCT_MODULE_NAME = AWSS3;
 				PRODUCT_NAME = AWSS3;
@@ -6793,11 +6608,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSS3/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSS3/AWSS3.modulemap";
 				PRODUCT_MODULE_NAME = AWSS3;
 				PRODUCT_NAME = AWSS3;
@@ -6895,11 +6706,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSCognitoIdentityProviderASF/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.modulemap";
 				PRODUCT_MODULE_NAME = AWSCognitoIdentityProviderASF;
 				PRODUCT_NAME = AWSCognitoIdentityProviderASF;
@@ -6931,11 +6738,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSCognitoIdentityProvider/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.modulemap";
 				PRODUCT_MODULE_NAME = AWSCognitoIdentityProvider;
 				PRODUCT_NAME = AWSCognitoIdentityProvider;
@@ -6966,11 +6769,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSSQS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSSQS/AWSSQS.modulemap";
 				PRODUCT_MODULE_NAME = AWSSQS;
 				PRODUCT_NAME = AWSSQS;
@@ -7002,11 +6801,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSLambda/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSLambda/AWSLambda.modulemap";
 				PRODUCT_MODULE_NAME = AWSLambda;
 				PRODUCT_NAME = AWSLambda;
@@ -7038,11 +6833,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSCognito/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSCognito/AWSCognito.modulemap";
 				PRODUCT_MODULE_NAME = AWSCognito;
 				PRODUCT_NAME = AWSCognito;
@@ -7073,11 +6864,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSMachineLearning/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSMachineLearning/AWSMachineLearning.modulemap";
 				PRODUCT_MODULE_NAME = AWSMachineLearning;
 				PRODUCT_NAME = AWSMachineLearning;
@@ -7109,11 +6896,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-PurdueClass/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-PurdueClass/Pods-PurdueClass.modulemap";
 				OTHER_LDFLAGS = "";
@@ -7147,11 +6930,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSSES/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSSES/AWSSES.modulemap";
 				PRODUCT_MODULE_NAME = AWSSES;
 				PRODUCT_NAME = AWSSES;
@@ -7183,11 +6962,7 @@
 				INFOPLIST_FILE = "Target Support Files/AWSEC2/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AWSEC2/AWSEC2.modulemap";
 				PRODUCT_MODULE_NAME = AWSEC2;
 				PRODUCT_NAME = AWSEC2;
