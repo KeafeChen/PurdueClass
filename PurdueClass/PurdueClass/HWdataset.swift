@@ -10,8 +10,8 @@ import Foundation
 class HWdataset{
     
     
-    let hwdatasets=[HWData(description: "a", date: "1"//,HWswitch: false
-        ),HWData(description: "b", date: "2"//,HWswitch: false
-        ),HWData(description: "c", date: "3"//,HWswitch: false
+    let hwdatasets=[HWData(description: "report", date: "April 5", month: 4, day: 5//,HWswitch: false
+    ),HWData(description: "backlog", date: "April 3", month: 4, day: 3//,HWswitch: false
+        ),HWData(description: "shell", date: "March 12", month: 3, day: 12//,HWswitch: false
         )]
 }

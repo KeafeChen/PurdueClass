@@ -26,13 +26,15 @@ class PastHWPage: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var tableView: UITableView!
     let data = HWdataset()
+    var data1 = [HWData]()
+    var data2 = [HWData]()
     
     // var data = [HW]()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate=self
         tableView.dataSource=self
-        
+        sortDue()
         
         /*    data = [
          HW.init(hwDescription: "hello", dueDate:"world"),
@@ -56,7 +58,33 @@ class PastHWPage: UIViewController, UITableViewDelegate, UITableViewDataSource{
         
         
     }
-    
+    func sortDue(){
+        //for hw in data.hwdatasets{
+        //  if hw
+        //}
+        //        var sortdatelist = [Int]()
+        // for i in data.hwdatasets{
+        //   sortdatelist.append(i.month*10+i.day)
+        // }
+        
+        //        quicksort(data.hwdatasets)
+        print("see here\n")
+        data1 = data.hwdatasets.sorted(by: { $0.month > $1.month})
+        data2 = data1
+        data2.sort{
+            ($0.month, $0.day) >
+                ($1.month, $1.day)
+        }
+        //        _ = data1.sort {
+        //            if $0.month != $1.month {
+        //                return $0.month < $1.month
+        //            }
+        //            else {
+        //                return $0.day < $1.day
+        //            }
+        //
+        //        }
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //  let cell = self.tableView.dequeueReusableCell(withIdentifier: "hwcell")as! CustomCell
         // cell.hwDescription = data[indexPath.row].hwDescription
@@ -68,7 +96,7 @@ class PastHWPage: UIViewController, UITableViewDelegate, UITableViewDataSource{
         //cell.textLabel?.text = hwDescription[indexPath.row]
         
         if let cell=tableView.dequeueReusableCell(withIdentifier: "pasthwcell", for: indexPath) as? HWcell{
-            cell.configureCell(hwcelldata: data.hwdatasets[indexPath.row])
+            cell.configureCell(hwcelldata: data2[indexPath.row])
             return cell
             
         }

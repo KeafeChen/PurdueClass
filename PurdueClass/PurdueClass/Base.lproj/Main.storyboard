@@ -1460,46 +1460,38 @@
                                                     <subviews>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tfZ-Xw-OBv">
                                                             <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" secondItem="tfZ-Xw-OBv" secondAttribute="height" multiplier="49:31" id="tLF-Rr-juW"/>
-                                                            </constraints>
                                                         </switch>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLP-ng-jVr" userLabel="HWDescription">
-                                                            <rect key="frame" x="49" y="0.0" width="234" height="31"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" secondItem="hLP-ng-jVr" secondAttribute="height" multiplier="234:31" id="bjh-63-vPc"/>
-                                                            </constraints>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" layoutMarginsFollowReadableWidth="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLP-ng-jVr" userLabel="HWDescription">
+                                                            <rect key="frame" x="49" y="0.0" width="135" height="31"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAU-tG-Td6" userLabel="HWDate">
-                                                            <rect key="frame" x="283" y="0.0" width="42" height="31"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" secondItem="oAU-tG-Td6" secondAttribute="height" multiplier="42:31" id="IT6-0M-oAC"/>
-                                                            </constraints>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Labellonglonglong" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAU-tG-Td6" userLabel="HWDate">
+                                                            <rect key="frame" x="184" y="0.0" width="141" height="31"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="tfZ-Xw-OBv" firstAttribute="top" secondItem="e7u-un-Mgj" secondAttribute="top" id="6lR-Kd-Z9x"/>
-                                                        <constraint firstItem="hLP-ng-jVr" firstAttribute="top" secondItem="e7u-un-Mgj" secondAttribute="top" id="ThT-8u-hlZ"/>
-                                                        <constraint firstAttribute="bottom" secondItem="tfZ-Xw-OBv" secondAttribute="bottom" id="W8m-92-9xR"/>
-                                                        <constraint firstItem="tfZ-Xw-OBv" firstAttribute="leading" secondItem="e7u-un-Mgj" secondAttribute="leading" id="ayO-Vz-N0d"/>
-                                                        <constraint firstAttribute="bottom" secondItem="oAU-tG-Td6" secondAttribute="bottom" id="lHx-gn-VVy"/>
-                                                        <constraint firstItem="oAU-tG-Td6" firstAttribute="top" secondItem="e7u-un-Mgj" secondAttribute="top" id="vd3-f0-2Sw"/>
-                                                        <constraint firstAttribute="trailing" secondItem="oAU-tG-Td6" secondAttribute="trailing" id="xiQ-Vk-1PR"/>
-                                                        <constraint firstAttribute="bottom" secondItem="hLP-ng-jVr" secondAttribute="bottom" id="yTq-EZ-e0X"/>
+                                                        <constraint firstAttribute="bottom" secondItem="tfZ-Xw-OBv" secondAttribute="bottom" id="DA9-LZ-vK1"/>
+                                                        <constraint firstItem="hLP-ng-jVr" firstAttribute="leading" secondItem="tfZ-Xw-OBv" secondAttribute="trailing" id="Mzo-GW-A3i"/>
+                                                        <constraint firstItem="tfZ-Xw-OBv" firstAttribute="top" secondItem="e7u-un-Mgj" secondAttribute="top" id="P5u-tl-8sC"/>
+                                                        <constraint firstItem="hLP-ng-jVr" firstAttribute="top" secondItem="e7u-un-Mgj" secondAttribute="top" id="VXX-cp-zmf"/>
+                                                        <constraint firstItem="tfZ-Xw-OBv" firstAttribute="leading" secondItem="e7u-un-Mgj" secondAttribute="leading" id="dxp-fo-3hQ"/>
+                                                        <constraint firstAttribute="bottom" secondItem="oAU-tG-Td6" secondAttribute="bottom" id="uQd-kV-FCz"/>
+                                                        <constraint firstAttribute="trailing" secondItem="oAU-tG-Td6" secondAttribute="trailing" id="wug-9R-QHx"/>
+                                                        <constraint firstItem="oAU-tG-Td6" firstAttribute="top" secondItem="e7u-un-Mgj" secondAttribute="top" id="xKI-kY-ism"/>
+                                                        <constraint firstAttribute="bottom" secondItem="hLP-ng-jVr" secondAttribute="bottom" id="xvS-q7-ccs"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="e7u-un-Mgj" secondAttribute="trailing" constant="20" id="A1A-GK-QJR"/>
-                                                <constraint firstItem="e7u-un-Mgj" firstAttribute="leading" secondItem="bOQ-M1-9sR" secondAttribute="leading" constant="20" id="KdE-hi-d1i"/>
-                                                <constraint firstAttribute="bottom" secondItem="e7u-un-Mgj" secondAttribute="bottom" constant="2.5" id="doy-Iu-Uj1"/>
-                                                <constraint firstItem="e7u-un-Mgj" firstAttribute="top" secondItem="bOQ-M1-9sR" secondAttribute="top" constant="10" id="xX3-88-PJR"/>
+                                                <constraint firstItem="e7u-un-Mgj" firstAttribute="top" secondItem="bOQ-M1-9sR" secondAttribute="top" constant="10" id="3iZ-DR-QKH"/>
+                                                <constraint firstItem="e7u-un-Mgj" firstAttribute="leading" secondItem="bOQ-M1-9sR" secondAttribute="leading" constant="20" id="4mi-sl-f2V"/>
+                                                <constraint firstAttribute="trailing" secondItem="e7u-un-Mgj" secondAttribute="trailing" constant="20" id="Xm8-D6-mTc"/>
+                                                <constraint firstAttribute="bottom" secondItem="e7u-un-Mgj" secondAttribute="bottom" constant="2.5" id="vSt-Dc-KaR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -1509,8 +1501,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="0Ry-kt-rWx" id="4Ic-bP-Miu"/>
-                                    <outlet property="delegate" destination="0Ry-kt-rWx" id="7oc-uM-weA"/>
+                                    <outlet property="dataSource" destination="0Ry-kt-rWx" id="JXP-bM-JF7"/>
+                                    <outlet property="delegate" destination="0Ry-kt-rWx" id="ywI-uu-bKb"/>
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ru-oB-as1" userLabel="Add">
@@ -1556,8 +1548,8 @@
                         <viewLayoutGuide key="safeArea" id="rQE-7S-Eeq"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="4Yp-sk-fV9" id="Z63-pS-1Rg"/>
-                        <outlet property="view" destination="4Yp-sk-fV9" id="Ugx-zJ-Sz3"/>
+                        <outlet property="tableView" destination="4Yp-sk-fV9" id="Iau-Yt-itI"/>
+                        <outlet property="view" destination="4Yp-sk-fV9" id="U1K-20-cI0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9fC-th-odE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1755,8 +1747,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="5PQ-Ao-xLG" id="lPG-AF-bCf"/>
-                                    <outlet property="delegate" destination="5PQ-Ao-xLG" id="UtI-0G-a6q"/>
+                                    <outlet property="dataSource" destination="5PQ-Ao-xLG" id="vdV-6f-7Fq"/>
+                                    <outlet property="delegate" destination="5PQ-Ao-xLG" id="P8N-TB-3dU"/>
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqZ-mx-Lmx" userLabel="Add">
