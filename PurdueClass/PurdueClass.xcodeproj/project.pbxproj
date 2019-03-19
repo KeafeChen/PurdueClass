@@ -10,6 +10,9 @@
 		184014130906A3620F1026C3 /* Pods_PurdueClass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB5FB171544398C9D6300CA /* Pods_PurdueClass.framework */; };
 		A466D86A222B16EE00E094D6 /* HWPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A466D869222B16EE00E094D6 /* HWPage.swift */; };
 		A466D870222C938F00E094D6 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A466D86F222C938F00E094D6 /* CustomCell.swift */; };
+		A47A786922407F490029D699 /* HWdatastruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47A786822407F490029D699 /* HWdatastruct.swift */; };
+		A47A786B2240818F0029D699 /* HWcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47A786A2240818F0029D699 /* HWcell.swift */; };
+		A47A786D224085590029D699 /* HWdataset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47A786C224085590029D699 /* HWdataset.swift */; };
 		CC3D557C2216424D008A4446 /* LayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3D557B2216424D008A4446 /* LayoutExtension.swift */; };
 		DBAA475A220B233500AB0F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA4759220B233500AB0F5F /* AppDelegate.swift */; };
 		DBAA475C220B233600AB0F5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA475B220B233600AB0F5F /* ViewController.swift */; };
@@ -35,6 +38,9 @@
 		1CB5FB171544398C9D6300CA /* Pods_PurdueClass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PurdueClass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A466D869222B16EE00E094D6 /* HWPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWPage.swift; sourceTree = "<group>"; };
 		A466D86F222C938F00E094D6 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		A47A786822407F490029D699 /* HWdatastruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWdatastruct.swift; sourceTree = "<group>"; };
+		A47A786A2240818F0029D699 /* HWcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWcell.swift; sourceTree = "<group>"; };
+		A47A786C224085590029D699 /* HWdataset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWdataset.swift; sourceTree = "<group>"; };
 		AE73CFC0FBD646067DC4775E /* Pods-PurdueClass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueClass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PurdueClass/Pods-PurdueClass.debug.xcconfig"; sourceTree = "<group>"; };
 		B0E55A0BC322F5F7E99B2354 /* Pods-PurdueClass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueClass.release.xcconfig"; path = "Pods/Target Support Files/Pods-PurdueClass/Pods-PurdueClass.release.xcconfig"; sourceTree = "<group>"; };
 		CC3D557B2216424D008A4446 /* LayoutExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutExtension.swift; sourceTree = "<group>"; };
@@ -128,6 +134,9 @@
 				DBF6C6AE221CD45100349B64 /* CourseCell.swift */,
 				A466D86F222C938F00E094D6 /* CustomCell.swift */,
 				A466D869222B16EE00E094D6 /* HWPage.swift */,
+				A47A786A2240818F0029D699 /* HWcell.swift */,
+				A47A786822407F490029D699 /* HWdatastruct.swift */,
+				A47A786C224085590029D699 /* HWdataset.swift */,
 				DBC1C9DA220B3BD2009EDF1E /* HomePage.swift */,
 				DBAA4760220B233600AB0F5F /* Assets.xcassets */,
 				DBAA4762220B233600AB0F5F /* LaunchScreen.storyboard */,
@@ -306,14 +315,17 @@
 				DBF6C6A5221CCC1100349B64 /* BackendCourseInfo.swift in Sources */,
 				DBF6C6AA221CD40C00349B64 /* SearchVC.swift in Sources */,
 				A466D870222C938F00E094D6 /* CustomCell.swift in Sources */,
+				A47A786D224085590029D699 /* HWdataset.swift in Sources */,
 				DBAA475C220B233600AB0F5F /* ViewController.swift in Sources */,
 				F2E94A91221CFCE6009FF9BF /* Profile.swift in Sources */,
 				F2DBEC6E22152FF90029AF2E /* SignUp.swift in Sources */,
+				A47A786922407F490029D699 /* HWdatastruct.swift in Sources */,
 				DBC1C9DB220B3BD2009EDF1E /* HomePage.swift in Sources */,
 				A466D86A222B16EE00E094D6 /* HWPage.swift in Sources */,
 				DBAA475A220B233500AB0F5F /* AppDelegate.swift in Sources */,
 				F2E94A93221CFDF9009FF9BF /* ChangePassword.swift in Sources */,
 				DBF6C69F221CC3FF00349B64 /* Account.swift in Sources */,
+				A47A786B2240818F0029D699 /* HWcell.swift in Sources */,
 				DBF6C6AD221CD43800349B64 /* Data.swift in Sources */,
 				F2DBEC6C221525630029AF2E /* ForgetPassword.swift in Sources */,
 				DBF6C6AF221CD45100349B64 /* CourseCell.swift in Sources */,
