@@ -272,6 +272,9 @@ class ClassInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             searchResultVC.course_value = self.result[myIndex].course!
             searchResultVC.professor_value = self.result[myIndex].professor!
             searchResultVC.detail_value = self.result[myIndex].detail!
+            searchResultVC.weekday_value = self.result[myIndex].weekday!
+            searchResultVC.start_value = self.result[myIndex].start!
+            searchResultVC.end_value = self.result[myIndex].end!
         }
  
     }
