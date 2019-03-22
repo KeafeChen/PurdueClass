@@ -607,7 +607,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4b-IE-5Pf">
-                                <rect key="frame" x="86" y="787" width="75.5" height="75"/>
+                                <rect key="frame" x="86" y="787" width="75" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.88231872080007645" blue="0.35559571229029907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="Hfq-6i-1Qh"/>
@@ -618,7 +618,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nzz-8i-Lkj">
-                                <rect key="frame" x="168.5" y="787" width="75" height="75"/>
+                                <rect key="frame" x="168" y="787" width="75" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.88231872080007645" blue="0.35559571229029907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="eBQ-Uz-OGl"/>
@@ -632,7 +632,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luK-jw-Rsq">
-                                <rect key="frame" x="251.5" y="787" width="75.5" height="75"/>
+                                <rect key="frame" x="251" y="787" width="75" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.88231872080007645" blue="0.35559571229029907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="bWe-E2-6Xf"/>
@@ -643,7 +643,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79T-2C-MBa">
-                                <rect key="frame" x="335" y="787" width="75" height="75"/>
+                                <rect key="frame" x="334" y="787" width="75" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.88231872080007645" blue="0.35559571229029907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="8jl-Pn-uXE"/>
@@ -994,7 +994,6 @@
         <!--Event DetailVC-->
         <scene sceneID="iUR-2I-Vp7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZc-73-Nr3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Rcc-KP-JqF" customClass="EventDetailVC" customModule="PurdueClass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YZw-Jg-fzx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -1152,6 +1151,7 @@
                         <outlet property="weekday_name" destination="RLS-CJ-HpP" id="fe6-kb-LWt"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZc-73-Nr3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3727.5362318840585" y="1170.5357142857142"/>
         </scene>
@@ -1844,8 +1844,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="OEf-l3-4g1"/>
         <segue reference="Hg9-6H-AeP"/>
-        <segue reference="hM5-7V-Evz"/>
-        <segue reference="oHt-ri-BxA"/>
+        <segue reference="q3I-SC-Tfp"/>
+        <segue reference="irS-wG-Z7v"/>
         <segue reference="0LW-Bw-GZA"/>
     </inferredMetricsTieBreakers>
 </document>
