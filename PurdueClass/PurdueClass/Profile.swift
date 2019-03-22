@@ -23,6 +23,7 @@ class Profile: UIViewController {
         LogoutButton.alpha = 0.7
         
         // Do any additional setup after loading the view.
+        UsernameDisplay.text = ""
         UsernameDisplay.insertText(UserDefaults.standard.string(forKey: "username")!)
     }
     
