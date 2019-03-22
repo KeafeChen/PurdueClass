@@ -28,6 +28,8 @@ class ScheduleVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
     var weekday_value: String = ""
     var start_value: String = ""
     var end_value : String = ""
+    var eventTodisplay = Event()
+    var eventToDelete : Event? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +61,21 @@ class ScheduleVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
             if flag { eventList.append(newEvent)}
         }
         
+        //delete
+        if eventToDelete != nil {
+            print("haha")
+            print(eventToDelete!.course)
+            for indexi in 0...(eventList.count-1){
+                let xxx = eventList[indexi]
+                if xxx.course == eventToDelete!.course && xxx.semester == eventToDelete!.semester {
+                    eventList.remove(at: indexi)
+                    break;
+                }
+            }
+            eventToDelete = nil
+        }
+        
+        //
         data.removeAll();
         data = [[],[],[],[],[],[],[]]
         
@@ -73,7 +90,6 @@ class ScheduleVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
         }
         
         //TODO: sort data based on start time
-
     }
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
@@ -107,5 +123,17 @@ class ScheduleVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        eventTodisplay = data[weekday-1][indexPath.row]
+        performSegue(withIdentifier: "displayEvent", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let eventDetailVC = segue.destination as? EventDetailVC {
+            eventDetailVC.eventDetail = eventTodisplay
+        }
+    }
+    
 }
 

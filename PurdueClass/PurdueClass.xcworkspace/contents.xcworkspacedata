@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/HeJunda/Documents/GitHub/PurdueClass/PurdueClass/PurdueClass/EventDetailVC.swift">
+   </FileRef>
+   <FileRef
       location = "group:PurdueClass.xcodeproj">
    </FileRef>
    <FileRef

@@ -25,6 +25,7 @@
 		E442106B224425BC006C1D0C /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E442106A224425BC006C1D0C /* ScheduleVC.swift */; };
 		E442107022442665006C1D0C /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E442106F22442665006C1D0C /* EventCell.swift */; };
 		E4421072224441AA006C1D0C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4421071224441AA006C1D0C /* Event.swift */; };
+		E442107422445ACD006C1D0C /* EventDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E442107322445ACD006C1D0C /* EventDetailVC.swift */; };
 		F2DBEC6C221525630029AF2E /* ForgetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DBEC6B221525630029AF2E /* ForgetPassword.swift */; };
 		F2DBEC6E22152FF90029AF2E /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DBEC6D22152FF90029AF2E /* SignUp.swift */; };
 		F2E94A8F221CFB2A009FF9BF /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = F2E94A8E221CFB2A009FF9BF /* awsconfiguration.json */; };
@@ -56,6 +57,7 @@
 		E442106C22442621006C1D0C /* PurdueClass-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PurdueClass-Bridging-Header.h"; sourceTree = "<group>"; };
 		E442106F22442665006C1D0C /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		E4421071224441AA006C1D0C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		E442107322445ACD006C1D0C /* EventDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventDetailVC.swift; path = /Users/HeJunda/Documents/GitHub/PurdueClass/PurdueClass/PurdueClass/EventDetailVC.swift; sourceTree = "<absolute>"; };
 		F2DBEC6B221525630029AF2E /* ForgetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassword.swift; sourceTree = "<group>"; };
 		F2DBEC6D22152FF90029AF2E /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		F2E94A8E221CFB2A009FF9BF /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				DBAA4762220B233600AB0F5F /* LaunchScreen.storyboard */,
 				DBAA4765220B233600AB0F5F /* Info.plist */,
 				E442106A224425BC006C1D0C /* ScheduleVC.swift */,
+				E442107322445ACD006C1D0C /* EventDetailVC.swift */,
 				E442106F22442665006C1D0C /* EventCell.swift */,
 				E442106C22442621006C1D0C /* PurdueClass-Bridging-Header.h */,
 				E4421071224441AA006C1D0C /* Event.swift */,
@@ -315,6 +318,7 @@
 				F2E94A93221CFDF9009FF9BF /* ChangePassword.swift in Sources */,
 				E4421072224441AA006C1D0C /* Event.swift in Sources */,
 				DBF6C69F221CC3FF00349B64 /* Account.swift in Sources */,
+				E442107422445ACD006C1D0C /* EventDetailVC.swift in Sources */,
 				DBF6C6AD221CD43800349B64 /* Data.swift in Sources */,
 				F2DBEC6C221525630029AF2E /* ForgetPassword.swift in Sources */,
 				DBF6C6AF221CD45100349B64 /* CourseCell.swift in Sources */,
