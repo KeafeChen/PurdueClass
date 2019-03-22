@@ -139,8 +139,7 @@ class ScheduleVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
                 }
             }
             eventToDelete = nil
-            print("here we have \(ddddd)")
-            ddddd = false
+ 
         }
         
         //
