@@ -60,6 +60,13 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
         
         
     }
+
+    @IBAction func change(_ sender: Any) {
+        
+    }
+    @IBAction func addHW(_ sender: Any) {
+        
+    }
     func addNewIfSome(){
         var tokens = newDate.split(separator: " ")
         if tokens.count > 1{
