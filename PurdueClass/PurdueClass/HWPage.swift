@@ -28,7 +28,7 @@ class HWPage: UIViewController, UITableViewDelegate, UITableViewDataSource{
     var newDay = Int()
     @IBOutlet weak var tableView: UITableView!
     
-    let data = HWdataset()
+
     var data1 = [HWData]()
     var data2 = [HWData]()
     
@@ -37,13 +37,12 @@ class HWPage: UIViewController, UITableViewDelegate, UITableViewDataSource{
         super.viewDidLoad()
         tableView.delegate=self
         tableView.dataSource=self
-        data1=data.hwdatasets
         
-            if newDescription != ""{
-                addNewIfSome()
+        if newDescription != ""{
+            addNewIfSome()
         }
         
-            self.sortDue()
+        self.sortDue()
    /*    data = [
             HW.init(hwDescription: "hello", dueDate:"world"),
             HW.init(hwDescription: "test", dueDate:"world"),

@@ -143,7 +143,7 @@
                                 </constraints>
                                 <state key="normal" title="HomeWork"/>
                                 <connections>
-                                    <segue destination="0Ry-kt-rWx" kind="show" id="uC8-Zk-UAI"/>
+                                    <segue destination="0Ry-kt-rWx" kind="show" id="5ok-Im-EhM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGQ-MR-PWi">
@@ -1806,10 +1806,10 @@
         <image name="UserIcon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Zkg-MU-OTd"/>
+        <segue reference="5ok-Im-EhM"/>
         <segue reference="zxt-hP-dqd"/>
         <segue reference="fuC-a3-CcA"/>
-        <segue reference="oHt-ri-BxA"/>
+        <segue reference="irS-wG-Z7v"/>
         <segue reference="EHu-JF-fCR"/>
     </inferredMetricsTieBreakers>
 </document>
