@@ -15,15 +15,25 @@ class AddNewHw: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBOutlet weak var descriptionOutlet: UITextField!
+    @IBOutlet weak var dateOutlet: UITextField!
     @IBAction func backbutton(_ sender: Any) {
     }
     
     @IBAction func descriptionTextField(_ sender: Any) {
+        
     }
     
     @IBAction func dueTextField(_ sender: Any) {
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is HWPage{
+            let vc = segue.destination as? HWPage
+            vc?.newDescription = descriptionOutlet.text!
+            vc?.newDate = dateOutlet.text!
+        }
+        
+    }
     
     
     /*

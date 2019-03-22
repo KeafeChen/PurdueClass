@@ -141,8 +141,8 @@
 				A466D869222B16EE00E094D6 /* HWPage.swift */,
 				A47A7878224167960029D699 /* PastHWPage.swift */,
 				A47A786A2240818F0029D699 /* HWcell.swift */,
-				A47A786822407F490029D699 /* HWdatastruct.swift */,
 				A47A786C224085590029D699 /* HWdataset.swift */,
+				A47A786822407F490029D699 /* HWdatastruct.swift */,
 				DBC1C9DA220B3BD2009EDF1E /* HomePage.swift */,
 				DBAA4760220B233600AB0F5F /* Assets.xcassets */,
 				DBAA4762220B233600AB0F5F /* LaunchScreen.storyboard */,
@@ -488,7 +488,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_HEADERS_RUN_UNIFDEF = NO;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9ACFBDFF43;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire\"",
@@ -500,7 +500,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Shunqiao-Huang";
+				PRODUCT_BUNDLE_IDENTIFIER = "Xinmeng-Sun";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -518,7 +518,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_HEADERS_RUN_UNIFDEF = NO;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9ACFBDFF43;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire\"",
@@ -530,7 +530,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Shunqiao-Huang";
+				PRODUCT_BUNDLE_IDENTIFIER = "Xinmeng-Sun";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
