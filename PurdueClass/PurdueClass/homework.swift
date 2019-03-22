@@ -24,8 +24,15 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
     var newDay = Int()
     @IBOutlet weak var tableView: UITableView!
     
-    
+    private let notificationPublisher = NotificationPublisher()
 
+    @IBAction func sendNotificationClicked(_ sender: Any) {
+        //Temporary notification, need to solve Outlets cannot be connected to repeating content
+        
+        notificationPublisher.sendNotification(title: "HW Added To Reminder", subtitle: "Title: Shell", body: "Due Date: March 12", badge: 1, delayInterval: nil)
+        
+    }
+    
     
     // var data = [HW]()
     override func viewDidLoad() {

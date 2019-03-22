@@ -16,6 +16,7 @@
 		DBAA475F220B233600AB0F5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBAA475D220B233600AB0F5F /* Main.storyboard */; };
 		DBAA4761220B233600AB0F5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBAA4760220B233600AB0F5F /* Assets.xcassets */; };
 		DBAA4764220B233600AB0F5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBAA4762220B233600AB0F5F /* LaunchScreen.storyboard */; };
+		DBB88980224564A2009CF511 /* NotificationPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB8897F224564A2009CF511 /* NotificationPublisher.swift */; };
 		DBBA15502245243A008701F8 /* homework.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA154F2245243A008701F8 /* homework.swift */; };
 		DBBA1552224527BF008701F8 /* addHW.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA1551224527BF008701F8 /* addHW.swift */; };
 		DBBA15542245292E008701F8 /* HWData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA15532245292E008701F8 /* HWData.swift */; };
@@ -52,6 +53,7 @@
 		DBAA4760220B233600AB0F5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBAA4763220B233600AB0F5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBAA4765220B233600AB0F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBB8897F224564A2009CF511 /* NotificationPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPublisher.swift; sourceTree = "<group>"; };
 		DBBA154F2245243A008701F8 /* homework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homework.swift; sourceTree = "<group>"; };
 		DBBA1551224527BF008701F8 /* addHW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addHW.swift; sourceTree = "<group>"; };
 		DBBA15532245292E008701F8 /* HWData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWData.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				DBBA154F2245243A008701F8 /* homework.swift */,
 				DBBA1551224527BF008701F8 /* addHW.swift */,
 				DBBA15532245292E008701F8 /* HWData.swift */,
+				DBB8897F224564A2009CF511 /* NotificationPublisher.swift */,
 			);
 			path = PurdueClass;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				DBBA1552224527BF008701F8 /* addHW.swift in Sources */,
 				DBF6C6A5221CCC1100349B64 /* BackendCourseInfo.swift in Sources */,
 				E442106B224425BC006C1D0C /* ScheduleVC.swift in Sources */,
+				DBB88980224564A2009CF511 /* NotificationPublisher.swift in Sources */,
 				DBF6C6AA221CD40C00349B64 /* SearchVC.swift in Sources */,
 				DBAA475C220B233600AB0F5F /* ViewController.swift in Sources */,
 				DB79AE902243E68E0057CF08 /* forgetCurrentPassword.swift in Sources */,
