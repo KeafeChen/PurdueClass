@@ -16,6 +16,7 @@
 		A47A78772240A0490029D699 /* AddNewHw.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47A78762240A0490029D699 /* AddNewHw.swift */; };
 		A47A7879224167960029D699 /* PastHWPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47A7878224167960029D699 /* PastHWPage.swift */; };
 		CC3D557C2216424D008A4446 /* LayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3D557B2216424D008A4446 /* LayoutExtension.swift */; };
+		CCB80D6C2244A3E800A59A53 /* NotificationPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB80D6B2244A3E800A59A53 /* NotificationPublisher.swift */; };
 		DBAA475A220B233500AB0F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA4759220B233500AB0F5F /* AppDelegate.swift */; };
 		DBAA475C220B233600AB0F5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA475B220B233600AB0F5F /* ViewController.swift */; };
 		DBAA475F220B233600AB0F5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBAA475D220B233600AB0F5F /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		AE73CFC0FBD646067DC4775E /* Pods-PurdueClass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueClass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PurdueClass/Pods-PurdueClass.debug.xcconfig"; sourceTree = "<group>"; };
 		B0E55A0BC322F5F7E99B2354 /* Pods-PurdueClass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueClass.release.xcconfig"; path = "Pods/Target Support Files/Pods-PurdueClass/Pods-PurdueClass.release.xcconfig"; sourceTree = "<group>"; };
 		CC3D557B2216424D008A4446 /* LayoutExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutExtension.swift; sourceTree = "<group>"; };
+		CCB80D6B2244A3E800A59A53 /* NotificationPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPublisher.swift; sourceTree = "<group>"; };
 		DBAA4756220B233500AB0F5F /* PurdueClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PurdueClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBAA4759220B233500AB0F5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBAA475B220B233600AB0F5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 		DBAA4758220B233500AB0F5F /* PurdueClass */ = {
 			isa = PBXGroup;
 			children = (
+				DBAA475D220B233600AB0F5F /* Main.storyboard */,
 				DBF6C69E221CC3FF00349B64 /* Account.swift */,
 				DBAA4759220B233500AB0F5F /* AppDelegate.swift */,
 				DBAA475B220B233600AB0F5F /* ViewController.swift */,
@@ -128,7 +131,6 @@
 				F2E94A90221CFCE6009FF9BF /* Profile.swift */,
 				F2E94A92221CFDF9009FF9BF /* ChangePassword.swift */,
 				DBF6C6AC221CD43700349B64 /* Data.swift */,
-				DBAA475D220B233600AB0F5F /* Main.storyboard */,
 				F2DBEC6B221525630029AF2E /* ForgetPassword.swift */,
 				CC3D557B2216424D008A4446 /* LayoutExtension.swift */,
 				DBF6C6A4221CCC1100349B64 /* BackendCourseInfo.swift */,
@@ -147,6 +149,7 @@
 				DBAA4760220B233600AB0F5F /* Assets.xcassets */,
 				DBAA4762220B233600AB0F5F /* LaunchScreen.storyboard */,
 				DBAA4765220B233600AB0F5F /* Info.plist */,
+				CCB80D6B2244A3E800A59A53 /* NotificationPublisher.swift */,
 			);
 			path = PurdueClass;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				A466D86A222B16EE00E094D6 /* HWPage.swift in Sources */,
 				A47A7879224167960029D699 /* PastHWPage.swift in Sources */,
 				DBAA475A220B233500AB0F5F /* AppDelegate.swift in Sources */,
+				CCB80D6C2244A3E800A59A53 /* NotificationPublisher.swift in Sources */,
 				F2E94A93221CFDF9009FF9BF /* ChangePassword.swift in Sources */,
 				DBF6C69F221CC3FF00349B64 /* Account.swift in Sources */,
 				A47A786B2240818F0029D699 /* HWcell.swift in Sources */,

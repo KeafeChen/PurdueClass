@@ -1455,7 +1455,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="365" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7u-un-Mgj">
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7u-un-Mgj" customClass="MyStackView">
                                                     <rect key="frame" x="20" y="10" width="325" height="31"/>
                                                     <subviews>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tfZ-Xw-OBv">
@@ -1519,6 +1519,17 @@
                                 <state key="normal" title="Past Due"/>
                                 <connections>
                                     <segue destination="5PQ-Ao-xLG" kind="show" id="6lw-yA-Mr6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6m-at-YYv">
+                                <rect key="frame" x="94" y="626" width="235" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Add to Reminder" backgroundImage="Enter Answer">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendNotificationClicked:" destination="0Ry-kt-rWx" eventType="touchUpInside" id="KgI-lN-YJL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1806,9 +1817,10 @@
         <image name="UserIcon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Zkg-MU-OTd"/>
+        <segue reference="6lw-yA-Mr6"/>
+        <segue reference="1eI-vG-wJv"/>
         <segue reference="zxt-hP-dqd"/>
-        <segue reference="fuC-a3-CcA"/>
+        <segue reference="QuS-0u-fhc"/>
         <segue reference="oHt-ri-BxA"/>
         <segue reference="EHu-JF-fCR"/>
     </inferredMetricsTieBreakers>

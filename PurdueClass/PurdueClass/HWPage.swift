@@ -28,6 +28,7 @@ class HWPage: UIViewController, UITableViewDelegate, UITableViewDataSource{
     var newDay = Int()
     @IBOutlet weak var tableView: UITableView!
     
+    private let notificationPublisher = NotificationPublisher()
     let data = HWdataset()
     var data1 = [HWData]()
     var data2 = [HWData]()
@@ -168,6 +169,20 @@ class HWPage: UIViewController, UITableViewDelegate, UITableViewDataSource{
             return cell
         }
         
+    
         return UITableViewCell()
         }
+    
+    
+    @IBAction func sendNotificationClicked(_ sender: Any) {
+        //Temporary notification, need to solve Outlets cannot be connected to repeating content
+        
+        notificationPublisher.sendNotification(title: "HW Added To Reminder", subtitle: "Title: Shell", body: "Due Date: March 12", badge: 1, delayInterval: nil)
+        
+    }
+    
 }
+
+
+
+
