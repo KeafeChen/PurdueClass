@@ -17,7 +17,7 @@ class ScheduleVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
     
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var tableView: UITableView!
-    
+    var user:String? = nil
     var weekday:Int = NSCalendar.current.component(.weekday, from: Date());
     
     var course_value:String = ""
@@ -41,7 +41,10 @@ class ScheduleVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
         tableView.delegate = self
         tableView.dataSource = self
         self.view.sendSubviewToBack(calendar)
-        
+        user = (UserDefaults.standard.string(forKey: "username")!)
+
+        print("current user name is \(user)")
+
         //
         if course_value != "" {
             var newEvent = Event();
@@ -132,6 +135,16 @@ class ScheduleVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let eventDetailVC = segue.destination as? EventDetailVC {
             eventDetailVC.eventDetail = eventTodisplay
+        }
+        if let searchResultVC = segue.destination as? HomePage{
+            searchResultVC.semester_value = semester_value
+            searchResultVC.department_value = department_value
+            searchResultVC.course_value = course_value
+            searchResultVC.professor_value = professor_value
+            searchResultVC.detail_value = detail_value
+            searchResultVC.weekday_value = weekday_value
+            searchResultVC.start_value = start_value
+            searchResultVC.end_value = end_value
         }
     }
     

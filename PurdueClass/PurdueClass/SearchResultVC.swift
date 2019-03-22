@@ -13,7 +13,8 @@ import AWSDynamoDB
 
 class SearchResultVC: UIViewController {
     let dispatchGroup = DispatchGroup()
-    
+    var user:String? = nil
+
     var semester: String?
     var department: String?
     var course: String?
@@ -40,6 +41,7 @@ class SearchResultVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        user = (UserDefaults.standard.string(forKey: "username")!)
         self.view.addBackground()
         course_name.text = course_value
         semester_name.text = semester_value
