@@ -30,7 +30,7 @@ public:
             i=q.front();
             q.pop();
             to.push_back(i);
-            for(int j=0;j<V[i].size();++j) if(--tv[V[i][j]]==0) q.push(V[i][j]);
+            for(int j=0;j<V[i].size();++j) if(!--tv[V[i][j]]) q.push(V[i][j]);
         }
         if(cnt-n) return {-1};
         return to;
