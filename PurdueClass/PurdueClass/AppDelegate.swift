@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func check(){
         if UserDefaults.standard.value(forKey: "username") != nil{
             let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-            let vc : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "home_with_tabbar") as UIViewController
+            let vc = mainStoryboard.instantiateViewController(withIdentifier: "TabBarIdentifier") as UIViewController
             //let navVC = UINavigationController(rootViewController: vc)
             let share = UIApplication.shared.delegate as? AppDelegate
             share?.window?.rootViewController = vc //navVC
