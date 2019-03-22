@@ -53,6 +53,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let share = UIApplication.shared.delegate as? AppDelegate
             share?.window?.rootViewController = vc //navVC
             share?.window?.makeKeyAndVisible()
+        }else {
+            UserDefaults.standard.set(nil, forKey: "schedule");
         }
     }
 

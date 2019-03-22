@@ -16,6 +16,7 @@
 		DBAA475F220B233600AB0F5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBAA475D220B233600AB0F5F /* Main.storyboard */; };
 		DBAA4761220B233600AB0F5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBAA4760220B233600AB0F5F /* Assets.xcassets */; };
 		DBAA4764220B233600AB0F5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBAA4762220B233600AB0F5F /* LaunchScreen.storyboard */; };
+		DBB5ED8822458908008AA3F5 /* PopUpWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB5ED8722458908008AA3F5 /* PopUpWindow.swift */; };
 		DBB88980224564A2009CF511 /* NotificationPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB8897F224564A2009CF511 /* NotificationPublisher.swift */; };
 		DBBA15502245243A008701F8 /* homework.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA154F2245243A008701F8 /* homework.swift */; };
 		DBBA1552224527BF008701F8 /* addHW.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA1551224527BF008701F8 /* addHW.swift */; };
@@ -53,6 +54,7 @@
 		DBAA4760220B233600AB0F5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBAA4763220B233600AB0F5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBAA4765220B233600AB0F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBB5ED8722458908008AA3F5 /* PopUpWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpWindow.swift; sourceTree = "<group>"; };
 		DBB8897F224564A2009CF511 /* NotificationPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPublisher.swift; sourceTree = "<group>"; };
 		DBBA154F2245243A008701F8 /* homework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homework.swift; sourceTree = "<group>"; };
 		DBBA1551224527BF008701F8 /* addHW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addHW.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				DBAA475B220B233600AB0F5F /* ViewController.swift */,
 				F2E94A8E221CFB2A009FF9BF /* awsconfiguration.json */,
 				F2DBEC6D22152FF90029AF2E /* SignUp.swift */,
+				DBB5ED8722458908008AA3F5 /* PopUpWindow.swift */,
 				F2E94A90221CFCE6009FF9BF /* Profile.swift */,
 				F2E94A92221CFDF9009FF9BF /* ChangePassword.swift */,
 				DBF6C6AC221CD43700349B64 /* Data.swift */,
@@ -324,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBB5ED8822458908008AA3F5 /* PopUpWindow.swift in Sources */,
 				DBBA1552224527BF008701F8 /* addHW.swift in Sources */,
 				DBF6C6A5221CCC1100349B64 /* BackendCourseInfo.swift in Sources */,
 				E442106B224425BC006C1D0C /* ScheduleVC.swift in Sources */,

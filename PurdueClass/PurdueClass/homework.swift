@@ -21,10 +21,15 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
     // }
     
     let eventStore = EKEventStore()
-    
+    private  let notificationPublisher = NotificationPublisher()
     
     @IBAction func ExportEvent(_ sender: Any) {
-        
+        if(data1.count == 0){
+            let alert = UIAlertController(title: "Sorry", message:"You cannot export nothing to your calendar. Please add homework first.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
+            self.present(alert, animated: true){}
+            return
+        }
         let eventStore = EKEventStore()
         switch EKEventStore.authorizationStatus(for: .event) {
         case .authorized:
@@ -239,4 +244,13 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
         
         return UITableViewCell()
     }
+    
+    @IBAction func sendNotificationClicked(_ sender: Any) {
+        //Temporary notification, need to solve Outlets cannot be connected to repeating content
+        
+        notificationPublisher.sendNotification(title: "HW Added To Reminder", subtitle: "Title: Shell", body: "Due Date: March 12", badge: 1, delayInterval: nil)
+        
+    }
+    
 }
+

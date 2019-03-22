@@ -1031,6 +1031,14 @@
                                     <segue destination="qha-ET-MrB" kind="show" id="0LW-Bw-GZA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qN7-ja-7Uz">
+                                <rect key="frame" x="24" y="832" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="save_screenshot:" destination="LQ6-NJ-CJZ" eventType="touchUpInside" id="0Im-Cc-dfZ"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6AJ-zT-Tdu">
                                 <rect key="frame" x="210" y="832" width="63" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1039,12 +1047,18 @@
                                     <segue destination="0pZ-1i-BzY" kind="show" id="Hg9-6H-AeP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMv-p5-R9r">
+                                <rect key="frame" x="355" y="832" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Export"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="glh-AD-xWo"/>
                     </view>
                     <connections>
                         <outlet property="calendar" destination="onM-NK-ov4" id="FvA-Mi-52y"/>
+                        <outlet property="export_button" destination="lMv-p5-R9r" id="W6i-x9-ZGG"/>
                         <outlet property="tableView" destination="Yar-ei-RG3" id="OJ5-1f-8Nc"/>
                         <segue destination="Rcc-KP-JqF" kind="show" identifier="displayEvent" id="wRr-HH-EX7"/>
                     </connections>
@@ -1110,15 +1124,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAJ-H9-waU">
-                                <rect key="frame" x="170" y="792" width="45" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Delete"/>
-                                <connections>
-                                    <action selector="deleteCourse:" destination="Rcc-KP-JqF" eventType="touchUpInside" id="QCR-kY-xNc"/>
-                                    <segue destination="LQ6-NJ-CJZ" kind="show" identifier="deleteCourse" id="hM5-7V-Evz"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oca-JI-h00">
                                 <rect key="frame" x="26" y="59" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1198,6 +1203,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAJ-H9-waU">
+                                <rect key="frame" x="307" y="792" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteCourse:" destination="Rcc-KP-JqF" eventType="touchUpInside" id="QCR-kY-xNc"/>
+                                    <segue destination="LQ6-NJ-CJZ" kind="show" identifier="deleteCourse" id="hM5-7V-Evz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="nlR-qo-rIb"/>
@@ -2094,8 +2108,8 @@
         <segue reference="e7y-WF-OzV"/>
         <segue reference="OEf-l3-4g1"/>
         <segue reference="fuC-a3-CcA"/>
-        <segue reference="q3I-SC-Tfp"/>
-        <segue reference="irS-wG-Z7v"/>
+        <segue reference="hM5-7V-Evz"/>
+        <segue reference="oHt-ri-BxA"/>
         <segue reference="9nf-kx-Vxg"/>
     </inferredMetricsTieBreakers>
 </document>

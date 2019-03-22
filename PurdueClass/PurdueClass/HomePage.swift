@@ -33,6 +33,8 @@ class HomePage: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UITa
     var eventTodisplay = Event()
     var eventToDelete : Event? = nil
     var weekday:Int = NSCalendar.current.component(.weekday, from: Date());
+    
+    let defaults = UserDefaults.standard
 
 
     override func viewDidLoad() {
@@ -85,6 +87,28 @@ class HomePage: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UITa
         tableView.dataSource = self
         self.view.sendSubviewToBack(calendar)
         self.view.addBackground()
+        
+        
+        var local_store : Array<Array<String>> = Array()
+        
+        if defaults.value(forKey: "schedule") != nil {
+            local_store = defaults.array(forKey: "schedule") as! Array<Array<String>>
+        }
+        
+        if eventList.count != local_store.count {
+            for i in local_store{
+                var newEvent = Event();
+                newEvent.semester = i[0]
+                newEvent.course = i[1]
+                newEvent.professor = i[2]
+                newEvent.department = i[3]
+                newEvent.weekday = i[4]
+                newEvent.start = i[5]
+                newEvent.end = i[6]
+                newEvent.detail = i[7]
+                eventList.append(newEvent)
+            }
+        }
         
         // Do any additional setup after loading the view.
         if course_value != "" {
