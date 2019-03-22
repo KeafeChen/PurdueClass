@@ -24,8 +24,28 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     
     @IBAction func ExportEvent(_ sender: Any) {
-        insertEvent(store: eventStore)
-        print("inside export event")
+        
+        let eventStore = EKEventStore()
+        switch EKEventStore.authorizationStatus(for: .event) {
+        case .authorized:
+            insertEvent(store: eventStore)
+        case .denied:
+            print("Access denied")
+        case .notDetermined:
+            // 3
+            eventStore.requestAccess(to: .event, completion:
+                {[weak self] (granted: Bool, error: Error?) -> Void in
+                    if granted {
+                        self!.insertEvent(store: eventStore)
+                    } else {
+                        print("Access denied")
+                    }
+            })
+        default:
+            print("Case default")
+        }
+        //insertEvent(store: eventStore)
+        //print("inside export event")
     }
     var newDescription = String()
     var newDate = String()
@@ -48,25 +68,7 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
         
         self.sortDue()
         
-        let eventStore = EKEventStore()
-        switch EKEventStore.authorizationStatus(for: .event) {
-        case .authorized:
-            insertEvent(store: eventStore)
-        case .denied:
-            print("Access denied")
-        case .notDetermined:
-            // 3
-            eventStore.requestAccess(to: .event, completion:
-                {[weak self] (granted: Bool, error: Error?) -> Void in
-                    if granted {
-                        self!.insertEvent(store: eventStore)
-                    } else {
-                        print("Access denied")
-                    }
-            })
-        default:
-            print("Case default")
-        }
+
         
         /*    data = [
          HW.init(hwDescription: "hello", dueDate:"world"),
@@ -86,8 +88,8 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
         for calendar in calendars {
             // 2
             if calendar.title == "Calendar" {
-                print("inside calendar")
-                print(data1.count)
+                //print("inside calendar")
+                //print(data1.count)
                 for thisdata in data1{
                     //                    var yeartoadd = 2019;
                     //                    var daytoadd = thisdata.day;
@@ -110,7 +112,7 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
                     
                     event.title = thisdata.description
                     print("test description")
-                    print(data1.description)
+                    //print(data1.description)
                     event.startDate = clddate
                     event.endDate = clddate.addingTimeInterval(60*59)
                     
