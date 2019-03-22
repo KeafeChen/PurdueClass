@@ -138,7 +138,7 @@
         <!--Item-->
         <scene sceneID="SFy-C1-9Tm">
             <objects>
-                <viewController id="qha-ET-MrB" customClass="HomePage" customModule="PurdueClass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home_with_tabbar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qha-ET-MrB" customClass="HomePage" customModule="PurdueClass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="home_with_tabbar" id="sRa-Df-uGh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
