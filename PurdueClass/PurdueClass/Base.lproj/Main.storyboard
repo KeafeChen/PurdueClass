@@ -135,7 +135,7 @@
             </objects>
             <point key="canvasLocation" x="967" y="-540"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="SFy-C1-9Tm">
             <objects>
                 <viewController storyboardIdentifier="home_with_tabbar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qha-ET-MrB" customClass="HomePage" customModule="PurdueClass" customModuleProvider="target" sceneMemberID="viewController">
@@ -154,7 +154,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="3jX-su-UzK"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="2Ye-Q4-IlK"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="HomeIcon" id="2Ye-Q4-IlK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zUd-e5-r0r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1218,6 +1218,7 @@
         <image name="Enter Answer" width="358" height="58"/>
         <image name="Enter Password" width="358" height="58"/>
         <image name="Enter Username" width="362" height="62"/>
+        <image name="HomeIcon" width="30" height="30"/>
         <image name="UserIcon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
