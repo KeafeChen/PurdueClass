@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		184014130906A3620F1026C3 /* Pods_PurdueClass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB5FB171544398C9D6300CA /* Pods_PurdueClass.framework */; };
 		CC3D557C2216424D008A4446 /* LayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3D557B2216424D008A4446 /* LayoutExtension.swift */; };
+		DB79AE902243E68E0057CF08 /* forgetCurrentPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB79AE8F2243E68E0057CF08 /* forgetCurrentPassword.swift */; };
 		DBAA475A220B233500AB0F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA4759220B233500AB0F5F /* AppDelegate.swift */; };
 		DBAA475C220B233600AB0F5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA475B220B233600AB0F5F /* ViewController.swift */; };
 		DBAA475F220B233600AB0F5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBAA475D220B233600AB0F5F /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		AE73CFC0FBD646067DC4775E /* Pods-PurdueClass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueClass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PurdueClass/Pods-PurdueClass.debug.xcconfig"; sourceTree = "<group>"; };
 		B0E55A0BC322F5F7E99B2354 /* Pods-PurdueClass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueClass.release.xcconfig"; path = "Pods/Target Support Files/Pods-PurdueClass/Pods-PurdueClass.release.xcconfig"; sourceTree = "<group>"; };
 		CC3D557B2216424D008A4446 /* LayoutExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutExtension.swift; sourceTree = "<group>"; };
+		DB79AE8F2243E68E0057CF08 /* forgetCurrentPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forgetCurrentPassword.swift; sourceTree = "<group>"; };
 		DBAA4756220B233500AB0F5F /* PurdueClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PurdueClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBAA4759220B233500AB0F5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBAA475B220B233600AB0F5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				DBF6C69E221CC3FF00349B64 /* Account.swift */,
+				DB79AE8F2243E68E0057CF08 /* forgetCurrentPassword.swift */,
 				DBAA4759220B233500AB0F5F /* AppDelegate.swift */,
 				DBAA475B220B233600AB0F5F /* ViewController.swift */,
 				F2E94A8E221CFB2A009FF9BF /* awsconfiguration.json */,
@@ -300,6 +303,7 @@
 				DBF6C6A5221CCC1100349B64 /* BackendCourseInfo.swift in Sources */,
 				DBF6C6AA221CD40C00349B64 /* SearchVC.swift in Sources */,
 				DBAA475C220B233600AB0F5F /* ViewController.swift in Sources */,
+				DB79AE902243E68E0057CF08 /* forgetCurrentPassword.swift in Sources */,
 				F2E94A91221CFCE6009FF9BF /* Profile.swift in Sources */,
 				F2DBEC6E22152FF90029AF2E /* SignUp.swift in Sources */,
 				DBC1C9DB220B3BD2009EDF1E /* HomePage.swift in Sources */,
@@ -460,7 +464,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_HEADERS_RUN_UNIFDEF = NO;
-				DEVELOPMENT_TEAM = FMXB5XWJLS;
+				DEVELOPMENT_TEAM = 2662NUG884;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire\"",
@@ -472,7 +476,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Shunqiao-Huang";
+				PRODUCT_BUNDLE_IDENTIFIER = "Qifeng-Chen";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -490,7 +494,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_HEADERS_RUN_UNIFDEF = NO;
-				DEVELOPMENT_TEAM = FMXB5XWJLS;
+				DEVELOPMENT_TEAM = 2662NUG884;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire\"",
@@ -502,7 +506,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Shunqiao-Huang";
+				PRODUCT_BUNDLE_IDENTIFIER = "Qifeng-Chen";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
