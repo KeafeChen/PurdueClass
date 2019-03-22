@@ -41,5 +41,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>This application needs to access the photo library </string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>This application needs to access the calender </string>
 </dict>
 </plist>

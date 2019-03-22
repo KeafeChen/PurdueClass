@@ -20,7 +20,13 @@ class Account: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     @objc var _answer: String?
     @objc var _password: String?
     @objc var _question: String?
-    
+    @objc var _fri: Set<String>?
+    @objc var _mon: Set<String>?
+    @objc var _sat: Set<String>?
+    @objc var _sun: Set<String>?
+    @objc var _thu: Set<String>?
+    @objc var _tue: Set<String>?
+    @objc var _wed: Set<String>?
     class func dynamoDBTableName() -> String {
         
         return "csproject-mobilehub-1949109104-Account"
@@ -37,6 +43,13 @@ class Account: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
             "_answer" : "answer",
             "_password" : "password",
             "_question" : "question",
+            "_sat" : "sat",
+            "_sun" : "sun",
+            "_thu" : "thu",
+            "_tue" : "tue",
+            "_wed" : "wed",
+            "_fri" : "fri",
+            "_mon" : "mon",
         ]
     }
 }

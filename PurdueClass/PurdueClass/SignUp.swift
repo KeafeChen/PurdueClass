@@ -110,7 +110,6 @@ class SignUp: UIViewController, UITextFieldDelegate{
             self.check = false
             checkExist()
             
-            
             dispatchGroup.notify(queue: .main){
                 if(self.check){
                     let alert = UIAlertController(title: "Sorry", message:"Your username has already been registered. Please change another username.", preferredStyle: .alert)

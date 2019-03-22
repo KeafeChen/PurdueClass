@@ -9,15 +9,28 @@
 import UIKit
 import AWSAuthCore
 import AWSMobileClient
+import UserNotifications
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var isInitialized = false;
 
+    private func requestNotificationAuthorization(application: UIApplication){
+        let center = UNUserNotificationCenter.current()
+        let options: UNAuthorizationOptions = [.alert, .badge, .sound]
+        center.requestAuthorization(options: options) { granted, error in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         tabbar()
-        
+        requestNotificationAuthorization(application: application)
+
         check()
         // Override point for customization after application launch.
         AWSDDLog.add(AWSDDTTYLogger.sharedInstance)
@@ -40,6 +53,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let share = UIApplication.shared.delegate as? AppDelegate
             share?.window?.rootViewController = vc //navVC
             share?.window?.makeKeyAndVisible()
+        }else {
+            UserDefaults.standard.set(nil, forKey: "schedule");
         }
     }
 
