@@ -23,6 +23,9 @@
 		DBF6C6AB221CD40C00349B64 /* SearchResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF6C6A9221CD40B00349B64 /* SearchResultVC.swift */; };
 		DBF6C6AD221CD43800349B64 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF6C6AC221CD43700349B64 /* Data.swift */; };
 		DBF6C6AF221CD45100349B64 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF6C6AE221CD45100349B64 /* CourseCell.swift */; };
+		E442106B224425BC006C1D0C /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E442106A224425BC006C1D0C /* ScheduleVC.swift */; };
+		E442107022442665006C1D0C /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E442106F22442665006C1D0C /* EventCell.swift */; };
+		E4421072224441AA006C1D0C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4421071224441AA006C1D0C /* Event.swift */; };
 		F2DBEC6C221525630029AF2E /* ForgetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DBEC6B221525630029AF2E /* ForgetPassword.swift */; };
 		F2DBEC6E22152FF90029AF2E /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DBEC6D22152FF90029AF2E /* SignUp.swift */; };
 		F2E94A8F221CFB2A009FF9BF /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = F2E94A8E221CFB2A009FF9BF /* awsconfiguration.json */; };
@@ -51,6 +54,10 @@
 		DBF6C6A9221CD40B00349B64 /* SearchResultVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultVC.swift; sourceTree = "<group>"; };
 		DBF6C6AC221CD43700349B64 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		DBF6C6AE221CD45100349B64 /* CourseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
+		E442106A224425BC006C1D0C /* ScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
+		E442106C22442621006C1D0C /* PurdueClass-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PurdueClass-Bridging-Header.h"; sourceTree = "<group>"; };
+		E442106F22442665006C1D0C /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		E4421071224441AA006C1D0C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		F2DBEC6B221525630029AF2E /* ForgetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassword.swift; sourceTree = "<group>"; };
 		F2DBEC6D22152FF90029AF2E /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		F2E94A8E221CFB2A009FF9BF /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
@@ -129,6 +136,10 @@
 				DBAA4760220B233600AB0F5F /* Assets.xcassets */,
 				DBAA4762220B233600AB0F5F /* LaunchScreen.storyboard */,
 				DBAA4765220B233600AB0F5F /* Info.plist */,
+				E442106A224425BC006C1D0C /* ScheduleVC.swift */,
+				E442106F22442665006C1D0C /* EventCell.swift */,
+				E442106C22442621006C1D0C /* PurdueClass-Bridging-Header.h */,
+				E4421071224441AA006C1D0C /* Event.swift */,
 			);
 			path = PurdueClass;
 			sourceTree = "<group>";
@@ -167,6 +178,7 @@
 				TargetAttributes = {
 					DBAA4755220B233500AB0F5F = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -208,15 +220,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-PurdueClass-checkManifestLockResult.txt",
 			);
@@ -229,8 +237,6 @@
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PurdueClass/Pods-PurdueClass-frameworks.sh",
@@ -256,12 +262,11 @@
 				"${BUILT_PRODUCTS_DIR}/AWSSQS/AWSSQS.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSSimpleDB/AWSSimpleDB.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAutoScaling.framework",
@@ -285,6 +290,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSSQS.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSSimpleDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 			);
@@ -301,14 +307,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBF6C6A5221CCC1100349B64 /* BackendCourseInfo.swift in Sources */,
+				E442106B224425BC006C1D0C /* ScheduleVC.swift in Sources */,
 				DBF6C6AA221CD40C00349B64 /* SearchVC.swift in Sources */,
 				DBAA475C220B233600AB0F5F /* ViewController.swift in Sources */,
 				DB79AE902243E68E0057CF08 /* forgetCurrentPassword.swift in Sources */,
 				F2E94A91221CFCE6009FF9BF /* Profile.swift in Sources */,
+				E442107022442665006C1D0C /* EventCell.swift in Sources */,
 				F2DBEC6E22152FF90029AF2E /* SignUp.swift in Sources */,
 				DBC1C9DB220B3BD2009EDF1E /* HomePage.swift in Sources */,
 				DBAA475A220B233500AB0F5F /* AppDelegate.swift in Sources */,
 				F2E94A93221CFDF9009FF9BF /* ChangePassword.swift in Sources */,
+				E4421072224441AA006C1D0C /* Event.swift in Sources */,
 				DBF6C69F221CC3FF00349B64 /* Account.swift in Sources */,
 				DBF6C6AD221CD43800349B64 /* Data.swift in Sources */,
 				F2DBEC6C221525630029AF2E /* ForgetPassword.swift in Sources */,
@@ -462,6 +471,7 @@
 			baseConfigurationReference = AE73CFC0FBD646067DC4775E /* Pods-PurdueClass.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_HEADERS_RUN_UNIFDEF = NO;
 				DEVELOPMENT_TEAM = 2662NUG884;
@@ -478,6 +488,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Qifeng-Chen";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PurdueClass/PurdueClass-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = (
@@ -492,6 +504,7 @@
 			baseConfigurationReference = B0E55A0BC322F5F7E99B2354 /* Pods-PurdueClass.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_HEADERS_RUN_UNIFDEF = NO;
 				DEVELOPMENT_TEAM = 2662NUG884;
@@ -508,6 +521,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Qifeng-Chen";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PurdueClass/PurdueClass-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(PODS_ROOT)/**";

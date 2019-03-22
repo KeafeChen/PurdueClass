@@ -42,6 +42,7 @@ PODS:
     - AWSCore (= 2.9.0)
   - AWSSQS (2.9.0):
     - AWSCore (= 2.9.0)
+  - FSCalendar (2.8.0)
   - Moya (12.0.1):
     - Moya/Core (= 12.0.1)
   - Moya/Core (12.0.1):
@@ -69,6 +70,7 @@ DEPENDENCIES:
   - AWSSimpleDB
   - AWSSNS
   - AWSSQS
+  - FSCalendar
   - Moya (~> 12.0)
 
 SPEC REPOS:
@@ -95,6 +97,7 @@ SPEC REPOS:
     - AWSSimpleDB
     - AWSSNS
     - AWSSQS
+    - FSCalendar
     - Moya
     - Result
 
@@ -121,9 +124,10 @@ SPEC CHECKSUMS:
   AWSSimpleDB: 85d008599da85c61a2289638ef51f0635bec93ef
   AWSSNS: 9b4b65e53ea64abd8a907234b4e102fc05280fad
   AWSSQS: ca67d45197ab4c61c99b739c972eddc79da22c05
+  FSCalendar: 3a5ed3636e2ba1b83ebebfcf0c2603105a6f5efe
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
 
-PODFILE CHECKSUM: 2d8780b1f1c5b6a0ce2b31a654f6b582e43e9e39
+PODFILE CHECKSUM: 08ea56763ddb01dea1232c99957c6e65932cf96b
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.5.2

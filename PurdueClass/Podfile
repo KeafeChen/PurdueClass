@@ -28,4 +28,5 @@ target 'PurdueClass' do
      pod 'AWSSimpleDB'
      pod 'AWSSNS'
      pod 'AWSSQS'
+     pod 'FSCalendar'
 end
