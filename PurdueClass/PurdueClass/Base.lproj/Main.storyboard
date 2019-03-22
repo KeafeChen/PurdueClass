@@ -142,6 +142,9 @@
                                     <constraint firstAttribute="height" constant="75" id="fUN-qq-xKu"/>
                                 </constraints>
                                 <state key="normal" title="HomeWork"/>
+                                <connections>
+                                    <segue destination="bh0-6k-fN2" kind="show" id="e7y-WF-OzV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGQ-MR-PWi">
                                 <rect key="frame" x="150" y="787" width="75" height="75"/>
@@ -207,6 +210,24 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ats-Hl-jRH">
+                                <rect key="frame" x="75" y="64" width="261" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="None"/>
+                                <connections>
+                                    <segue destination="bh0-6k-fN2" kind="show" id="Brc-De-TfI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukF-oH-fBB">
+                                <rect key="frame" x="75" y="161" width="261" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="None"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhj-80-lc9">
+                                <rect key="frame" x="77" y="258" width="261" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="None"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -234,6 +255,9 @@
                     </view>
                     <connections>
                         <outlet property="calendar" destination="Pvm-se-n2t" id="kvF-QC-kVA"/>
+                        <outlet property="hw1" destination="ats-Hl-jRH" id="2NI-9y-t4X"/>
+                        <outlet property="hw2" destination="ukF-oH-fBB" id="GnQ-yU-sEe"/>
+                        <outlet property="hw3" destination="uhj-80-lc9" id="kJT-En-dBp"/>
                         <outlet property="tableView" destination="aat-iG-QdB" id="SMV-5M-uok"/>
                     </connections>
                 </viewController>
@@ -1941,12 +1965,22 @@
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="addHW:" destination="bh0-6k-fN2" eventType="touchUpInside" id="WZi-Hc-cXa"/>
+                                    <segue destination="CPz-PC-rnW" kind="show" id="F9f-2y-651"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KU-79-1Pf">
+                                <rect key="frame" x="172" y="816" width="70" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <action selector="addHW:" destination="bh0-6k-fN2" eventType="touchUpInside" id="Rjj-jJ-Niy"/>
+                                    <segue destination="qha-ET-MrB" kind="show" id="9nf-kx-Vxg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIq-qH-INF">
-                                <rect key="frame" x="20" y="81" width="70" height="46"/>
+                                <rect key="frame" x="25" y="81" width="105" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Past"/>
+                                <state key="normal" title="My current due"/>
                                 <connections>
                                     <action selector="change:" destination="bh0-6k-fN2" eventType="touchUpInside" id="8Zq-S4-Y2C"/>
                                 </connections>
@@ -1956,12 +1990,79 @@
                         <viewLayoutGuide key="safeArea" id="dau-tI-o7b"/>
                     </view>
                     <connections>
+                        <outlet property="changeButton" destination="JIq-qH-INF" id="oBg-Uj-Rwo"/>
                         <outlet property="tableView" destination="oTi-xC-FYY" id="M5d-e6-ycO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OLM-A1-TAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1289.8550724637682" y="-633.48214285714278"/>
+        </scene>
+        <!--AddHW-->
+        <scene sceneID="erw-7K-5wU">
+            <objects>
+                <viewController id="CPz-PC-rnW" customClass="addHW" customModule="PurdueClass" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ksr-SU-TFK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Homework description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXf-90-haL">
+                                <rect key="frame" x="39" y="181" width="337" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Due date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2I-Uo-zaA">
+                                <rect key="frame" x="39" y="364" width="337" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="plx-3w-OTV" userLabel="description1">
+                                <rect key="frame" x="39" y="264" width="299" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hmJ-mK-iOd" userLabel="date">
+                                <rect key="frame" x="39" y="433" width="299" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7L9-x5-8dy">
+                                <rect key="frame" x="39" y="71" width="68" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="back:" destination="CPz-PC-rnW" eventType="touchUpInside" id="Wim-gU-N6u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdj-R1-hPn">
+                                <rect key="frame" x="154" y="545" width="68" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submit:" destination="CPz-PC-rnW" eventType="touchUpInside" id="LMJ-Ty-2t2"/>
+                                    <segue destination="bh0-6k-fN2" kind="show" id="2GC-CR-UBz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0Do-oN-WhJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="date" destination="hmJ-mK-iOd" id="hG3-OP-4TL"/>
+                        <outlet property="description1" destination="plx-3w-OTV" id="NFl-IA-lch"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x4z-E9-XT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2082.608695652174" y="-633.48214285714278"/>
         </scene>
     </scenes>
     <resources>
@@ -1974,10 +2075,11 @@
         <image name="UserIcon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="e7y-WF-OzV"/>
         <segue reference="OEf-l3-4g1"/>
         <segue reference="fuC-a3-CcA"/>
         <segue reference="q3I-SC-Tfp"/>
         <segue reference="irS-wG-Z7v"/>
-        <segue reference="EHu-JF-fCR"/>
+        <segue reference="9nf-kx-Vxg"/>
     </inferredMetricsTieBreakers>
 </document>

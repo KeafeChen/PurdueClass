@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
     //class HeadlineTableViewCell: UITableViewCell {
     //}
@@ -24,8 +25,7 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var tableView: UITableView!
     
     
-    var data1 = [HWData]()
-    var data2 = [HWData]()
+
     
     // var data = [HW]()
     override func viewDidLoad() {
@@ -56,13 +56,25 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
     //let dueDate = ["Jan 07 11:59","Jan 20 11:59","Jan 11 11:59"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(current == true){
+            return data1.count
+        }
         return data2.count
         
         
     }
-
+    @IBOutlet weak var changeButton: UIButton!
+    
     @IBAction func change(_ sender: Any) {
-        
+        if(current == true){
+            current = false
+            tableView.reloadData()
+            changeButton.setTitle("My past due", for: .normal)
+        }else{
+            current = true
+            tableView.reloadData()
+            changeButton.setTitle("My current due", for: .normal)
+        }
     }
     @IBAction func addHW(_ sender: Any) {
         
@@ -82,54 +94,39 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
             case "September": newMonth = 9;
             case "October": newMonth = 10;
             case "November": newMonth = 11;
-            case "Decemebr": newMonth = 12;
+            case "December": newMonth = 12;
                 
             default:
                 newMonth = 0;
             }
             newDay = Int(tokens[1])!
-            data1.append(HWData(description: newDescription, date: newDate, month: newMonth, day: newDay//,HWswitch: false
+            if current == true{
+                data1.append(HWData(description: newDescription, date: newDate, month: newMonth, day: newDay//,HWswitch: false
             ))
+            }
+            else{
+                data2.append(HWData(description: newDescription, date: newDate, month: newMonth, day: newDay//,HWswitch: false
+            ))
+            }
         }
-        //print("test new goes here")
-        //print(newDescription)
-        //print(newDate)
-        //print(newMonth)
-        //print(newDay)
+
         
     }
     
     func sortDue(){
-        //for hw in data.hwdatasets{
-        //  if hw
-        //}
-        //        var sortdatelist = [Int]()
-        // for i in data.hwdatasets{
-        //   sortdatelist.append(i.month*10+i.day)
-        // }
-        
-        //        quicksort(data.hwdatasets)
-        //print("see here\n")
-        //print(data.hwdatasets.sorted(by: { $0.month < $1.month}))
-        //data1 = data.hwdatasets
-        //data1.append(somestuff)
-        data2 = data1
-        data2.sort{
-            ($0.month, $0.day) <
-                ($1.month, $1.day)
+        if(current == true){
+            data1.sort{
+                ($0.month, $0.day) <
+                    ($1.month, $1.day)
+            }
+        }else{
+            data2.sort{
+                ($0.month, $0.day) <
+                    ($1.month, $1.day)
+            }
         }
         
-        print("test data 22222222")
-        print(data2)
-        //        _ = data1.sort {
-        //            if $0.month != $1.month {
-        //                return $0.month < $1.month
-        //            }
-        //            else {
-        //                return $0.day < $1.day
-        //            }
-        //
-        //        }
+
     }
     
     
@@ -146,23 +143,14 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
      }
      */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //  let cell = self.tableView.dequeueReusableCell(withIdentifier: "hwcell")as! CustomCell
-        // cell.hwDescription = data[indexPath.row].hwDescription
-        //cell.dueDate = data[indexPath.row].dueDate
-        
-        
-        
-        //let text = self.hwDescription[indexPath.row]
-        //cell.textLabel?.text = hwDescription[indexPath.row]
-        
-        // test data2 here
-        
-        print("test data2")
-        
         if let cell=tableView.dequeueReusableCell(withIdentifier: "hwcell", for: indexPath) as? HWcell{
-            print(cell)
+
             //           DispatchQueue.main.async {
-            cell.configureCell(hwcelldata: self.data2[indexPath.row])
+            if(current == true){
+                cell.configureCell(hwcelldata: data1[indexPath.row])
+            }else{
+                cell.configureCell(hwcelldata: data2[indexPath.row])
+            }
             //         self.dispatchGroup.leave()
             
             //   }
