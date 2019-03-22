@@ -6,6 +6,7 @@
 //  Copyright © 2019 Qifeng Chen. All rights reserved.
 //
 
+import EventKit
 import UIKit
 
 
@@ -18,20 +19,41 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
     //    var hwDescription: String
     //  var dueDate: String
     // }
+    
+    let eventStore = EKEventStore()
+    
+    
+    @IBAction func ExportEvent(_ sender: Any) {
+        
+        let eventStore = EKEventStore()
+        switch EKEventStore.authorizationStatus(for: .event) {
+        case .authorized:
+            insertEvent(store: eventStore)
+        case .denied:
+            print("Access denied")
+        case .notDetermined:
+            // 3
+            eventStore.requestAccess(to: .event, completion:
+                {[weak self] (granted: Bool, error: Error?) -> Void in
+                    if granted {
+                        self!.insertEvent(store: eventStore)
+                    } else {
+                        print("Access denied")
+                    }
+            })
+        default:
+            print("Case default")
+        }
+        //insertEvent(store: eventStore)
+        //print("inside export event")
+    }
     var newDescription = String()
     var newDate = String()
     var newMonth = Int()
     var newDay = Int()
     @IBOutlet weak var tableView: UITableView!
     
-    private let notificationPublisher = NotificationPublisher()
-
-    @IBAction func sendNotificationClicked(_ sender: Any) {
-        //Temporary notification, need to solve Outlets cannot be connected to repeating content
-        
-        notificationPublisher.sendNotification(title: "HW Added To Reminder", subtitle: "Title: Shell", body: "Due Date: March 12", badge: 1, delayInterval: nil)
-        
-    }
+    
     
     
     // var data = [HW]()
@@ -45,6 +67,9 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
         }
         
         self.sortDue()
+        
+
+        
         /*    data = [
          HW.init(hwDescription: "hello", dueDate:"world"),
          HW.init(hwDescription: "test", dueDate:"world"),
@@ -52,6 +77,54 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
          HW.init(hwDescription: "hello", dueDate:"world")]*/
         //self.tableView.register(CustomCell.self, forCellReuseIdentifier: "custom")
         //  self.tableView.register(CustomCell.self, forCellReuseIdentifier: "hwcell")
+    }
+    
+    func insertEvent(store: EKEventStore) {
+        
+        print("inside insertevent")
+        
+        // 1
+        let calendars = store.calendars(for: .event)
+        for calendar in calendars {
+            // 2
+            if calendar.title == "Calendar" {
+                //print("inside calendar")
+                //print(data1.count)
+                for thisdata in data1{
+                    //                    var yeartoadd = 2019;
+                    //                    var daytoadd = thisdata.day;
+                    //                    var monthtoadd = thisdata.month;
+                    let thisCalendar = Calendar.current
+                    
+                    let dateComponent = DateComponents(calendar: Calendar.current, era: 1, year: 2019, month: thisdata.month, day: thisdata.day, hour: 23)
+                    
+                    let clddate = thisCalendar.date(from: dateComponent)!
+                    // Calendar.current.date(byAdding: dateComponent, to: clddate)
+                    
+                    // 3
+                    //let startDate = Date()
+                    // 2 hours
+                    // let endDate = dateComponent.addingTimeInterval(2 * 60 * 60)
+                    
+                    // 4
+                    let event = EKEvent(eventStore: store)
+                    event.calendar = calendar
+                    
+                    event.title = thisdata.description
+                    print("test description")
+                    //print(data1.description)
+                    event.startDate = clddate
+                    event.endDate = clddate.addingTimeInterval(60*59)
+                    
+                    // 5
+                    do {
+                        try store.save(event, span: .thisEvent)
+                    }
+                    catch {
+                        print("Error saving event in calendar")             }
+                }
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -109,14 +182,14 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
             newDay = Int(tokens[1])!
             if current == true{
                 data1.append(HWData(description: newDescription, date: newDate, month: newMonth, day: newDay//,HWswitch: false
-            ))
+                ))
             }
             else{
                 data2.append(HWData(description: newDescription, date: newDate, month: newMonth, day: newDay//,HWswitch: false
-            ))
+                ))
             }
         }
-
+        
         
     }
     
@@ -133,7 +206,7 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
             }
         }
         
-
+        
     }
     
     
@@ -151,7 +224,7 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
      */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell=tableView.dequeueReusableCell(withIdentifier: "hwcell", for: indexPath) as? HWcell{
-
+            
             //           DispatchQueue.main.async {
             if(current == true){
                 cell.configureCell(hwcelldata: data1[indexPath.row])
