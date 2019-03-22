@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		184014130906A3620F1026C3 /* Pods_PurdueClass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB5FB171544398C9D6300CA /* Pods_PurdueClass.framework */; };
 		CC3D557C2216424D008A4446 /* LayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3D557B2216424D008A4446 /* LayoutExtension.swift */; };
+		CCB80D6822449ABA00A59A53 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB80D6722449ABA00A59A53 /* TabBarController.swift */; };
 		DBAA475A220B233500AB0F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA4759220B233500AB0F5F /* AppDelegate.swift */; };
 		DBAA475C220B233600AB0F5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA475B220B233600AB0F5F /* ViewController.swift */; };
 		DBAA475F220B233600AB0F5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBAA475D220B233600AB0F5F /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		AE73CFC0FBD646067DC4775E /* Pods-PurdueClass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueClass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PurdueClass/Pods-PurdueClass.debug.xcconfig"; sourceTree = "<group>"; };
 		B0E55A0BC322F5F7E99B2354 /* Pods-PurdueClass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueClass.release.xcconfig"; path = "Pods/Target Support Files/Pods-PurdueClass/Pods-PurdueClass.release.xcconfig"; sourceTree = "<group>"; };
 		CC3D557B2216424D008A4446 /* LayoutExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutExtension.swift; sourceTree = "<group>"; };
+		CCB80D6722449ABA00A59A53 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DBAA4756220B233500AB0F5F /* PurdueClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PurdueClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBAA4759220B233500AB0F5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBAA475B220B233600AB0F5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				DBF6C6A6221CD40000349B64 /* ClassInfoVC.swift */,
 				DBF6C6AE221CD45100349B64 /* CourseCell.swift */,
 				DBC1C9DA220B3BD2009EDF1E /* HomePage.swift */,
+				CCB80D6722449ABA00A59A53 /* TabBarController.swift */,
 				DBAA4760220B233600AB0F5F /* Assets.xcassets */,
 				DBAA4762220B233600AB0F5F /* LaunchScreen.storyboard */,
 				DBAA4765220B233600AB0F5F /* Info.plist */,
@@ -230,7 +233,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PurdueClass/Pods-PurdueClass-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-PurdueClass/Pods-PurdueClass-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSAutoScaling/AWSAutoScaling.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCloudWatch/AWSCloudWatch.framework",
@@ -255,6 +258,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/TransitionableTab/TransitionableTab.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -284,10 +288,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TransitionableTab.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PurdueClass/Pods-PurdueClass-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PurdueClass/Pods-PurdueClass-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -298,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBF6C6A5221CCC1100349B64 /* BackendCourseInfo.swift in Sources */,
+				CCB80D6822449ABA00A59A53 /* TabBarController.swift in Sources */,
 				DBF6C6AA221CD40C00349B64 /* SearchVC.swift in Sources */,
 				DBAA475C220B233600AB0F5F /* ViewController.swift in Sources */,
 				F2E94A91221CFCE6009FF9BF /* Profile.swift in Sources */,

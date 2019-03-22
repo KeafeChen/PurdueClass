@@ -48,6 +48,7 @@ PODS:
     - Alamofire (~> 4.1)
     - Result (~> 4.0)
   - Result (4.1.0)
+  - TransitionableTab (0.2.0)
 
 DEPENDENCIES:
   - AWSAuthCore
@@ -70,6 +71,7 @@ DEPENDENCIES:
   - AWSSNS
   - AWSSQS
   - Moya (~> 12.0)
+  - TransitionableTab (~> 0.2.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -97,6 +99,7 @@ SPEC REPOS:
     - AWSSQS
     - Moya
     - Result
+    - TransitionableTab
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
@@ -123,7 +126,8 @@ SPEC CHECKSUMS:
   AWSSQS: ca67d45197ab4c61c99b739c972eddc79da22c05
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  TransitionableTab: 54a5d0af475033bdb83959fde4e5d6201af7e2ab
 
-PODFILE CHECKSUM: 2d8780b1f1c5b6a0ce2b31a654f6b582e43e9e39
+PODFILE CHECKSUM: 26abc868c30b29b2e07b6ea87f3814a73f71ad7e
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1
