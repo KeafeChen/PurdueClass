@@ -16,8 +16,8 @@ class Profile: UIViewController {
     
     @IBOutlet weak var LogoutButton: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         self.view.addBackground()
         ChangePassword.addButtonDesign()
         LogoutButton.alpha = 0.7
@@ -57,4 +57,5 @@ class Profile: UIViewController {
      }
      */
     
+    @IBAction func unwindToProfile (_ sender: UIStoryboardSegue){}
 }

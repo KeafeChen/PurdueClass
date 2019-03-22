@@ -79,9 +79,11 @@ class ClassInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     var categryToUpdate: String!
     let dispatchGroup = DispatchGroup()
     
-    override func viewDidLoad() {
+    @IBAction func unwindToClassinfoVC (_ sender: UIStoryboardSegue){}
+    
+    override func viewWillAppear(_ animated: Bool) {
         self.classTable.allowsSelection = true
-        super.viewDidLoad()
+        super.viewWillAppear(true)
         self.view.addBackground()
         classTable.delegate = self
         let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
@@ -380,7 +382,5 @@ class ClassInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
                 }
         })
     }
-    
-   
 }
 

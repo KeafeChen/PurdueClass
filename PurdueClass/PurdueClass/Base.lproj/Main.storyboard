@@ -755,7 +755,7 @@
                                     <action selector="Cancel:" destination="26u-ZV-vHO" eventType="touchUpInside" id="gSv-Gp-S7G"/>
                                     <action selector="ChangePassword:" destination="fdn-H7-Wp8" eventType="touchUpInside" id="AYo-cx-IYP"/>
                                     <action selector="LoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wqa-Ih-bjt"/>
-                                    <segue destination="fdn-H7-Wp8" kind="show" id="fX0-gE-dmH"/>
+                                    <segue destination="fwD-Cq-rq3" kind="unwind" unwindAction="unwindToProfile:" id="TjL-HM-BbE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -770,6 +770,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1c-dp-XdC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="fwD-Cq-rq3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1945" y="1012"/>
         </scene>
@@ -1388,10 +1389,11 @@
                     <connections>
                         <outlet property="searchBar" destination="dhM-nZ-Ctm" id="Nri-6t-F1u"/>
                         <outlet property="tableView" destination="nC8-Kz-KOm" id="jgh-rw-owk"/>
-                        <segue destination="0pZ-1i-BzY" kind="show" identifier="toClassInfoVC" id="vQz-LK-3li"/>
+                        <segue destination="stG-Jf-dUh" kind="unwind" identifier="toClassInfoVC" unwindAction="unwindToClassinfoVC:" id="hvK-sc-bb4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBx-R9-VaU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="stG-Jf-dUh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3799.1999999999998" y="-384.55772113943033"/>
         </scene>
@@ -1406,7 +1408,7 @@
         <image name="UserIcon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OEf-l3-4g1"/>
+        <segue reference="SVl-wM-2Ap"/>
         <segue reference="iFe-NY-GST"/>
         <segue reference="oHt-ri-BxA"/>
         <segue reference="RD3-D1-QGt"/>

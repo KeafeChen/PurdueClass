@@ -80,6 +80,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         titleToPass = data[indexPath.row]
+        //where original back segue is performed
         performSegue(withIdentifier: "toClassInfoVC", sender: self)
     }
     
