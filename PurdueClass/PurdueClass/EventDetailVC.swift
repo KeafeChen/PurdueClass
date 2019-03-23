@@ -47,6 +47,9 @@ class EventDetailVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func switch_class(_ sender: Any) {
+        deleteCourse(self)
+    }
     @IBAction func deleteCourse(_ sender: Any) {
         performSegue(withIdentifier: "deleteCourse", sender: self)
     }
