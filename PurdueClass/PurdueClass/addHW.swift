@@ -9,11 +9,27 @@
 import UIKit
 
 class addHW: UIViewController {
-
+    
+    private var datePicker = UIDatePicker()
+    //private var ddate = Date
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        datePicker.datePickerMode = .dateAndTime
+        date.inputView = datePicker
+        datePicker.addTarget(self, action: #selector(addHW.dateChanged(sender:)), for: UIControl.Event.valueChanged)
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func dateChanged(sender: UIDatePicker){
+        let format = DateFormatter()
+        format.dateStyle = DateFormatter.Style.medium
+        format.timeStyle = DateFormatter.Style.medium
+        date.text = format.string(from: sender.date)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
     
     @IBOutlet weak var description1: UITextField!
@@ -32,7 +48,7 @@ class addHW: UIViewController {
         if segue.destination is homework{
             let vc = segue.destination as? homework
             vc?.newDescription = description1.text!
-            vc?.newDate = date.text!
+            vc?.newDate = datePicker.date
         }
         
     }

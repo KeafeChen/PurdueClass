@@ -60,7 +60,7 @@
 		DBBA1551224527BF008701F8 /* addHW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addHW.swift; sourceTree = "<group>"; };
 		DBBA15532245292E008701F8 /* HWData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWData.swift; sourceTree = "<group>"; };
 		DBBA15552245296A008701F8 /* HWcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWcell.swift; sourceTree = "<group>"; };
-		DBC1C9DA220B3BD2009EDF1E /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		DBC1C9DA220B3BD2009EDF1E /* HomePage.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		DBF6C69E221CC3FF00349B64 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		DBF6C6A4221CCC1100349B64 /* BackendCourseInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendCourseInfo.swift; sourceTree = "<group>"; };
 		DBF6C6A6221CD40000349B64 /* ClassInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassInfoVC.swift; sourceTree = "<group>"; };

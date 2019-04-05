@@ -40,6 +40,8 @@ class HomePage: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UITa
     override func viewDidLoad() {
         super.viewDidLoad()
         print(data1)
+        let dateFormattor = DateFormatter()
+        dateFormattor.dateFormat = "MMMM-dd HH:mm"
         if(data1.count == 0){
             hw1.setTitle("None", for: .normal )
             hw2.setTitle("None", for: .normal )
@@ -48,30 +50,30 @@ class HomePage: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UITa
             if(data1.count == 1){
                 var _hw1:String = data1[0].description
                 _hw1 += "   "
-                _hw1 += data1[0].date
+                _hw1 += dateFormattor.string(from: data1[0].date)
                 hw1.setTitle(_hw1, for: .normal)
                 hw2.setTitle("None", for: .normal )
                 hw3.setTitle("None", for: .normal )
             }else if(data1.count == 2){
                 var _hw1:String = data1[0].description
                 _hw1 += "   "
-                _hw1 += data1[0].date
+                _hw1 += dateFormattor.string(from: data1[0].date)
                 var _hw2:String = data1[1].description
                 _hw2 += "   "
-                _hw2 += data1[1].date
+                _hw2 += dateFormattor.string(from: data1[1].date)
                 hw1.setTitle(_hw1, for: .normal)
                 hw2.setTitle(_hw2, for: .normal )
                 hw3.setTitle("None", for: .normal )
             }else if(data1.count >= 3){
                 var _hw1:String = data1[0].description
                 _hw1 += "   "
-                _hw1 += data1[0].date
+                _hw1 += dateFormattor.string(from: data1[0].date)
                 var _hw2:String = data1[1].description
                 _hw2 += "   "
-                _hw2 += data1[1].date
+                _hw2 += dateFormattor.string(from: data1[1].date)
                 var _hw3:String = data1[2].description
                 _hw3 += "   "
-                _hw3 += data1[2].date
+                _hw3 += dateFormattor.string(from: data1[2].date)
                 hw1.setTitle(_hw1, for: .normal)
                 hw2.setTitle(_hw2, for: .normal )
                 hw3.setTitle(_hw3, for: .normal )

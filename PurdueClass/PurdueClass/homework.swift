@@ -53,9 +53,11 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
         //print("inside export event")
     }
     var newDescription = String()
-    var newDate = String()
-    var newMonth = Int()
-    var newDay = Int()
+    var newDate = Date()
+//    var newMonth = Int()
+//    var newDay = Int()
+//    var newHour = Int()
+//    var newMin = Int()
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -71,7 +73,7 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
             addNewIfSome()
         }
         
-        self.sortDue()
+        sortDue()
         
 
         
@@ -101,9 +103,9 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
                     //                    var monthtoadd = thisdata.month;
                     let thisCalendar = Calendar.current
                     
-                    let dateComponent = DateComponents(calendar: Calendar.current, era: 1, year: 2019, month: thisdata.month, day: thisdata.day, hour: 23)
+                  //  let dateComponent = DateComponents(calendar: Calendar.current, era: 1, year: 2019, month: thisdata.month, day: thisdata.day, hour: 23, minute: 0 )
                     
-                    let clddate = thisCalendar.date(from: dateComponent)!
+                    let clddate = thisdata.date//thisCalendar.date(from: dateComponent)!
                     // Calendar.current.date(byAdding: dateComponent, to: clddate)
                     
                     // 3
@@ -118,9 +120,9 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
                     event.title = thisdata.description
                     print("test description")
                     //print(data1.description)
-                    event.startDate = clddate
-                    event.endDate = clddate.addingTimeInterval(60*59)
-                    
+                    event.endDate = clddate
+                    event.startDate = clddate.addingTimeInterval(-60*59)
+
                     // 5
                     do {
                         try store.save(event, span: .thisEvent)
@@ -164,8 +166,9 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBAction func addHW(_ sender: Any) {
         
     }
+    
     func addNewIfSome(){
-        var tokens = newDate.split(separator: " ")
+        /*var tokens = newDate.split(separator: " ")
         if tokens.count > 1{
             switch tokens[0]{
             case "January": newMonth = 1;
@@ -184,16 +187,15 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
             default:
                 newMonth = 0;
             }
-            newDay = Int(tokens[1])!
+            newDay = Int(tokens[1])!*/
             if current == true{
-                data1.append(HWData(description: newDescription, date: newDate, month: newMonth, day: newDay//,HWswitch: false
+                data1.append(HWData(description: newDescription, date: newDate//,HWswitch: false
                 ))
             }
             else{
-                data2.append(HWData(description: newDescription, date: newDate, month: newMonth, day: newDay//,HWswitch: false
+                data2.append(HWData(description: newDescription, date: newDate//,HWswitch: false
                 ))
             }
-        }
         
         
     }
@@ -201,13 +203,13 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
     func sortDue(){
         if(current == true){
             data1.sort{
-                ($0.month, $0.day) <
-                    ($1.month, $1.day)
+                ($0.date) <
+                    ($1.date)
             }
         }else{
             data2.sort{
-                ($0.month, $0.day) <
-                    ($1.month, $1.day)
+                ($0.date) <
+                    ($1.date)
             }
         }
         
@@ -273,6 +275,5 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
         notificationPublisher.sendNotification(title: "HW Added To Reminder", subtitle: "Title: Shell", body: "Due Date: March 12", badge: 1, delayInterval: nil)
         
     }
-    
-}
 
+}

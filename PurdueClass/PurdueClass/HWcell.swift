@@ -20,7 +20,9 @@ class HWcell: UITableViewCell {
     
     func configureCell(hwcelldata: HWData){
         HWdescription.text=hwcelldata.description
-        HWdate.text=hwcelldata.date
+        let dateFormattor = DateFormatter()
+        dateFormattor.dateFormat = "MMMM-dd HH:mm"
+        HWdate.text=dateFormattor.string(from: hwcelldata.date)
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
