@@ -245,6 +245,28 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
         return UITableViewCell()
     }
     
+    // delete cell
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            // handle delete (by removing the data from your array and updating the tableview)
+            if(current == true){
+                data1.remove(at: indexPath.row)
+            }else{
+                data2.remove(at: indexPath.row)
+            }
+            
+            tableView.beginUpdates()
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            tableView.endUpdates()
+            
+        }
+    }
+    
     @IBAction func sendNotificationClicked(_ sender: Any) {
         //Temporary notification, need to solve Outlets cannot be connected to repeating content
         
