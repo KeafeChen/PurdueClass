@@ -9,8 +9,49 @@
 import EventKit
 import UIKit
 
+protocol cellDelagateP: class {
+    func didPressButton(_ sender: UIButton)
+}
 
-class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class HWcell: UITableViewCell {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    weak var cellDelegate: cellDelagateP?
+    @IBOutlet weak var HWdate: UILabel!
+    @IBOutlet weak var HWdescription: UILabel!
+    @IBOutlet weak var btn: UIButton!
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        let button = sender
+        
+        cellDelegate?.didPressButton(button)
+    }
+
+    
+    // @IBAction func HWSwitch(_ sender: Any)
+    
+    func configureCell(cell: HWcell, hwcelldata: HWData){
+        HWdescription.text=hwcelldata.description
+        let dateFormattor = DateFormatter()
+        dateFormattor.dateFormat = "MMMM-dd HH:mm"
+        HWdate.text=dateFormattor.string(from: hwcelldata.date)
+        if(hwcelldata.todoCheck == false){
+            cell.btn.setTitle("DONE", for: .normal)
+        }
+        if(hwcelldata.todoCheck == true){
+            cell.btn.setTitle("TODO", for: .normal)
+        }
+    }
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
+    }
+    
+    
+}
+class homework: UIViewController, UITableViewDelegate, UITableViewDataSource , cellDelagateP{
     //class HeadlineTableViewCell: UITableViewCell {
     //}
     
@@ -19,6 +60,66 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
     //    var hwDescription: String
     //  var dueDate: String
     // }
+    
+    func didPressButton(_ sender: UIButton) {
+        if let indexPath = getCurrentCellIndexPath(sender) {
+            let index = indexPath.row
+
+            if(current){
+                let todoo = data1[index].todoCheck
+                if(todoo){
+                    data1[index].todoCheck = false
+                    sender.setTitle("DONE", for: .normal)
+
+                }else{
+                    data1[index].todoCheck = true
+                    sender.setTitle("TODO", for: .normal)
+
+                }
+            }else{
+                let todoo = data2[index].todoCheck
+                if(todoo){
+                    data1[index].todoCheck = false
+                    sender.setTitle("DONE", for: .normal)
+
+                }else{
+                    data1[index].todoCheck = true
+                    sender.setTitle("TODO", for: .normal)
+
+                }
+            }
+            
+        }
+    }
+    func getCurrentCellIndexPath(_ sender: UIButton) -> IndexPath? {
+        let buttonPosition = sender.convert(CGPoint.zero, to: tableView)
+        if let indexPath: IndexPath = tableView.indexPathForRow(at: buttonPosition) {
+            return indexPath
+        }
+        return nil
+    }
+   /* @IBAction func todoAction(_ sender: Any) {
+        let cell = (sender as AnyObject).superview?.superview?.superview as! UITableViewCell
+        var indexPath = tableView.indexPath(for: cell)
+        if(current){
+            let index = (indexPath?.row)!
+            var todoo = data1[index].todoCheck
+            if(todoo){
+                todoo = false
+            }else{
+                todoo = true
+            }
+        }else{
+            let index = (indexPath?.row)!
+            var todoo = data2[index].todoCheck
+            if(todoo){
+                todoo = false
+            }else{
+                todoo = true
+            }
+        }
+    }*/
+
     
     let eventStore = EKEventStore()
     private  let notificationPublisher = NotificationPublisher()
@@ -189,11 +290,11 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
             }
             newDay = Int(tokens[1])!*/
             if current == true{
-                data1.append(HWData(description: newDescription, date: newDate//,HWswitch: false
+                data1.append(HWData(description: newDescription, date: newDate, todoCheck: true//,HWswitch: false
                 ))
             }
             else{
-                data2.append(HWData(description: newDescription, date: newDate//,HWswitch: false
+                data2.append(HWData(description: newDescription, date: newDate, todoCheck: true//,HWswitch: false
                 ))
             }
         
@@ -231,16 +332,18 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
      */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell=tableView.dequeueReusableCell(withIdentifier: "hwcell", for: indexPath) as? HWcell{
-            
+            cell.cellDelegate = self
+
             //           DispatchQueue.main.async {
             if(current == true){
-                cell.configureCell(hwcelldata: data1[indexPath.row])
+                cell.configureCell(cell: cell, hwcelldata: data1[indexPath.row])
             }else{
-                cell.configureCell(hwcelldata: data2[indexPath.row])
+                cell.configureCell(cell: cell, hwcelldata: data2[indexPath.row])
             }
             //         self.dispatchGroup.leave()
             
             //   }
+            cell.btn.tag = indexPath.row
             return cell
         }
         

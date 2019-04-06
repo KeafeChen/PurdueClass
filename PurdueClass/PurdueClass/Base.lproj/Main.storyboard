@@ -1930,11 +1930,18 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mhe-Vi-g03">
                                                     <rect key="frame" x="20" y="10" width="325" height="31"/>
                                                     <subviews>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qjV-f1-53Y">
-                                                            <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
-                                                        </switch>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vb2-AW-wbE">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="31"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="50" id="5r9-kI-d8l"/>
+                                                            </constraints>
+                                                            <state key="normal" title="TODO"/>
+                                                            <connections>
+                                                                <action selector="buttonPressed:" destination="4Vw-XT-FDl" eventType="touchUpInside" id="V0L-4o-zrA"/>
+                                                            </connections>
+                                                        </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" layoutMarginsFollowReadableWidth="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUN-no-Trn" userLabel="HWDescription">
-                                                            <rect key="frame" x="49" y="0.0" width="135" height="31"/>
+                                                            <rect key="frame" x="50" y="0.0" width="134" height="31"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -1947,14 +1954,12 @@
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="qjV-f1-53Y" secondAttribute="bottom" id="0F5-5y-QQ8"/>
-                                                        <constraint firstItem="gUN-no-Trn" firstAttribute="leading" secondItem="qjV-f1-53Y" secondAttribute="trailing" id="Bs3-1P-i7m"/>
                                                         <constraint firstItem="uYO-zR-iX5" firstAttribute="top" secondItem="Mhe-Vi-g03" secondAttribute="top" id="GR2-KT-Bbu"/>
-                                                        <constraint firstItem="qjV-f1-53Y" firstAttribute="leading" secondItem="Mhe-Vi-g03" secondAttribute="leading" id="WQn-uO-ARn"/>
-                                                        <constraint firstItem="qjV-f1-53Y" firstAttribute="top" secondItem="Mhe-Vi-g03" secondAttribute="top" id="al7-oF-HAS"/>
                                                         <constraint firstAttribute="bottom" secondItem="gUN-no-Trn" secondAttribute="bottom" id="g8t-2N-6pb"/>
+                                                        <constraint firstItem="Vb2-AW-wbE" firstAttribute="leading" secondItem="Mhe-Vi-g03" secondAttribute="leading" id="ifD-4C-Spw"/>
                                                         <constraint firstAttribute="trailing" secondItem="uYO-zR-iX5" secondAttribute="trailing" id="j21-pR-m02"/>
                                                         <constraint firstAttribute="bottom" secondItem="uYO-zR-iX5" secondAttribute="bottom" id="mIY-gM-NF2"/>
+                                                        <constraint firstItem="Vb2-AW-wbE" firstAttribute="top" secondItem="Mhe-Vi-g03" secondAttribute="top" id="pIN-al-R9d"/>
                                                         <constraint firstItem="gUN-no-Trn" firstAttribute="top" secondItem="Mhe-Vi-g03" secondAttribute="top" id="tPX-q8-1Xa"/>
                                                     </constraints>
                                                 </stackView>
@@ -1967,8 +1972,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="HWdate" destination="uYO-zR-iX5" id="zE4-8m-4cS"/>
-                                            <outlet property="HWdescription" destination="gUN-no-Trn" id="A89-h0-Clm"/>
+                                            <outlet property="HWdate" destination="uYO-zR-iX5" id="u5l-51-OqV"/>
+                                            <outlet property="HWdescription" destination="gUN-no-Trn" id="W5f-xY-Th9"/>
+                                            <outlet property="btn" destination="Vb2-AW-wbE" id="Noy-I2-pxq"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -2105,7 +2111,6 @@
         <image name="UserIcon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="F9f-2y-651"/>
         <segue reference="2GC-CR-UBz"/>
         <segue reference="OEf-l3-4g1"/>
         <segue reference="fuC-a3-CcA"/>

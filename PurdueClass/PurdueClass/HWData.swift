@@ -15,5 +15,5 @@ struct HWData{
     let date : Date
    // let hour : Int
    // let min : Int
-    // let HWswitch : Bool
+     var todoCheck : Bool
 }
