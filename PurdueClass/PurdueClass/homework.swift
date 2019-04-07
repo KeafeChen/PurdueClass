@@ -289,6 +289,15 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource , c
                 newMonth = 0;
             }
             newDay = Int(tokens[1])!*/
+        
+            var present = Date()
+        if(newDate<present && current == true){
+            change((Any).self)
+        }
+        if(newDate>present && current == false){
+            change((Any).self)
+        }
+        
             if current == true{
                 data1.append(HWData(description: newDescription, date: newDate, todoCheck: true//,HWswitch: false
                 ))
