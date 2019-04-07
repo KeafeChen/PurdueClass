@@ -60,7 +60,11 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource , c
     //    var hwDescription: String
     //  var dueDate: String
     // }
-    
+    var timer: Timer!
+    var refresher: UIRefreshControl!
+    @IBAction func refresh(_ sender: Any) {
+        refreshEvery15Secs()
+    }
     func didPressButton(_ sender: UIButton) {
         if let indexPath = getCurrentCellIndexPath(sender) {
             let index = indexPath.row
@@ -173,7 +177,9 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource , c
         if newDescription != ""{
             addNewIfSome()
         }
-        
+
+        timer = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(homework.refreshEvery15Secs), userInfo: nil, repeats: true)
+
         sortDue()
         
 
@@ -185,6 +191,20 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource , c
          HW.init(hwDescription: "hello", dueDate:"world")]*/
         //self.tableView.register(CustomCell.self, forCellReuseIdentifier: "custom")
         //  self.tableView.register(CustomCell.self, forCellReuseIdentifier: "hwcell")
+    }
+    
+    @objc func refreshEvery15Secs(){
+        // refresh code
+        let present = Date()
+        var index = 0
+        for dataa in data1 {
+            if(dataa.date<present){
+                data2.append(dataa)
+                data1.remove(at: index)
+            }
+            index = index+1
+        }
+        tableView.reloadData()
     }
     
     func insertEvent(store: EKEventStore) {
