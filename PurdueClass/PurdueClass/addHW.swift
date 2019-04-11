@@ -10,9 +10,11 @@ import UIKit
 
 class addHW: UIViewController {
 
+    @IBOutlet weak var submit_outlet: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.addBackground()
+        submit_outlet.addButtonDesign()
         // Do any additional setup after loading the view.
     }
     

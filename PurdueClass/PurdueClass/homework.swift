@@ -20,6 +20,9 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
     //  var dueDate: String
     // }
     
+    @IBOutlet weak var notif_button: UIButton!
+    @IBOutlet weak var export_button: UIButton!
+    
     let eventStore = EKEventStore()
     private  let notificationPublisher = NotificationPublisher()
     
@@ -64,6 +67,9 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
     // var data = [HW]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addBackground()
+        notif_button.addButtonDesign()
+        export_button.addButtonDesign()
         tableView.delegate=self
         tableView.dataSource=self
         

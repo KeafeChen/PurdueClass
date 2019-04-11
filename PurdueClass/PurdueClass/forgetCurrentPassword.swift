@@ -26,8 +26,11 @@ class forgetCurrentPassword: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
+    @IBOutlet weak var getmypassword: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addBackground()
+        getmypassword.addButtonDesign()
         let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
                                                                 identityPoolId:"us-east-1:b3912726-6290-4b03-9457-021d6d836bea")
         let configuration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:credentialsProvider)

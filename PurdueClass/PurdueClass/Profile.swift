@@ -16,6 +16,13 @@ class Profile: UIViewController {
     
     @IBOutlet weak var LogoutButton: UIButton!
     
+    
+    @IBOutlet weak var classinfo: UIButton!
+    @IBOutlet weak var homework: UIButton!
+    @IBOutlet weak var home: UIButton!
+    @IBOutlet weak var profile: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addBackground()

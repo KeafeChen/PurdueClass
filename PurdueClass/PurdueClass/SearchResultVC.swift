@@ -43,6 +43,8 @@ class SearchResultVC: UIViewController {
         super.viewDidLoad()
         user = (UserDefaults.standard.string(forKey: "username")!)
         self.view.addBackground()
+        addtomyclass.addButtonDesign()
+        ratemyprofessor.addButtonDesign()
         course_name.text = course_value
         semester_name.text = semester_value
         department_name.text = department_value
@@ -58,6 +60,9 @@ class SearchResultVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    
+    @IBOutlet weak var addtomyclass: UIButton!
+    @IBOutlet weak var ratemyprofessor: UIButton!
     @IBAction func rateMyProfessor(_ sender: Any) {
         let index = self.professor_value.range(of: " ")
         let first_name = self.professor_value.prefix(upTo: index!.lowerBound)

@@ -22,6 +22,14 @@ class HomePage: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UITa
     
     @IBOutlet weak var hw3: UIButton!
     @IBOutlet weak var hw2: UIButton!
+    
+    
+    @IBOutlet weak var classinfo: UIButton!
+    @IBOutlet weak var homework: UIButton!
+    @IBOutlet weak var home: UIButton!
+    @IBOutlet weak var profile: UIButton!
+    
+    
     var course_value:String = ""
     var semester_value:String = ""
     var department_value:String = ""
@@ -39,6 +47,7 @@ class HomePage: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UITa
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         print(data1)
         if(data1.count == 0){
             hw1.setTitle("None", for: .normal )

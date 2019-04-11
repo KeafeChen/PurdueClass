@@ -57,6 +57,13 @@ class ClassInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     var data: [String] = []
     var result: [BackendCourseInfo] = []
 
+    @IBOutlet weak var classinfo: UIButton!
+    @IBOutlet weak var homework: UIButton!
+    @IBOutlet weak var home: UIButton!
+    @IBAction func profile(_ sender: Any) {
+    }
+    
+    
     @IBOutlet var categoryButtons: [UIButton]!
     
     @IBOutlet weak var SemesterText: UIButton!
@@ -75,6 +82,9 @@ class ClassInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     @IBOutlet var stackview2: UIStackView!
     @IBOutlet var stackview3: UIStackView!
     
+    @IBOutlet weak var search: UIButton!
+    
+    
     var textToUpdate: String!
     var categryToUpdate: String!
     let dispatchGroup = DispatchGroup()
@@ -83,6 +93,7 @@ class ClassInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         self.classTable.allowsSelection = true
         super.viewDidLoad()
         self.view.addBackground()
+        search.addButtonDesign()
         classTable.delegate = self
         let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
                                                                 identityPoolId:"us-east-1:b3912726-6290-4b03-9457-021d6d836bea")

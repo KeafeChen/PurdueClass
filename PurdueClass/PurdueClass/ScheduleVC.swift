@@ -20,7 +20,7 @@ class ScheduleVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
     var user:String? = nil
     var weekday:Int = NSCalendar.current.component(.weekday, from: Date());
     
-    
+    @IBOutlet weak var save_button: UIButton!
     @IBOutlet weak var export_button: UIButton!
     
     let defaults = UserDefaults.standard
@@ -52,6 +52,9 @@ class ScheduleVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
     var eventToDelete : Event? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addBackground()
+        export_button.addButtonDesign()
+        save_button.addButtonDesign()
         calendar.dataSource = self
         calendar.delegate = self
         calendar.scope = .week
@@ -139,8 +142,10 @@ class ScheduleVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
                 }
             }
             eventToDelete = nil
-            print("here we have \(ddddd)")
-            ddddd = false
+            
+            //Code down below are commented out to build succesfully
+            //print("here we have \(ddddd)")
+            //ddddd = false
         }
         
         //

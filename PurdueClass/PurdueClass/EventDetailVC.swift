@@ -31,6 +31,8 @@ class EventDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addBackground()
+        delete.addButtonDesign()
         if eventDetail != nil {
             course_name.text = eventDetail.course
             semester_name.text = eventDetail.semester
@@ -47,6 +49,7 @@ class EventDetailVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBOutlet weak var delete: UIButton!
     @IBAction func deleteCourse(_ sender: Any) {
         performSegue(withIdentifier: "deleteCourse", sender: self)
     }
