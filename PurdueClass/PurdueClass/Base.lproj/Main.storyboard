@@ -669,7 +669,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4b-IE-5Pf">
-                                <rect key="frame" x="86" y="787" width="75" height="75"/>
+                                <rect key="frame" x="86" y="787" width="75.5" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.88231872080007645" blue="0.35559571229029907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="Hfq-6i-1Qh"/>
@@ -680,7 +680,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nzz-8i-Lkj">
-                                <rect key="frame" x="168" y="787" width="75" height="75"/>
+                                <rect key="frame" x="168.5" y="787" width="75" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.88231872080007645" blue="0.35559571229029907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="eBQ-Uz-OGl"/>
@@ -694,7 +694,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luK-jw-Rsq">
-                                <rect key="frame" x="251" y="787" width="75" height="75"/>
+                                <rect key="frame" x="251.5" y="787" width="75.5" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.88231872080007645" blue="0.35559571229029907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="bWe-E2-6Xf"/>
@@ -705,7 +705,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79T-2C-MBa">
-                                <rect key="frame" x="334" y="787" width="75" height="75"/>
+                                <rect key="frame" x="335" y="787" width="75" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.88231872080007645" blue="0.35559571229029907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="8jl-Pn-uXE"/>
@@ -1975,6 +1975,7 @@
                                             <outlet property="HWdate" destination="uYO-zR-iX5" id="u5l-51-OqV"/>
                                             <outlet property="HWdescription" destination="gUN-no-Trn" id="W5f-xY-Th9"/>
                                             <outlet property="btn" destination="Vb2-AW-wbE" id="Noy-I2-pxq"/>
+                                            <segue destination="CPz-PC-rnW" kind="show" identifier="celladdHW" id="siw-vp-nf3"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1985,7 +1986,7 @@
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="addHW:" destination="bh0-6k-fN2" eventType="touchUpInside" id="WZi-Hc-cXa"/>
-                                    <segue destination="CPz-PC-rnW" kind="show" id="F9f-2y-651"/>
+                                    <segue destination="CPz-PC-rnW" kind="show" identifier="addSegue" id="F9f-2y-651"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KU-79-1Pf">
@@ -2045,7 +2046,7 @@
         <!--AddHW-->
         <scene sceneID="erw-7K-5wU">
             <objects>
-                <viewController id="CPz-PC-rnW" customClass="addHW" customModule="PurdueClass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addHWid" id="CPz-PC-rnW" customClass="addHW" customModule="PurdueClass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ksr-SU-TFK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2119,10 +2120,11 @@
         <image name="UserIcon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="siw-vp-nf3"/>
         <segue reference="2GC-CR-UBz"/>
-        <segue reference="OEf-l3-4g1"/>
+        <segue reference="G0G-5c-mhp"/>
         <segue reference="fuC-a3-CcA"/>
-        <segue reference="hM5-7V-Evz"/>
+        <segue reference="n2S-TD-poA"/>
         <segue reference="oHt-ri-BxA"/>
         <segue reference="9nf-kx-Vxg"/>
     </inferredMetricsTieBreakers>

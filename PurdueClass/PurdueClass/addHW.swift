@@ -10,11 +10,17 @@ import UIKit
 
 class addHW: UIViewController {
     
+    var descriptionTxt = String()
+    var dateTxt = String()
+    var notTxt = String()
+    
     private var datePicker = UIDatePicker()
     //private var ddate = Date
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        description1.text = descriptionTxt
+        
         datePicker.datePickerMode = .dateAndTime
         date.inputView = datePicker
         datePicker.addTarget(self, action: #selector(addHW.dateChanged(sender:)), for: UIControl.Event.valueChanged)

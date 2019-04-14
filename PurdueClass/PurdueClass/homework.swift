@@ -178,6 +178,8 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource , c
             addNewIfSome()
         }
 
+        
+        // refresh timer
         timer = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(homework.refreshEvery15Secs), userInfo: nil, repeats: true)
 
         sortDue()
@@ -191,6 +193,46 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource , c
          HW.init(hwDescription: "hello", dueDate:"world")]*/
         //self.tableView.register(CustomCell.self, forCellReuseIdentifier: "custom")
         //  self.tableView.register(CustomCell.self, forCellReuseIdentifier: "hwcell")
+    }
+    
+    var indexx = 0
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        indexx=indexPath.row
+        print("didSelectRow")
+
+        
+    }
+    
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier=="celladdHW"{
+            if let vc=segue.destination as?addHW{
+        //DispatchQueue.main.asyncAfter(deadline: .now()+5.0, execute: {
+            vc.descriptionTxt = data1[self.indexx].description
+            print("prepare")
+          //  })
+            //vc.descriptionTxt=data1[indexx].description
+            }
+        }
+        
+        //print("%%%%%%%%%%%")
+        //print(sender)
+        //print(String(indexx)+"$$$$$$$$$$$$")
+
+        
+        /*
+        if let addSegue = segue.destination as? addHW {
+            // Setup new view controller
+            
+            if(current){
+                addSegue.descriptionTxt = data1[indexx].description
+            }
+            else{
+                addSegue.descriptionTxt = data2[indexx].description
+
+            }
+        }*/
     }
     
     @objc func refreshEvery15Secs(){
