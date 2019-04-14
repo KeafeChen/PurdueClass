@@ -86,7 +86,7 @@
 		E41A6308226296BF00A98CEB /* NoteTaking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTaking.swift; sourceTree = "<group>"; };
 		E41A6309226296BF00A98CEB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E41A630A226296BF00A98CEB /* NoteTakingCoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTakingCoreDataHelper.swift; sourceTree = "<group>"; };
-		E4283E982263923600CE5440 /* note.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = note.png; path = ../../../../../Desktop/note.png; sourceTree = "<group>"; };
+		E4283E982263923600CE5440 /* note.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = note.png; path = PurdueClass/note.png; sourceTree = SOURCE_ROOT; };
 		E442106A224425BC006C1D0C /* ScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
 		E442106C22442621006C1D0C /* PurdueClass-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PurdueClass-Bridging-Header.h"; sourceTree = "<group>"; };
 		E442106F22442665006C1D0C /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
