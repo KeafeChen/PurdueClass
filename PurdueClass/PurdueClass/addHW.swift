@@ -20,7 +20,7 @@ class addHW: UIViewController {
         super.viewDidLoad()
 
         description1.text = descriptionTxt
-        
+        date.text=dateTxt
         datePicker.datePickerMode = .dateAndTime
         date.inputView = datePicker
         datePicker.addTarget(self, action: #selector(addHW.dateChanged(sender:)), for: UIControl.Event.valueChanged)

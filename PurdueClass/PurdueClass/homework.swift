@@ -8,6 +8,7 @@
 
 import EventKit
 import UIKit
+import Dispatch
 
 protocol cellDelagateP: class {
     func didPressButton(_ sender: UIButton)
@@ -65,6 +66,7 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource , c
     @IBAction func refresh(_ sender: Any) {
         refreshEvery15Secs()
     }
+    var indexx = 0
     func didPressButton(_ sender: UIButton) {
         if let indexPath = getCurrentCellIndexPath(sender) {
             let index = indexPath.row
@@ -184,56 +186,30 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource , c
 
         sortDue()
         
-
-        
-        /*    data = [
-         HW.init(hwDescription: "hello", dueDate:"world"),
-         HW.init(hwDescription: "test", dueDate:"world"),
-         HW.init(hwDescription: "hello", dueDate:"world"),
-         HW.init(hwDescription: "hello", dueDate:"world")]*/
-        //self.tableView.register(CustomCell.self, forCellReuseIdentifier: "custom")
-        //  self.tableView.register(CustomCell.self, forCellReuseIdentifier: "hwcell")
     }
-    
-    var indexx = 0
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        indexx=indexPath.row
-        print("didSelectRow")
 
-        
+
     }
-    
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier=="celladdHW"{
             if let vc=segue.destination as?addHW{
-        //DispatchQueue.main.asyncAfter(deadline: .now()+5.0, execute: {
-            vc.descriptionTxt = data1[self.indexx].description
-            print("prepare")
-          //  })
-            //vc.descriptionTxt=data1[indexx].description
+
+                var indexPath =  self.tableView.indexPathForSelectedRow;
+                let rowNum : Int = indexPath!.row
+                
+                vc.descriptionTxt = data1[rowNum].description
+                let format = DateFormatter()
+                format.dateStyle = DateFormatter.Style.medium
+                format.timeStyle = DateFormatter.Style.medium
+                vc.dateTxt = format.string(from: data1[rowNum].date)
+               // vc.date=data1[rowNum].date
             }
         }
         
-        //print("%%%%%%%%%%%")
-        //print(sender)
-        //print(String(indexx)+"$$$$$$$$$$$$")
-
-        
-        /*
-        if let addSegue = segue.destination as? addHW {
-            // Setup new view controller
-            
-            if(current){
-                addSegue.descriptionTxt = data1[indexx].description
-            }
-            else{
-                addSegue.descriptionTxt = data2[indexx].description
-
-            }
-        }*/
     }
+    
     
     @objc func refreshEvery15Secs(){
         // refresh code
