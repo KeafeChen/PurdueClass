@@ -47,6 +47,7 @@
 		F21496022263ACE200BE0C09 /* BlockCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21496012263ACE200BE0C09 /* BlockCollectionViewCell.swift */; };
 		F21496042263DDBA00BE0C09 /* BlockVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21496032263DDBA00BE0C09 /* BlockVar.swift */; };
 		F21496062264593C00BE0C09 /* PopUpBlockWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21496052264593C00BE0C09 /* PopUpBlockWindow.swift */; };
+		F214960822648D2C00BE0C09 /* PopUpSwitchWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F214960722648D2C00BE0C09 /* PopUpSwitchWindow.swift */; };
 		F2DBEC6C221525630029AF2E /* ForgetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DBEC6B221525630029AF2E /* ForgetPassword.swift */; };
 		F2DBEC6E22152FF90029AF2E /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DBEC6D22152FF90029AF2E /* SignUp.swift */; };
 		F2E94A8F221CFB2A009FF9BF /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = F2E94A8E221CFB2A009FF9BF /* awsconfiguration.json */; };
@@ -100,6 +101,7 @@
 		F21496012263ACE200BE0C09 /* BlockCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockCollectionViewCell.swift; sourceTree = "<group>"; };
 		F21496032263DDBA00BE0C09 /* BlockVar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockVar.swift; sourceTree = "<group>"; };
 		F21496052264593C00BE0C09 /* PopUpBlockWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpBlockWindow.swift; sourceTree = "<group>"; };
+		F214960722648D2C00BE0C09 /* PopUpSwitchWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpSwitchWindow.swift; sourceTree = "<group>"; };
 		F2DBEC6B221525630029AF2E /* ForgetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassword.swift; sourceTree = "<group>"; };
 		F2DBEC6D22152FF90029AF2E /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		F2E94A8E221CFB2A009FF9BF /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				F21495FF2263A03300BE0C09 /* New_Schedule.swift */,
+				F214960722648D2C00BE0C09 /* PopUpSwitchWindow.swift */,
 				F21496032263DDBA00BE0C09 /* BlockVar.swift */,
 				F21496052264593C00BE0C09 /* PopUpBlockWindow.swift */,
 				F21496012263ACE200BE0C09 /* BlockCollectionViewCell.swift */,
@@ -458,6 +461,7 @@
 				DBBA15562245296A008701F8 /* HWcell.swift in Sources */,
 				E41A630D226296BF00A98CEB /* NoteTakingDateHelper.swift in Sources */,
 				DBBA15542245292E008701F8 /* HWData.swift in Sources */,
+				F214960822648D2C00BE0C09 /* PopUpSwitchWindow.swift in Sources */,
 				F2E94A91221CFCE6009FF9BF /* Profile.swift in Sources */,
 				E41A630C226296BF00A98CEB /* MasterViewController.swift in Sources */,
 				E442107022442665006C1D0C /* EventCell.swift in Sources */,

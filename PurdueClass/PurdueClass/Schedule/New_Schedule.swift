@@ -43,6 +43,14 @@ class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionView
         return view
     }()
     
+    lazy var popUpSwitchWindow: PopUpSwitchWindow = {
+        let view = PopUpSwitchWindow()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = 5
+        view.delegate = self
+        return view
+    }()
+    
     let visualEffectView: UIVisualEffectView = {
         let blurEffect = UIBlurEffect(style: .light)
         let view = UIVisualEffectView(effect: blurEffect)
@@ -345,6 +353,28 @@ class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionView
         print("Show pop up window..")
     }
     
+    @objc func handleShowSwitchPopUp() {
+  
+        popUpSwitchWindow.show = true
+        
+        view.addSubview(popUpSwitchWindow)
+        popUpSwitchWindow.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -40).isActive = true
+        popUpSwitchWindow.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        popUpSwitchWindow.heightAnchor.constraint(equalToConstant: view.frame.width - 64).isActive = true
+        popUpSwitchWindow.widthAnchor.constraint(equalToConstant: view.frame.width - 64).isActive = true
+        
+        popUpSwitchWindow.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        popUpSwitchWindow.alpha = 0
+        
+        UIView.animate(withDuration: 0.5) {
+            self.visualEffectView.alpha = 1
+            self.popUpSwitchWindow.alpha = 1
+            self.popUpSwitchWindow.transform = CGAffineTransform.identity
+        }
+        
+        print("Show pop up window..")
+    }
+    
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -451,17 +481,32 @@ extension New_Schedule: PopUpBlockDelgate {
             print("remove pop up ios")
         }
     }
+    
     func handleSwitch(){
+        handleShowSwitchPopUp()
+    }
+}
+
+extension New_Schedule: PopUpSwitchDelgate {
+    func handleDismiss() {
         UIView.animate(withDuration: 0.5, animations: {
             self.visualEffectView.alpha = 0
-            self.popUpBlockWindow.alpha = 0
-            self.popUpBlockWindow.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+            self.popUpSwitchWindow.alpha = 0
+            self.popUpSwitchWindow.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
         }) { (_) in
-            self.popUpBlockWindow.removeFromSuperview()
+            self.popUpSwitchWindow.removeFromSuperview()
             print("remove pop up ios")
         }
     }
     
-    
+    func handleSwitchSession(){
+        UIView.animate(withDuration: 0.5, animations: {
+            self.visualEffectView.alpha = 0
+            self.popUpSwitchWindow.alpha = 0
+            self.popUpSwitchWindow.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        }) { (_) in
+            self.popUpSwitchWindow.removeFromSuperview()
+            print("remove pop up ios")
+        }
+    }
 }
-
