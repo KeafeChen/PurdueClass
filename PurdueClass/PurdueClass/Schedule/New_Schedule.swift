@@ -10,11 +10,14 @@ import UIKit
 
 var hahaha = 0
 
+var clicked = -1
+
 class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     
     @IBOutlet weak var Schedule: UICollectionView!
     
+    var cell_info : Array<BlockCollectionViewCell> = []
     
     let defaults = UserDefaults.standard
     
@@ -28,6 +31,14 @@ class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionView
     
     lazy var popUpWindow: PopUpWindow = {
         let view = PopUpWindow()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = 5
+        view.delegate = self
+        return view
+    }()
+    
+    lazy var popUpBlockWindow: PopUpBlockWindow = {
+        let view = PopUpBlockWindow()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 5
         view.delegate = self
@@ -105,7 +116,7 @@ class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionView
             newEvent.weekday = weekday_value
             newEvent.start = start_value
             newEvent.end = end_value
-            newEvent.detail = detail_value
+        newEvent.detail = detail_value
             
             var flag = true
             for xxx in eventList {
@@ -290,6 +301,34 @@ class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionView
         print("Show pop up window..")
     }
     
+    @objc func handleShowBlockPopUp(sender: UIButton) {
+        for i in 0...block_index.count-1 {
+            if block_index[i].contains(sender.tag){
+                clicked = i
+            }
+        }
+        
+        popUpBlockWindow.show = true
+        
+        view.addSubview(popUpBlockWindow)
+        popUpBlockWindow.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -40).isActive = true
+        popUpBlockWindow.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        popUpBlockWindow.heightAnchor.constraint(equalToConstant: view.frame.width - 64).isActive = true
+        popUpBlockWindow.widthAnchor.constraint(equalToConstant: view.frame.width - 64).isActive = true
+        
+        popUpBlockWindow.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        popUpBlockWindow.alpha = 0
+        
+        UIView.animate(withDuration: 0.5) {
+            self.visualEffectView.alpha = 1
+            self.popUpBlockWindow.alpha = 1
+            self.popUpBlockWindow.transform = CGAffineTransform.identity
+        }
+        
+        print("Show pop up window..")
+    }
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 168
@@ -301,25 +340,26 @@ class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionView
         print(indexPath)
         cell.block_label.text = "\(indexPath.row + 1)"
         */
-        print(eventList[1].course)
-        print(block_index.count)
+  
+        cell_info = []
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Schedule", for: indexPath) as? BlockCollectionViewCell{
             for i in 0...block_index.count-1 {
                 for j in 0...block_index[i].count-1{
                     if block_index[i][j] == indexPath.row {
-                        print("reached!")
-                        print(i)
-                        print(indexPath)
                         cell.configureCell(title: block_content[i][j])
                         cell.backgroundColor = block_color[i]
+                        cell.block_button.tag = indexPath.row
+                        cell.block_button.addTarget(self, action: #selector(handleShowBlockPopUp), for: .touchUpInside)
                         break;
                     }
                 }
             }
+            cell_info.append(cell)
             return cell
         }
         return UICollectionViewCell()
     }
+    
 }
 
 
@@ -350,15 +390,53 @@ extension New_Schedule: PopUpDelgate {
             print("remove pop up ios")
         }
     }
-    
-    func handleDismissalGoogle() {
+    func handleDismissalGoogle(){
         UIView.animate(withDuration: 0.5, animations: {
             self.visualEffectView.alpha = 0
             self.popUpWindow.alpha = 0
             self.popUpWindow.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
         }) { (_) in
             self.popUpWindow.removeFromSuperview()
-            print("remove pop up google")
+            print("remove pop up ios")
         }
     }
+
+
 }
+
+extension New_Schedule: PopUpBlockDelgate {
+    func handleDismissal() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.visualEffectView.alpha = 0
+            self.popUpBlockWindow.alpha = 0
+            self.popUpBlockWindow.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        }) { (_) in
+            self.popUpBlockWindow.removeFromSuperview()
+            print("remove pop up ios")
+        }
+    }
+    func handleDelete(){
+        UIView.animate(withDuration: 0.5, animations: {
+            self.visualEffectView.alpha = 0
+            self.popUpBlockWindow.alpha = 0
+            self.popUpBlockWindow.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        }) { (_) in
+            self.popUpBlockWindow.removeFromSuperview()
+            print("remove pop up ios")
+        }
+    }
+    func handleSwitch(){
+        UIView.animate(withDuration: 0.5, animations: {
+            self.visualEffectView.alpha = 0
+            self.popUpBlockWindow.alpha = 0
+            self.popUpBlockWindow.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        }) { (_) in
+            self.popUpBlockWindow.removeFromSuperview()
+            print("remove pop up ios")
+        }
+    }
+    
+    
+    
+}
+

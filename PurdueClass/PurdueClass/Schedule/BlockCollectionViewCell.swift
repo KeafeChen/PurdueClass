@@ -12,8 +12,16 @@ class BlockCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var block_label: UILabel!
     
-    func configureCell(title: String?){
-        print(title)
-        block_label.text = title ?? ""
+    @IBOutlet weak var block_button: UIButton!
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
     }
+    
+    func configureCell(title: String?){
+        block_button.setTitle(title, for: .normal)
+    }
+    
+   
 }

@@ -70,6 +70,7 @@ class ScheduleVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
         visualEffectView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true;
         
         visualEffectView.alpha = 0
+    
         var local_store : Array<Array<String>> = Array()
         
         if defaults.value(forKey: "schedule") != nil {
@@ -126,7 +127,6 @@ class ScheduleVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
         
         //delete
         if eventToDelete != nil {
-            print("haha")
             print(eventToDelete!.course)
             for indexi in 0...(eventList.count-1){
                 let xxx = eventList[indexi]
@@ -174,10 +174,6 @@ class ScheduleVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
         let stringToPass : String
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as? EventCell {
-            print("?????")
-            print(data)
-            print(weekday-1)
-            print(indexPath.row)
             if let start = data[weekday-1][indexPath.row].start {
                 let end = data[weekday-1][indexPath.row].end ?? ""
                 let course = data[weekday-1][indexPath.row].course ?? ""
