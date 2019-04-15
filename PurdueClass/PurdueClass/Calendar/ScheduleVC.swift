@@ -20,7 +20,6 @@ class ScheduleVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
     var user:String? = nil
     var weekday:Int = NSCalendar.current.component(.weekday, from: Date());
     
-    
     @IBOutlet weak var export_button: UIButton!
     
     let defaults = UserDefaults.standard
@@ -175,6 +174,10 @@ class ScheduleVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
         let stringToPass : String
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as? EventCell {
+            print("?????")
+            print(data)
+            print(weekday-1)
+            print(indexPath.row)
             if let start = data[weekday-1][indexPath.row].start {
                 let end = data[weekday-1][indexPath.row].end ?? ""
                 let course = data[weekday-1][indexPath.row].course ?? ""

@@ -33,7 +33,7 @@ class PopUpWindow: UIView {
         let buttonIOS = UIButton(type: .system)
         buttonIOS.backgroundColor = .white
         buttonIOS.setTitle("export to IOS Calendar", for: .normal)
-        buttonIOS.setTitleColor(.blue, for: .normal)
+        buttonIOS.setTitleColor(UIColor(red: 207/255, green: 163/255, blue: 74/255, alpha: 1.0), for: .normal)
         buttonIOS.addTarget(self, action: #selector(handleDismissalIOS), for: .touchUpInside)
         buttonIOS.translatesAutoresizingMaskIntoConstraints = false
         buttonIOS.layer.cornerRadius = 5
@@ -55,7 +55,7 @@ class PopUpWindow: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .blue
+        backgroundColor = UIColor(red: 207/255, green: 163/255, blue: 74/255, alpha: 1.0)
         
         addSubview(buttonIOS)
         buttonIOS.heightAnchor.constraint(equalToConstant: 50).isActive = true;
