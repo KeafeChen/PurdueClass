@@ -17,8 +17,6 @@ class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionView
     
     @IBOutlet weak var Schedule: UICollectionView!
     
-    var cell_info : Array<BlockCollectionViewCell> = []
-    
     let defaults = UserDefaults.standard
     
     let color_set = [UIColor(red: 66/255, green: 133/255, blue: 244/255, alpha: 1), UIColor(red: 234/255, green: 67/255, blue: 53/255, alpha: 1), UIColor(red: 253/255, green: 189/255, blue: 4/255, alpha: 1), UIColor(red: 56/255, green: 168/255, blue: 83/255, alpha: 1), UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1),UIColor(red: 119/255, green: 119/255, blue: 119/255, alpha: 1)]
@@ -57,6 +55,8 @@ class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionView
     var block_content : Array<Array<String>> = []
     var block_color : Array<UIColor> = []
     
+    var deleteIndex : Array<Int> = []
+    
     var course_value:String = ""
     var semester_value:String = ""
     var department_value:String = ""
@@ -84,7 +84,11 @@ class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionView
         
         visualEffectView.alpha = 0
         
-        
+        check()
+
+    }
+    
+    func check(){
         var local_store : Array<Array<String>> = Array()
         
         if defaults.value(forKey: "schedule") != nil {
@@ -92,6 +96,7 @@ class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionView
         }
         
         if eventList.count != local_store.count {
+            eventList = []
             for i in local_store{
                 var newEvent = Event();
                 newEvent.semester = i[0]
@@ -116,7 +121,7 @@ class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionView
             newEvent.weekday = weekday_value
             newEvent.start = start_value
             newEvent.end = end_value
-        newEvent.detail = detail_value
+            newEvent.detail = detail_value
             
             var flag = true
             for xxx in eventList {
@@ -137,12 +142,16 @@ class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionView
                 defaults.set(local_store, forKey:"schedule")
             }
         }
-        
+    
+        block_index = []
+        block_content = []
+        block_color = []
         for event in local_store{
             var current : Array<Int> = []
+            print(event)
             
             var newnew : Array<String> = []
-
+            
             if event[4].contains("M"){
                 newnew.append(event[1])
                 for i in find_index(event: event, day: 1){
@@ -183,7 +192,7 @@ class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionView
                 }
                 newnew.removeLast()
             }
-          
+            
             block_index.append(current)
             block_content.append(newnew)
             block_color.append(color_set[hahaha])   //(.random())
@@ -195,14 +204,16 @@ class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionView
         
         //delete
         if eventToDelete != nil {
-            print("haha")
-            print(eventToDelete!.course)
             for indexi in 0...(eventList.count-1){
                 let xxx = eventList[indexi]
                 if xxx.course == eventToDelete!.course && xxx.semester == eventToDelete!.semester {
                     eventList.remove(at: indexi)
                     local_store.remove(at: indexi)
                     defaults.set(local_store, forKey:"schedule")
+                    deleteIndex = block_index[indexi]
+                    block_index.remove(at: indexi)
+                    block_color.remove(at: indexi)
+                    block_content.remove(at: indexi)
                     break;
                 }
             }
@@ -223,10 +234,7 @@ class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionView
                 if day.contains("F"){ data[5].append(xxx)}
             }
         }
-        
-
     }
-    
 
     /*
     // MARK: - Navigation
@@ -239,12 +247,22 @@ class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionView
     */
     func find_index(event : Array<String>, day : Int) -> Array<Int>{
         var current : Array<Int> = []
-        
         let starthour = Int(event[5].dropLast(5) as Substring)
-        let startmin = Int(event[5].dropFirst(3).dropLast(2) as Substring)
+        var startmin : Int
+        if event[5].count == 6{
+            startmin = Int(event[5].dropFirst(2).dropLast(2) as Substring)!
+        } else {
+            startmin = Int(event[5].dropFirst(3).dropLast(2) as Substring)!
+        }
+        
         let endhour = Int(event[6].dropLast(5) as Substring)
-        let endmin = Int(event[6].dropFirst(3).dropLast(2) as Substring)
-    
+        var endmin : Int
+        if event[6].count == 6{
+            endmin = Int(event[6].dropFirst(2).dropLast(2) as Substring)!
+        } else {
+            endmin = Int(event[6].dropFirst(3).dropLast(2) as Substring)!
+        }
+        
         var start = 0
         var end = 0
         if startmin == 30 {
@@ -257,7 +275,6 @@ class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionView
         } else {
             end = ((endhour! - 7) * 2 - 2) * 7 + day
         }
-        
         var stupid = 7
         for i in start...end{
             if (stupid % 7 == 0){
@@ -341,22 +358,28 @@ class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionView
         cell.block_label.text = "\(indexPath.row + 1)"
         */
   
-        cell_info = []
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Schedule", for: indexPath) as? BlockCollectionViewCell{
-            for i in 0...block_index.count-1 {
-                for j in 0...block_index[i].count-1{
-                    if block_index[i][j] == indexPath.row {
-                        cell.configureCell(title: block_content[i][j])
-                        cell.backgroundColor = block_color[i]
-                        cell.block_button.tag = indexPath.row
-                        cell.block_button.addTarget(self, action: #selector(handleShowBlockPopUp), for: .touchUpInside)
-                        break;
+            cell.configureCell(title: "")
+            cell.backgroundColor = UIColor(red: 235/255, green: 235/255, blue: 235/255, alpha: 1)
+            cell.block_button.removeTarget(self, action: #selector(handleShowBlockPopUp), for: .touchUpInside)
+        
+            if block_index.count > 0{
+                for i in 0...block_index.count-1 {
+                    for j in 0...block_index[i].count-1{
+                        if block_index[i][j] == indexPath.row {
+                            cell.configureCell(title: block_content[i][j])
+                            cell.backgroundColor = block_color[i]
+                            cell.block_button.tag = indexPath.row
+                            cell.block_button.addTarget(self, action: #selector(handleShowBlockPopUp), for: .touchUpInside)
+                            break;
+                        }
                     }
                 }
             }
-            cell_info.append(cell)
+            
             return cell
         }
+        self.deleteIndex = []
         return UICollectionViewCell()
     }
     
@@ -416,6 +439,9 @@ extension New_Schedule: PopUpBlockDelgate {
         }
     }
     func handleDelete(){
+        self.eventToDelete = eventList[clicked]
+        viewDidLoad()
+        Schedule.reloadData()
         UIView.animate(withDuration: 0.5, animations: {
             self.visualEffectView.alpha = 0
             self.popUpBlockWindow.alpha = 0
@@ -435,7 +461,6 @@ extension New_Schedule: PopUpBlockDelgate {
             print("remove pop up ios")
         }
     }
-    
     
     
 }

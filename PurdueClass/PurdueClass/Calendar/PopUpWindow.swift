@@ -148,8 +148,12 @@ class PopUpWindow: UIView {
             components.month = month
             components.year = 2019
             let starthour = Int(i[5].dropLast(5) as Substring)
-            let startmin = Int(i[5].dropFirst(3).dropLast(2) as Substring)
-            
+            var startmin : Int
+            if i[5].count == 6{
+                startmin = Int(i[5].dropFirst(2).dropLast(2) as Substring)!
+            } else {
+                startmin = Int(i[5].dropFirst(3).dropLast(2) as Substring)!
+            }
             
             components.hour = starthour
             components.minute = startmin
@@ -159,8 +163,12 @@ class PopUpWindow: UIView {
             let startDate = newDate
             
             let endhour = Int(i[6].dropLast(5) as Substring)
-            let endmin = Int(i[6].dropFirst(3).dropLast(2) as Substring)
-            
+            var endmin : Int
+            if i[6].count == 6{
+                endmin = Int(i[6].dropFirst(2).dropLast(2) as Substring)!
+            } else {
+                endmin = Int(i[6].dropFirst(3).dropLast(2) as Substring)!
+            }
             components.hour = endhour
             components.minute = endmin
             
