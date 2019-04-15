@@ -8,9 +8,51 @@
 
 import EventKit
 import UIKit
+import Dispatch
 
+protocol cellDelagateP: class {
+    func didPressButton(_ sender: UIButton)
+}
 
-class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class HWcell: UITableViewCell {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    weak var cellDelegate: cellDelagateP?
+    @IBOutlet weak var HWdate: UILabel!
+    @IBOutlet weak var HWdescription: UILabel!
+    @IBOutlet weak var btn: UIButton!
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        let button = sender
+        
+        cellDelegate?.didPressButton(button)
+    }
+
+    
+    // @IBAction func HWSwitch(_ sender: Any)
+    
+    func configureCell(cell: HWcell, hwcelldata: HWData){
+        HWdescription.text=hwcelldata.description
+        let dateFormattor = DateFormatter()
+        dateFormattor.dateFormat = "MMMM-dd HH:mm"
+        HWdate.text=dateFormattor.string(from: hwcelldata.date)
+        if(hwcelldata.todoCheck == false){
+            cell.btn.setTitle("DONE", for: .normal)
+        }
+        if(hwcelldata.todoCheck == true){
+            cell.btn.setTitle("TODO", for: .normal)
+        }
+    }
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
+    }
+    
+    
+}
+class homework: UIViewController, UITableViewDelegate, UITableViewDataSource , cellDelagateP{
     //class HeadlineTableViewCell: UITableViewCell {
     //}
     
@@ -19,6 +61,71 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
     //    var hwDescription: String
     //  var dueDate: String
     // }
+    var timer: Timer!
+    var refresher: UIRefreshControl!
+    @IBAction func refresh(_ sender: Any) {
+        refreshEvery15Secs()
+    }
+    var indexx = 0
+    func didPressButton(_ sender: UIButton) {
+        if let indexPath = getCurrentCellIndexPath(sender) {
+            let index = indexPath.row
+
+            if(current){
+                let todoo = data1[index].todoCheck
+                if(todoo){
+                    data1[index].todoCheck = false
+                    sender.setTitle("DONE", for: .normal)
+
+                }else{
+                    data1[index].todoCheck = true
+                    sender.setTitle("TODO", for: .normal)
+
+                }
+            }else{
+                let todoo = data2[index].todoCheck
+                if(todoo){
+                    data1[index].todoCheck = false
+                    sender.setTitle("DONE", for: .normal)
+
+                }else{
+                    data1[index].todoCheck = true
+                    sender.setTitle("TODO", for: .normal)
+
+                }
+            }
+            
+        }
+    }
+    func getCurrentCellIndexPath(_ sender: UIButton) -> IndexPath? {
+        let buttonPosition = sender.convert(CGPoint.zero, to: tableView)
+        if let indexPath: IndexPath = tableView.indexPathForRow(at: buttonPosition) {
+            return indexPath
+        }
+        return nil
+    }
+   /* @IBAction func todoAction(_ sender: Any) {
+        let cell = (sender as AnyObject).superview?.superview?.superview as! UITableViewCell
+        var indexPath = tableView.indexPath(for: cell)
+        if(current){
+            let index = (indexPath?.row)!
+            var todoo = data1[index].todoCheck
+            if(todoo){
+                todoo = false
+            }else{
+                todoo = true
+            }
+        }else{
+            let index = (indexPath?.row)!
+            var todoo = data2[index].todoCheck
+            if(todoo){
+                todoo = false
+            }else{
+                todoo = true
+            }
+        }
+    }*/
+
     
     let eventStore = EKEventStore()
     private  let notificationPublisher = NotificationPublisher()
@@ -53,9 +160,11 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
         //print("inside export event")
     }
     var newDescription = String()
-    var newDate = String()
-    var newMonth = Int()
-    var newDay = Int()
+    var newDate = Date()
+//    var newMonth = Int()
+//    var newDay = Int()
+//    var newHour = Int()
+//    var newMin = Int()
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -70,18 +179,50 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
         if newDescription != ""{
             addNewIfSome()
         }
-        
-        self.sortDue()
-        
 
         
-        /*    data = [
-         HW.init(hwDescription: "hello", dueDate:"world"),
-         HW.init(hwDescription: "test", dueDate:"world"),
-         HW.init(hwDescription: "hello", dueDate:"world"),
-         HW.init(hwDescription: "hello", dueDate:"world")]*/
-        //self.tableView.register(CustomCell.self, forCellReuseIdentifier: "custom")
-        //  self.tableView.register(CustomCell.self, forCellReuseIdentifier: "hwcell")
+        // refresh timer
+        timer = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(homework.refreshEvery15Secs), userInfo: nil, repeats: true)
+
+        sortDue()
+        
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier=="celladdHW"{
+            if let vc=segue.destination as?addHW{
+
+                var indexPath =  self.tableView.indexPathForSelectedRow;
+                let rowNum : Int = indexPath!.row
+                
+                vc.descriptionTxt = data1[rowNum].description
+                let format = DateFormatter()
+                format.dateStyle = DateFormatter.Style.medium
+                format.timeStyle = DateFormatter.Style.medium
+                vc.dateTxt = format.string(from: data1[rowNum].date)
+               // vc.date=data1[rowNum].date
+            }
+        }
+        
+    }
+    
+    
+    @objc func refreshEvery15Secs(){
+        // refresh code
+        let present = Date()
+        var index = 0
+        for dataa in data1 {
+            if(dataa.date<present){
+                data2.append(dataa)
+                data1.remove(at: index)
+            }
+            index = index+1
+        }
+        tableView.reloadData()
     }
     
     func insertEvent(store: EKEventStore) {
@@ -101,9 +242,9 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
                     //                    var monthtoadd = thisdata.month;
                     let thisCalendar = Calendar.current
                     
-                    let dateComponent = DateComponents(calendar: Calendar.current, era: 1, year: 2019, month: thisdata.month, day: thisdata.day, hour: 23)
+                  //  let dateComponent = DateComponents(calendar: Calendar.current, era: 1, year: 2019, month: thisdata.month, day: thisdata.day, hour: 23, minute: 0 )
                     
-                    let clddate = thisCalendar.date(from: dateComponent)!
+                    let clddate = thisdata.date//thisCalendar.date(from: dateComponent)!
                     // Calendar.current.date(byAdding: dateComponent, to: clddate)
                     
                     // 3
@@ -118,9 +259,9 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
                     event.title = thisdata.description
                     print("test description")
                     //print(data1.description)
-                    event.startDate = clddate
-                    event.endDate = clddate.addingTimeInterval(60*59)
-                    
+                    event.endDate = clddate
+                    event.startDate = clddate.addingTimeInterval(-60*59)
+
                     // 5
                     do {
                         try store.save(event, span: .thisEvent)
@@ -164,8 +305,9 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBAction func addHW(_ sender: Any) {
         
     }
+    
     func addNewIfSome(){
-        var tokens = newDate.split(separator: " ")
+        /*var tokens = newDate.split(separator: " ")
         if tokens.count > 1{
             switch tokens[0]{
             case "January": newMonth = 1;
@@ -184,16 +326,24 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
             default:
                 newMonth = 0;
             }
-            newDay = Int(tokens[1])!
+            newDay = Int(tokens[1])!*/
+        
+            var present = Date()
+        if(newDate<present && current == true){
+            change((Any).self)
+        }
+        if(newDate>present && current == false){
+            change((Any).self)
+        }
+        
             if current == true{
-                data1.append(HWData(description: newDescription, date: newDate, month: newMonth, day: newDay//,HWswitch: false
+                data1.append(HWData(description: newDescription, date: newDate, todoCheck: true//,HWswitch: false
                 ))
             }
             else{
-                data2.append(HWData(description: newDescription, date: newDate, month: newMonth, day: newDay//,HWswitch: false
+                data2.append(HWData(description: newDescription, date: newDate, todoCheck: true//,HWswitch: false
                 ))
             }
-        }
         
         
     }
@@ -201,13 +351,13 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
     func sortDue(){
         if(current == true){
             data1.sort{
-                ($0.month, $0.day) <
-                    ($1.month, $1.day)
+                ($0.date) <
+                    ($1.date)
             }
         }else{
             data2.sort{
-                ($0.month, $0.day) <
-                    ($1.month, $1.day)
+                ($0.date) <
+                    ($1.date)
             }
         }
         
@@ -229,20 +379,44 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
      */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell=tableView.dequeueReusableCell(withIdentifier: "hwcell", for: indexPath) as? HWcell{
-            
+            cell.cellDelegate = self
+
             //           DispatchQueue.main.async {
             if(current == true){
-                cell.configureCell(hwcelldata: data1[indexPath.row])
+                cell.configureCell(cell: cell, hwcelldata: data1[indexPath.row])
             }else{
-                cell.configureCell(hwcelldata: data2[indexPath.row])
+                cell.configureCell(cell: cell, hwcelldata: data2[indexPath.row])
             }
             //         self.dispatchGroup.leave()
             
             //   }
+            cell.btn.tag = indexPath.row
             return cell
         }
         
         return UITableViewCell()
+    }
+    
+    // delete cell
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            // handle delete (by removing the data from your array and updating the tableview)
+            if(current == true){
+                data1.remove(at: indexPath.row)
+            }else{
+                data2.remove(at: indexPath.row)
+            }
+            
+            tableView.beginUpdates()
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            tableView.endUpdates()
+            
+        }
     }
     
     @IBAction func sendNotificationClicked(_ sender: Any) {
@@ -251,6 +425,5 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource{
         notificationPublisher.sendNotification(title: "HW Added To Reminder", subtitle: "Title: Shell", body: "Due Date: March 12", badge: 1, delayInterval: nil)
         
     }
-    
-}
 
+}
