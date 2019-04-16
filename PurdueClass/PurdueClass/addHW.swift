@@ -13,10 +13,6 @@ class addHW: UIViewController {
     var descriptionTxt = String()
     var dateTxt = String()
     var notTxt = String()
-    var reviseOrNot = Bool()
-    var submitTxt = String()
-    
-    
     
     private var datePicker = UIDatePicker()
     //private var ddate = Date
@@ -54,8 +50,9 @@ class addHW: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBOutlet weak var submit: UIButton!
-
+    @IBAction func submit(_ sender: Any) {
+        
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is homework{
