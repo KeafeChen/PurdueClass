@@ -11,6 +11,7 @@
 		A40514FB2265931C0066651D /* updateHW.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40514FA2265931C0066651D /* updateHW.swift */; };
 		CC3D557C2216424D008A4446 /* LayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3D557B2216424D008A4446 /* LayoutExtension.swift */; };
 		DB79AE902243E68E0057CF08 /* forgetCurrentPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB79AE8F2243E68E0057CF08 /* forgetCurrentPassword.swift */; };
+		DB83D6BC224470E1004D711A /* EventDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB83D6BB224470E1004D711A /* EventDetailVC.swift */; };
 		DBAA475A220B233500AB0F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA4759220B233500AB0F5F /* AppDelegate.swift */; };
 		DBAA475C220B233600AB0F5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA475B220B233600AB0F5F /* ViewController.swift */; };
 		DBAA475F220B233600AB0F5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBAA475D220B233600AB0F5F /* Main.storyboard */; };
@@ -30,25 +31,9 @@
 		DBF6C6AB221CD40C00349B64 /* SearchResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF6C6A9221CD40B00349B64 /* SearchResultVC.swift */; };
 		DBF6C6AD221CD43800349B64 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF6C6AC221CD43700349B64 /* Data.swift */; };
 		DBF6C6AF221CD45100349B64 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF6C6AE221CD45100349B64 /* CourseCell.swift */; };
-		E41A630B226296BF00A98CEB /* MyNotesData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E41A6301226296BE00A98CEB /* MyNotesData.xcdatamodeld */; };
-		E41A630C226296BF00A98CEB /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41A6303226296BE00A98CEB /* MasterViewController.swift */; };
-		E41A630D226296BF00A98CEB /* NoteTakingDateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41A6304226296BE00A98CEB /* NoteTakingDateHelper.swift */; };
-		E41A630E226296BF00A98CEB /* NoteTakingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41A6305226296BE00A98CEB /* NoteTakingCell.swift */; };
-		E41A630F226296BF00A98CEB /* NoteTakingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41A6306226296BE00A98CEB /* NoteTakingStorage.swift */; };
-		E41A6310226296BF00A98CEB /* NoteTakingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41A6307226296BF00A98CEB /* NoteTakingVC.swift */; };
-		E41A6311226296BF00A98CEB /* NoteTaking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41A6308226296BF00A98CEB /* NoteTaking.swift */; };
-		E41A6312226296BF00A98CEB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41A6309226296BF00A98CEB /* DetailViewController.swift */; };
-		E41A6313226296BF00A98CEB /* NoteTakingCoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41A630A226296BF00A98CEB /* NoteTakingCoreDataHelper.swift */; };
-		E4283E992263923600CE5440 /* note.png in Resources */ = {isa = PBXBuildFile; fileRef = E4283E982263923600CE5440 /* note.png */; };
 		E442106B224425BC006C1D0C /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E442106A224425BC006C1D0C /* ScheduleVC.swift */; };
 		E442107022442665006C1D0C /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E442106F22442665006C1D0C /* EventCell.swift */; };
 		E4421072224441AA006C1D0C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4421071224441AA006C1D0C /* Event.swift */; };
-		E4A9AF7622626ADD002AA1C6 /* EventDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9AF7522626ADC002AA1C6 /* EventDetailVC.swift */; };
-		F21496002263A03300BE0C09 /* New_Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21495FF2263A03300BE0C09 /* New_Schedule.swift */; };
-		F21496022263ACE200BE0C09 /* BlockCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21496012263ACE200BE0C09 /* BlockCollectionViewCell.swift */; };
-		F21496042263DDBA00BE0C09 /* BlockVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21496032263DDBA00BE0C09 /* BlockVar.swift */; };
-		F21496062264593C00BE0C09 /* PopUpBlockWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21496052264593C00BE0C09 /* PopUpBlockWindow.swift */; };
-		F214960822648D2C00BE0C09 /* PopUpSwitchWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F214960722648D2C00BE0C09 /* PopUpSwitchWindow.swift */; };
 		F2DBEC6C221525630029AF2E /* ForgetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DBEC6B221525630029AF2E /* ForgetPassword.swift */; };
 		F2DBEC6E22152FF90029AF2E /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DBEC6D22152FF90029AF2E /* SignUp.swift */; };
 		F2E94A8F221CFB2A009FF9BF /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = F2E94A8E221CFB2A009FF9BF /* awsconfiguration.json */; };
@@ -63,6 +48,7 @@
 		B0E55A0BC322F5F7E99B2354 /* Pods-PurdueClass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueClass.release.xcconfig"; path = "Pods/Target Support Files/Pods-PurdueClass/Pods-PurdueClass.release.xcconfig"; sourceTree = "<group>"; };
 		CC3D557B2216424D008A4446 /* LayoutExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutExtension.swift; sourceTree = "<group>"; };
 		DB79AE8F2243E68E0057CF08 /* forgetCurrentPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forgetCurrentPassword.swift; sourceTree = "<group>"; };
+		DB83D6BB224470E1004D711A /* EventDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventDetailVC.swift; path = "../../../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/6ebfb849d669be67e60f7be33ca1a96a/Message/MessageTemp/8cef5ed576e51232219236686f74acdd/File/EventDetailVC.swift"; sourceTree = "<group>"; };
 		DBAA4756220B233500AB0F5F /* PurdueClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PurdueClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBAA4759220B233500AB0F5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBAA475B220B233600AB0F5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,26 +70,10 @@
 		DBF6C6A9221CD40B00349B64 /* SearchResultVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultVC.swift; sourceTree = "<group>"; };
 		DBF6C6AC221CD43700349B64 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		DBF6C6AE221CD45100349B64 /* CourseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
-		E41A6302226296BE00A98CEB /* ReallySimpleNotesData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReallySimpleNotesData.xcdatamodel; sourceTree = "<group>"; };
-		E41A6303226296BE00A98CEB /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		E41A6304226296BE00A98CEB /* NoteTakingDateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTakingDateHelper.swift; sourceTree = "<group>"; };
-		E41A6305226296BE00A98CEB /* NoteTakingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTakingCell.swift; sourceTree = "<group>"; };
-		E41A6306226296BE00A98CEB /* NoteTakingStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTakingStorage.swift; sourceTree = "<group>"; };
-		E41A6307226296BF00A98CEB /* NoteTakingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTakingVC.swift; sourceTree = "<group>"; };
-		E41A6308226296BF00A98CEB /* NoteTaking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTaking.swift; sourceTree = "<group>"; };
-		E41A6309226296BF00A98CEB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		E41A630A226296BF00A98CEB /* NoteTakingCoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTakingCoreDataHelper.swift; sourceTree = "<group>"; };
-		E4283E982263923600CE5440 /* note.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = note.png; path = PurdueClass/Note/note.png; sourceTree = SOURCE_ROOT; };
 		E442106A224425BC006C1D0C /* ScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
 		E442106C22442621006C1D0C /* PurdueClass-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PurdueClass-Bridging-Header.h"; sourceTree = "<group>"; };
 		E442106F22442665006C1D0C /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		E4421071224441AA006C1D0C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		E4A9AF7522626ADC002AA1C6 /* EventDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailVC.swift; sourceTree = "<group>"; };
-		F21495FF2263A03300BE0C09 /* New_Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New_Schedule.swift; sourceTree = "<group>"; };
-		F21496012263ACE200BE0C09 /* BlockCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockCollectionViewCell.swift; sourceTree = "<group>"; };
-		F21496032263DDBA00BE0C09 /* BlockVar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockVar.swift; sourceTree = "<group>"; };
-		F21496052264593C00BE0C09 /* PopUpBlockWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpBlockWindow.swift; sourceTree = "<group>"; };
-		F214960722648D2C00BE0C09 /* PopUpSwitchWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpSwitchWindow.swift; sourceTree = "<group>"; };
 		F2DBEC6B221525630029AF2E /* ForgetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassword.swift; sourceTree = "<group>"; };
 		F2DBEC6D22152FF90029AF2E /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		F2E94A8E221CFB2A009FF9BF /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
@@ -161,128 +131,41 @@
 		DBAA4758220B233500AB0F5F /* PurdueClass */ = {
 			isa = PBXGroup;
 			children = (
-				DBAA475D220B233600AB0F5F /* Main.storyboard */,
-				E442106C22442621006C1D0C /* PurdueClass-Bridging-Header.h */,
-				DBAA4765220B233600AB0F5F /* Info.plist */,
-				F21495FB22639CA900BE0C09 /* Source */,
-				F21495F822639BCE00BE0C09 /* Initial */,
-				F21495FA22639BE800BE0C09 /* Profile */,
-				F21495F922639BD700BE0C09 /* Home */,
-				F21495F722639BC700BE0C09 /* Course */,
-				F21495F322639B2100BE0C09 /* Calendar */,
-				F21495FC22639F9300BE0C09 /* Schedule */,
-				F21495F422639B3400BE0C09 /* Homework */,
-				F21495F622639B8000BE0C09 /* Note */,
-				DBAA4760220B233600AB0F5F /* Assets.xcassets */,
-			);
-			path = PurdueClass;
-			sourceTree = "<group>";
-		};
-		F21495F322639B2100BE0C09 /* Calendar */ = {
-			isa = PBXGroup;
-			children = (
-				E442106F22442665006C1D0C /* EventCell.swift */,
-				E442106A224425BC006C1D0C /* ScheduleVC.swift */,
-				E4A9AF7522626ADC002AA1C6 /* EventDetailVC.swift */,
-				E4421071224441AA006C1D0C /* Event.swift */,
-				DBF6C6AE221CD45100349B64 /* CourseCell.swift */,
+				DBF6C69E221CC3FF00349B64 /* Account.swift */,
+				DB79AE8F2243E68E0057CF08 /* forgetCurrentPassword.swift */,
+				DBAA4759220B233500AB0F5F /* AppDelegate.swift */,
+				DBAA475B220B233600AB0F5F /* ViewController.swift */,
+				F2E94A8E221CFB2A009FF9BF /* awsconfiguration.json */,
+				F2DBEC6D22152FF90029AF2E /* SignUp.swift */,
 				DBB5ED8722458908008AA3F5 /* PopUpWindow.swift */,
-			);
-			path = Calendar;
-			sourceTree = "<group>";
-		};
-		F21495F422639B3400BE0C09 /* Homework */ = {
-			isa = PBXGroup;
-			children = (
+				F2E94A90221CFCE6009FF9BF /* Profile.swift */,
+				F2E94A92221CFDF9009FF9BF /* ChangePassword.swift */,
+				DBF6C6AC221CD43700349B64 /* Data.swift */,
+				DBAA475D220B233600AB0F5F /* Main.storyboard */,
+				DBBA15552245296A008701F8 /* HWcell.swift */,
+				F2DBEC6B221525630029AF2E /* ForgetPassword.swift */,
+				CC3D557B2216424D008A4446 /* LayoutExtension.swift */,
+				DB83D6BB224470E1004D711A /* EventDetailVC.swift */,
+				DBF6C6A4221CCC1100349B64 /* BackendCourseInfo.swift */,
+				DBF6C6A8221CD40B00349B64 /* SearchVC.swift */,
+				DBF6C6A9221CD40B00349B64 /* SearchResultVC.swift */,
+				DBF6C6A6221CD40000349B64 /* ClassInfoVC.swift */,
+				DBF6C6AE221CD45100349B64 /* CourseCell.swift */,
+				DBC1C9DA220B3BD2009EDF1E /* HomePage.swift */,
+				DBAA4760220B233600AB0F5F /* Assets.xcassets */,
+				DBAA4762220B233600AB0F5F /* LaunchScreen.storyboard */,
+				DBAA4765220B233600AB0F5F /* Info.plist */,
+				E442106A224425BC006C1D0C /* ScheduleVC.swift */,
+				E442106F22442665006C1D0C /* EventCell.swift */,
+				E442106C22442621006C1D0C /* PurdueClass-Bridging-Header.h */,
+				E4421071224441AA006C1D0C /* Event.swift */,
 				DBBA154F2245243A008701F8 /* homework.swift */,
 				A40514FA2265931C0066651D /* updateHW.swift */,
 				DBBA1551224527BF008701F8 /* addHW.swift */,
 				DBBA15532245292E008701F8 /* HWData.swift */,
-				DBBA15552245296A008701F8 /* HWcell.swift */,
 				DBB8897F224564A2009CF511 /* NotificationPublisher.swift */,
 			);
-			path = Homework;
-			sourceTree = "<group>";
-		};
-		F21495F622639B8000BE0C09 /* Note */ = {
-			isa = PBXGroup;
-			children = (
-				E41A6307226296BF00A98CEB /* NoteTakingVC.swift */,
-				E4283E982263923600CE5440 /* note.png */,
-				E41A6306226296BE00A98CEB /* NoteTakingStorage.swift */,
-				E41A6301226296BE00A98CEB /* MyNotesData.xcdatamodeld */,
-				E41A6308226296BF00A98CEB /* NoteTaking.swift */,
-				E41A630A226296BF00A98CEB /* NoteTakingCoreDataHelper.swift */,
-				E41A6304226296BE00A98CEB /* NoteTakingDateHelper.swift */,
-				E41A6305226296BE00A98CEB /* NoteTakingCell.swift */,
-			);
-			path = Note;
-			sourceTree = "<group>";
-		};
-		F21495F722639BC700BE0C09 /* Course */ = {
-			isa = PBXGroup;
-			children = (
-				DBF6C6A6221CD40000349B64 /* ClassInfoVC.swift */,
-				DBF6C6A8221CD40B00349B64 /* SearchVC.swift */,
-				DBF6C6A4221CCC1100349B64 /* BackendCourseInfo.swift */,
-				DBF6C6A9221CD40B00349B64 /* SearchResultVC.swift */,
-				DBF6C6AC221CD43700349B64 /* Data.swift */,
-				E41A6309226296BF00A98CEB /* DetailViewController.swift */,
-			);
-			path = Course;
-			sourceTree = "<group>";
-		};
-		F21495F822639BCE00BE0C09 /* Initial */ = {
-			isa = PBXGroup;
-			children = (
-				DBF6C69E221CC3FF00349B64 /* Account.swift */,
-				E41A6303226296BE00A98CEB /* MasterViewController.swift */,
-				F2E94A92221CFDF9009FF9BF /* ChangePassword.swift */,
-				F2DBEC6D22152FF90029AF2E /* SignUp.swift */,
-				F2DBEC6B221525630029AF2E /* ForgetPassword.swift */,
-				DBAA475B220B233600AB0F5F /* ViewController.swift */,
-				DBAA4762220B233600AB0F5F /* LaunchScreen.storyboard */,
-			);
-			path = Initial;
-			sourceTree = "<group>";
-		};
-		F21495F922639BD700BE0C09 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				DBC1C9DA220B3BD2009EDF1E /* HomePage.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		F21495FA22639BE800BE0C09 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				DB79AE8F2243E68E0057CF08 /* forgetCurrentPassword.swift */,
-				F2E94A90221CFCE6009FF9BF /* Profile.swift */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
-		F21495FB22639CA900BE0C09 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				F2E94A8E221CFB2A009FF9BF /* awsconfiguration.json */,
-				CC3D557B2216424D008A4446 /* LayoutExtension.swift */,
-				DBAA4759220B233500AB0F5F /* AppDelegate.swift */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		F21495FC22639F9300BE0C09 /* Schedule */ = {
-			isa = PBXGroup;
-			children = (
-				F21495FF2263A03300BE0C09 /* New_Schedule.swift */,
-				F214960722648D2C00BE0C09 /* PopUpSwitchWindow.swift */,
-				F21496032263DDBA00BE0C09 /* BlockVar.swift */,
-				F21496052264593C00BE0C09 /* PopUpBlockWindow.swift */,
-				F21496012263ACE200BE0C09 /* BlockCollectionViewCell.swift */,
-			);
-			path = Schedule;
+			path = PurdueClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,7 +232,6 @@
 				F2E94A8F221CFB2A009FF9BF /* awsconfiguration.json in Resources */,
 				DBAA4764220B233600AB0F5F /* LaunchScreen.storyboard in Resources */,
 				DBAA4761220B233600AB0F5F /* Assets.xcassets in Resources */,
-				E4283E992263923600CE5440 /* note.png in Resources */,
 				DBAA475F220B233600AB0F5F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,45 +331,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBB5ED8822458908008AA3F5 /* PopUpWindow.swift in Sources */,
-				E41A6312226296BF00A98CEB /* DetailViewController.swift in Sources */,
 				DBBA1552224527BF008701F8 /* addHW.swift in Sources */,
-				F21496062264593C00BE0C09 /* PopUpBlockWindow.swift in Sources */,
 				DBF6C6A5221CCC1100349B64 /* BackendCourseInfo.swift in Sources */,
-				E4A9AF7622626ADD002AA1C6 /* EventDetailVC.swift in Sources */,
-				F21496022263ACE200BE0C09 /* BlockCollectionViewCell.swift in Sources */,
 				E442106B224425BC006C1D0C /* ScheduleVC.swift in Sources */,
 				DBB88980224564A2009CF511 /* NotificationPublisher.swift in Sources */,
-				F21496002263A03300BE0C09 /* New_Schedule.swift in Sources */,
 				DBF6C6AA221CD40C00349B64 /* SearchVC.swift in Sources */,
 				DBAA475C220B233600AB0F5F /* ViewController.swift in Sources */,
 				DB79AE902243E68E0057CF08 /* forgetCurrentPassword.swift in Sources */,
 				DBBA15562245296A008701F8 /* HWcell.swift in Sources */,
-				E41A630D226296BF00A98CEB /* NoteTakingDateHelper.swift in Sources */,
 				DBBA15542245292E008701F8 /* HWData.swift in Sources */,
-				F214960822648D2C00BE0C09 /* PopUpSwitchWindow.swift in Sources */,
 				F2E94A91221CFCE6009FF9BF /* Profile.swift in Sources */,
-				E41A630C226296BF00A98CEB /* MasterViewController.swift in Sources */,
 				E442107022442665006C1D0C /* EventCell.swift in Sources */,
-				E41A630E226296BF00A98CEB /* NoteTakingCell.swift in Sources */,
 				F2DBEC6E22152FF90029AF2E /* SignUp.swift in Sources */,
 				DBC1C9DB220B3BD2009EDF1E /* HomePage.swift in Sources */,
-				F21496042263DDBA00BE0C09 /* BlockVar.swift in Sources */,
 				DBBA15502245243A008701F8 /* homework.swift in Sources */,
+				DB83D6BC224470E1004D711A /* EventDetailVC.swift in Sources */,
 				DBAA475A220B233500AB0F5F /* AppDelegate.swift in Sources */,
 				F2E94A93221CFDF9009FF9BF /* ChangePassword.swift in Sources */,
-				E41A6311226296BF00A98CEB /* NoteTaking.swift in Sources */,
 				E4421072224441AA006C1D0C /* Event.swift in Sources */,
 				DBF6C69F221CC3FF00349B64 /* Account.swift in Sources */,
 				DBF6C6AD221CD43800349B64 /* Data.swift in Sources */,
 				F2DBEC6C221525630029AF2E /* ForgetPassword.swift in Sources */,
 				DBF6C6AF221CD45100349B64 /* CourseCell.swift in Sources */,
-				E41A6310226296BF00A98CEB /* NoteTakingVC.swift in Sources */,
 				DBF6C6AB221CD40C00349B64 /* SearchResultVC.swift in Sources */,
 				CC3D557C2216424D008A4446 /* LayoutExtension.swift in Sources */,
-				E41A630F226296BF00A98CEB /* NoteTakingStorage.swift in Sources */,
-				E41A6313226296BF00A98CEB /* NoteTakingCoreDataHelper.swift in Sources */,
+				A40514FB2265931C0066651D /* updateHW.swift in Sources */,
 				DBF6C6A7221CD40000349B64 /* ClassInfoVC.swift in Sources */,
-				E41A630B226296BF00A98CEB /* MyNotesData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,7 +506,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_HEADERS_RUN_UNIFDEF = NO;
-				DEVELOPMENT_TEAM = 72MBMQHRJP;
+				DEVELOPMENT_TEAM = 2662NUG884;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire\"",
@@ -649,7 +518,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Shunqiao;
+				PRODUCT_BUNDLE_IDENTIFIER = "Qifeng-Chen";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PurdueClass/PurdueClass-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -670,7 +539,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_HEADERS_RUN_UNIFDEF = NO;
-				DEVELOPMENT_TEAM = 72MBMQHRJP;
+				DEVELOPMENT_TEAM = 2662NUG884;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire\"",
@@ -682,7 +551,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Shunqiao;
+				PRODUCT_BUNDLE_IDENTIFIER = "Qifeng-Chen";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PurdueClass/PurdueClass-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
@@ -713,19 +582,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		E41A6301226296BE00A98CEB /* MyNotesData.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				E41A6302226296BE00A98CEB /* ReallySimpleNotesData.xcdatamodel */,
-			);
-			currentVersion = E41A6302226296BE00A98CEB /* ReallySimpleNotesData.xcdatamodel */;
-			path = MyNotesData.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = DBAA474E220B233500AB0F5F /* Project object */;
 }
