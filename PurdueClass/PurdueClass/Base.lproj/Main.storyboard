@@ -2138,7 +2138,6 @@
                     <connections>
                         <outlet property="date" destination="hmJ-mK-iOd" id="hG3-OP-4TL"/>
                         <outlet property="description1" destination="plx-3w-OTV" id="NFl-IA-lch"/>
-                        <outlet property="note" destination="dqR-vi-NrV" id="fKu-Ne-dXn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x4z-E9-XT2" userLabel="First Responder" sceneMemberID="firstResponder"/>

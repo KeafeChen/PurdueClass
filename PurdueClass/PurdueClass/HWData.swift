@@ -8,13 +8,13 @@
 
 import Foundation
 struct HWData{
-    var description : String
+    let description : String
    // let date : String
    // let month : Int
    // let day : Int
-    var date : Date
+    let date : Date
    // let hour : Int
    // let min : Int
     var todoCheck : Bool
-    var note : String
+    //var note : String
 }

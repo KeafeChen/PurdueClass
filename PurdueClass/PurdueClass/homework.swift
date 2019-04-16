@@ -161,7 +161,6 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource , c
     }
     var newDescription = String()
     var newDate = Date()
-    var newNote=String()
 //    var newMonth = Int()
 //    var newDay = Int()
 //    var newHour = Int()
@@ -200,21 +199,11 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource , c
                 var indexPath =  self.tableView.indexPathForSelectedRow;
                 let rowNum : Int = indexPath!.row
                 
-                if(current){
-                    vc.descriptionTxt = data1[rowNum].description
-                    let format = DateFormatter()
-                    format.dateStyle = DateFormatter.Style.medium
-                    format.timeStyle = DateFormatter.Style.medium
-                    vc.dateTxt = format.string(from: data1[rowNum].date)
-                    vc.notTxt = data1[rowNum].note
-                }else{
-                    vc.descriptionTxt = data2[rowNum].description
-                    let format = DateFormatter()
-                    format.dateStyle = DateFormatter.Style.medium
-                    format.timeStyle = DateFormatter.Style.medium
-                    vc.dateTxt = format.string(from: data2[rowNum].date)
-                    vc.notTxt = data2[rowNum].note
-                }
+                vc.descriptionTxt = data1[rowNum].description
+                let format = DateFormatter()
+                format.dateStyle = DateFormatter.Style.medium
+                format.timeStyle = DateFormatter.Style.medium
+                vc.dateTxt = format.string(from: data1[rowNum].date)
                // vc.date=data1[rowNum].date
             }
         }
@@ -348,11 +337,11 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource , c
         }
         
             if current == true{
-                data1.append(HWData(description: newDescription, date: newDate, todoCheck: true, note: newNote//,HWswitch: false
+                data1.append(HWData(description: newDescription, date: newDate, todoCheck: true//,HWswitch: false
                 ))
             }
             else{
-                data2.append(HWData(description: newDescription, date: newDate, todoCheck: true, note: newNote//,HWswitch: false
+                data2.append(HWData(description: newDescription, date: newDate, todoCheck: true//,HWswitch: false
                 ))
             }
         

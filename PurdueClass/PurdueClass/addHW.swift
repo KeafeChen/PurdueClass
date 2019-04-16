@@ -21,7 +21,6 @@ class addHW: UIViewController {
 
         description1.text = descriptionTxt
         date.text=dateTxt
-        note.text=notTxt
         
         datePicker.datePickerMode = .dateAndTime
         date.inputView = datePicker
@@ -44,8 +43,6 @@ class addHW: UIViewController {
     
     @IBOutlet weak var date: UITextField!
     
-    @IBOutlet weak var note: UITextField!
-    
     @IBAction func back(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -59,8 +56,6 @@ class addHW: UIViewController {
             let vc = segue.destination as? homework
             vc?.newDescription = description1.text!
             vc?.newDate = datePicker.date
-            vc?.newNote = note.text!
-
         }
         
     }
