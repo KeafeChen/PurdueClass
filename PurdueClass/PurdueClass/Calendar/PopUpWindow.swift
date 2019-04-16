@@ -33,7 +33,7 @@ class PopUpWindow: UIView {
         let buttonIOS = UIButton(type: .system)
         buttonIOS.backgroundColor = .white
         buttonIOS.setTitle("export to IOS Calendar", for: .normal)
-        buttonIOS.setTitleColor(.blue, for: .normal)
+        buttonIOS.setTitleColor(UIColor(red: 207/255, green: 163/255, blue: 74/255, alpha: 1.0), for: .normal)
         buttonIOS.addTarget(self, action: #selector(handleDismissalIOS), for: .touchUpInside)
         buttonIOS.translatesAutoresizingMaskIntoConstraints = false
         buttonIOS.layer.cornerRadius = 5
@@ -55,7 +55,7 @@ class PopUpWindow: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .blue
+        backgroundColor = UIColor(red: 207/255, green: 163/255, blue: 74/255, alpha: 1.0)
         
         addSubview(buttonIOS)
         buttonIOS.heightAnchor.constraint(equalToConstant: 50).isActive = true;
@@ -148,8 +148,12 @@ class PopUpWindow: UIView {
             components.month = month
             components.year = 2019
             let starthour = Int(i[5].dropLast(5) as Substring)
-            let startmin = Int(i[5].dropFirst(3).dropLast(2) as Substring)
-            
+            var startmin : Int
+            if i[5].count == 6{
+                startmin = Int(i[5].dropFirst(2).dropLast(2) as Substring)!
+            } else {
+                startmin = Int(i[5].dropFirst(3).dropLast(2) as Substring)!
+            }
             
             components.hour = starthour
             components.minute = startmin
@@ -159,8 +163,12 @@ class PopUpWindow: UIView {
             let startDate = newDate
             
             let endhour = Int(i[6].dropLast(5) as Substring)
-            let endmin = Int(i[6].dropFirst(3).dropLast(2) as Substring)
-            
+            var endmin : Int
+            if i[6].count == 6{
+                endmin = Int(i[6].dropFirst(2).dropLast(2) as Substring)!
+            } else {
+                endmin = Int(i[6].dropFirst(3).dropLast(2) as Substring)!
+            }
             components.hour = endhour
             components.minute = endmin
             
