@@ -63,10 +63,10 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource , c
     // }
     var timer: Timer!
     var refresher: UIRefreshControl!
+    var indexOfRevise = Int()
     @IBAction func refresh(_ sender: Any) {
         refreshEvery15Secs()
     }
-    var indexx = 0
     func didPressButton(_ sender: UIButton) {
         if let indexPath = getCurrentCellIndexPath(sender) {
             let index = indexPath.row
@@ -161,6 +161,10 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource , c
     }
     var newDescription = String()
     var newDate = Date()
+    var newNote=String()
+    var revDescription=String()
+    var revDate=Date()
+    var revNote=String()
 //    var newMonth = Int()
 //    var newDay = Int()
 //    var newHour = Int()
@@ -179,7 +183,9 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource , c
         if newDescription != ""{
             addNewIfSome()
         }
-
+        if revDescription != ""{
+            reviseIfSome()
+        }
         
         // refresh timer
         timer = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(homework.refreshEvery15Secs), userInfo: nil, repeats: true)
@@ -193,19 +199,28 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource , c
 
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier=="celladdHW"{
-            if let vc=segue.destination as?addHW{
+        if let vc=segue.destination as?updateHW{
 
-                var indexPath =  self.tableView.indexPathForSelectedRow;
-                let rowNum : Int = indexPath!.row
+            var indexPath =  self.tableView.indexPathForSelectedRow;
+            let rowNum : Int = indexPath!.row
+            vc.index=rowNum
                 
+            if(current){
                 vc.descriptionTxt = data1[rowNum].description
                 let format = DateFormatter()
                 format.dateStyle = DateFormatter.Style.medium
                 format.timeStyle = DateFormatter.Style.medium
                 vc.dateTxt = format.string(from: data1[rowNum].date)
-               // vc.date=data1[rowNum].date
+                vc.notTxt = data1[rowNum].note
+            }else{
+                vc.descriptionTxt = data2[rowNum].description
+                let format = DateFormatter()
+                format.dateStyle = DateFormatter.Style.medium
+                    format.timeStyle = DateFormatter.Style.medium
+                vc.dateTxt = format.string(from: data2[rowNum].date)
+                vc.notTxt = data2[rowNum].note
             }
+               // vc.date=data1[rowNum].date
         }
         
     }
@@ -328,7 +343,7 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource , c
             }
             newDay = Int(tokens[1])!*/
         
-            var present = Date()
+        var present = Date()
         if(newDate<present && current == true){
             change((Any).self)
         }
@@ -337,15 +352,30 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource , c
         }
         
             if current == true{
-                data1.append(HWData(description: newDescription, date: newDate, todoCheck: true//,HWswitch: false
+                data1.append(HWData(description: newDescription, date: newDate, todoCheck: true, note: newNote//,HWswitch: false
                 ))
             }
             else{
-                data2.append(HWData(description: newDescription, date: newDate, todoCheck: true//,HWswitch: false
+                data2.append(HWData(description: newDescription, date: newDate, todoCheck: true, note: newNote//,HWswitch: false
                 ))
             }
         
         
+    }
+    
+    func reviseIfSome(){
+        var present = Date()
+
+        if(current){
+            data1[indexOfRevise].description=revDescription
+            data1[indexOfRevise].date=revDate
+            data1[indexOfRevise].note=revNote
+        }else{
+            data2[indexOfRevise].description=revDescription
+            data2[indexOfRevise].date=revDate
+            data2[indexOfRevise].note=revNote
+        }
+        refreshEvery15Secs()
     }
     
     func sortDue(){

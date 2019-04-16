@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		184014130906A3620F1026C3 /* Pods_PurdueClass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB5FB171544398C9D6300CA /* Pods_PurdueClass.framework */; };
+		A45C49D12265A81900FA8D4E /* updateHW.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45C49D02265A81900FA8D4E /* updateHW.swift */; };
 		CC3D557C2216424D008A4446 /* LayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3D557B2216424D008A4446 /* LayoutExtension.swift */; };
 		DB79AE902243E68E0057CF08 /* forgetCurrentPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB79AE8F2243E68E0057CF08 /* forgetCurrentPassword.swift */; };
 		DBAA475A220B233500AB0F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA4759220B233500AB0F5F /* AppDelegate.swift */; };
@@ -57,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		1CB5FB171544398C9D6300CA /* Pods_PurdueClass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PurdueClass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A45C49D02265A81900FA8D4E /* updateHW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updateHW.swift; sourceTree = "<group>"; };
 		AE73CFC0FBD646067DC4775E /* Pods-PurdueClass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueClass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PurdueClass/Pods-PurdueClass.debug.xcconfig"; sourceTree = "<group>"; };
 		B0E55A0BC322F5F7E99B2354 /* Pods-PurdueClass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueClass.release.xcconfig"; path = "Pods/Target Support Files/Pods-PurdueClass/Pods-PurdueClass.release.xcconfig"; sourceTree = "<group>"; };
 		CC3D557B2216424D008A4446 /* LayoutExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutExtension.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				DBBA154F2245243A008701F8 /* homework.swift */,
 				DBBA1551224527BF008701F8 /* addHW.swift */,
 				DBBA15532245292E008701F8 /* HWData.swift */,
+				A45C49D02265A81900FA8D4E /* updateHW.swift */,
 				DBBA15552245296A008701F8 /* HWcell.swift */,
 				DBB8897F224564A2009CF511 /* NotificationPublisher.swift */,
 			);
@@ -477,6 +480,7 @@
 				DBF6C69F221CC3FF00349B64 /* Account.swift in Sources */,
 				DBF6C6AD221CD43800349B64 /* Data.swift in Sources */,
 				F2DBEC6C221525630029AF2E /* ForgetPassword.swift in Sources */,
+				A45C49D12265A81900FA8D4E /* updateHW.swift in Sources */,
 				DBF6C6AF221CD45100349B64 /* CourseCell.swift in Sources */,
 				E41A6310226296BF00A98CEB /* NoteTakingVC.swift in Sources */,
 				DBF6C6AB221CD40C00349B64 /* SearchResultVC.swift in Sources */,
