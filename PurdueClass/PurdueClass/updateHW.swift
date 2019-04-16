@@ -8,7 +8,7 @@
 
 import UIKit
 
-class addHW: UIViewController {
+class updateHW: UIViewController {
     
     var descriptionTxt = String()
     var dateTxt = String()
@@ -16,13 +16,13 @@ class addHW: UIViewController {
     var reviseOrNot = Bool()
     var submitTxt = String()
     
-    
-    
+    var index=Int()
+
     private var datePicker = UIDatePicker()
     //private var ddate = Date
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         description1.text = descriptionTxt
         date.text=dateTxt
         note.text=notTxt
@@ -55,26 +55,26 @@ class addHW: UIViewController {
     }
     
     @IBOutlet weak var submit: UIButton!
-
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is homework{
             let vc = segue.destination as? homework
-            vc?.newDescription = description1.text!
-            vc?.newDate = datePicker.date
-            vc?.newNote = note.text!
-
+            vc?.revDescription = description1.text!
+            vc?.revDate = datePicker.date
+            vc?.revNote = note.text!
+            vc?.indexOfRevise = index
         }
         
     }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

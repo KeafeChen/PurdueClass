@@ -61,12 +61,15 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource , c
     //    var hwDescription: String
     //  var dueDate: String
     // }
+    
+    var revise = false
+    var indexOfRevise = Int()
+
     var timer: Timer!
     var refresher: UIRefreshControl!
     @IBAction func refresh(_ sender: Any) {
         refreshEvery15Secs()
     }
-    var indexx = 0
     func didPressButton(_ sender: UIButton) {
         if let indexPath = getCurrentCellIndexPath(sender) {
             let index = indexPath.row
@@ -162,6 +165,11 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource , c
     var newDescription = String()
     var newDate = Date()
     var newNote=String()
+    var revDescription=String()
+    var revDate=Date()
+    var revNote=String()
+
+    
 //    var newMonth = Int()
 //    var newDay = Int()
 //    var newHour = Int()
@@ -180,6 +188,11 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource , c
         if newDescription != ""{
             addNewIfSome()
         }
+        
+        if revDescription != ""{
+            reviseIfSome()
+        }
+        
 
         
         // refresh timer
@@ -193,12 +206,16 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource , c
 
 
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier=="celladdHW"{
-            if let vc=segue.destination as?addHW{
+        
+           // revise = true
+            if let vc=segue.destination as?updateHW{
 
                 var indexPath =  self.tableView.indexPathForSelectedRow;
                 let rowNum : Int = indexPath!.row
+                vc.index=rowNum
+                // vc.reviseOrNot = revise
                 
                 if(current){
                     vc.descriptionTxt = data1[rowNum].description
@@ -217,7 +234,6 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource , c
                 }
                // vc.date=data1[rowNum].date
             }
-        }
         
     }
     
@@ -318,45 +334,35 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource , c
     }
     
     func addNewIfSome(){
-        /*var tokens = newDate.split(separator: " ")
-        if tokens.count > 1{
-            switch tokens[0]{
-            case "January": newMonth = 1;
-            case "February": newMonth = 2;
-            case "March": newMonth = 3;
-            case "April": newMonth = 4;
-            case "May": newMonth = 5;
-            case "June": newMonth = 6;
-            case "July": newMonth = 7;
-            case "August": newMonth = 8;
-            case "September": newMonth = 9;
-            case "October": newMonth = 10;
-            case "November": newMonth = 11;
-            case "December": newMonth = 12;
-                
-            default:
-                newMonth = 0;
-            }
-            newDay = Int(tokens[1])!*/
-        
-            var present = Date()
+        var present = Date()
         if(newDate<present && current == true){
             change((Any).self)
         }
         if(newDate>present && current == false){
             change((Any).self)
         }
+        if current == true{
+            data1.append(HWData(description: newDescription, date: newDate, todoCheck: true, note: newNote//,HWswitch: false
+            ))
+        }
+        else{
+            data2.append(HWData(description: newDescription, date: newDate, todoCheck: true, note: newNote//,HWswitch: false
+            ))
+        }
         
-            if current == true{
-                data1.append(HWData(description: newDescription, date: newDate, todoCheck: true, note: newNote//,HWswitch: false
-                ))
-            }
-            else{
-                data2.append(HWData(description: newDescription, date: newDate, todoCheck: true, note: newNote//,HWswitch: false
-                ))
-            }
         
-        
+    }
+    
+    func reviseIfSome(){
+        if(current){
+            data1[indexOfRevise].description=revDescription
+            data1[indexOfRevise].date=revDate
+            data1[indexOfRevise].note=revNote
+        }else{
+            data2[indexOfRevise].description=revDescription
+            data2[indexOfRevise].date=revDate
+            data2[indexOfRevise].note=revNote
+        }
     }
     
     func sortDue(){
