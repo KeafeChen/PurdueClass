@@ -9,15 +9,15 @@
 import UIKit
 
 class addHW: UIViewController {
-
+    
     var descriptionTxt = String()
     var dateTxt = String()
     var notTxt = String()
     var reviseOrNot = Bool()
     var submitTxt = String()
-
-
-
+    
+    
+    
     private var datePicker = UIDatePicker()
     //private var ddate = Date
     override func viewDidLoad() {
@@ -25,36 +25,38 @@ class addHW: UIViewController {
 
         description1.text = descriptionTxt
         date.text=dateTxt
+        note.text=notTxt
+        
         datePicker.datePickerMode = .dateAndTime
         date.inputView = datePicker
         datePicker.addTarget(self, action: #selector(addHW.dateChanged(sender:)), for: UIControl.Event.valueChanged)
         // Do any additional setup after loading the view.
     }
-
+    
     @objc func dateChanged(sender: UIDatePicker){
         let format = DateFormatter()
         format.dateStyle = DateFormatter.Style.medium
         format.timeStyle = DateFormatter.Style.medium
         date.text = format.string(from: sender.date)
     }
-
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
-
+    
     @IBOutlet weak var description1: UITextField!
-
+    
     @IBOutlet weak var date: UITextField!
-
+    
     @IBOutlet weak var note: UITextField!
-
+    
     @IBAction func back(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-
+    
     @IBOutlet weak var submit: UIButton!
 
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is homework{
             let vc = segue.destination as? homework
@@ -63,7 +65,7 @@ class addHW: UIViewController {
             vc?.newNote = note.text!
 
         }
-
+        
     }
     /*
     // MARK: - Navigation
