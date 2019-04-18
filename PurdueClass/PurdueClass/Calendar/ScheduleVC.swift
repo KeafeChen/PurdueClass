@@ -14,16 +14,16 @@ var eventList:[Event] = []
 var data = [[],[Event()],[Event()],[Event()],[Event()],[Event()],[]]
 
 class ScheduleVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UITableViewDelegate, UITableViewDataSource {
-    
+
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var tableView: UITableView!
     var user:String? = nil
     var weekday:Int = NSCalendar.current.component(.weekday, from: Date());
-    
+
     @IBOutlet weak var export_button: UIButton!
-    
+
     let defaults = UserDefaults.standard
-    
+
     lazy var popUpWindow: PopUpWindow = {
         let view = PopUpWindow()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -31,14 +31,14 @@ class ScheduleVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
         view.delegate = self
         return view
     }()
-    
+
     let visualEffectView: UIVisualEffectView = {
         let blurEffect = UIBlurEffect(style: .light)
         let view = UIVisualEffectView(effect: blurEffect)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    
+
     var course_value:String = ""
     var semester_value:String = ""
     var department_value:String = ""
@@ -62,21 +62,21 @@ class ScheduleVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
         user = (UserDefaults.standard.string(forKey: "username")!)
         export_button.addTarget(self, action: #selector(handleShowPopUp), for: .touchUpInside)
         export_button.layer.cornerRadius = 5
-        
+
         view.addSubview(visualEffectView)
         visualEffectView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true;
         visualEffectView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true;
         visualEffectView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true;
         visualEffectView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true;
-        
+
         visualEffectView.alpha = 0
-    
+
         var local_store : Array<Array<String>> = Array()
-        
+
         if defaults.value(forKey: "schedule") != nil {
             local_store = defaults.array(forKey: "schedule") as! Array<Array<String>>
         }
-        
+
         if eventList.count != local_store.count {
             for i in local_store{
                 var newEvent = Event();
@@ -104,7 +104,7 @@ class ScheduleVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
             newEvent.start = start_value
             newEvent.end = end_value
             newEvent.detail = detail_value
-            
+
             var flag = true
             for xxx in eventList {
                 if xxx.course == newEvent.course && xxx.semester == newEvent.semester {flag = false}
@@ -124,7 +124,7 @@ class ScheduleVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
                 defaults.set(local_store, forKey:"schedule")
             }
         }
-        
+
         //delete
         if eventToDelete != nil {
             print(eventToDelete!.course)
@@ -138,13 +138,13 @@ class ScheduleVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
                 }
             }
             eventToDelete = nil
-          
+
         }
-        
+
         //
         data.removeAll();
         data = [[],[],[],[],[],[],[]]
-        
+
         for xxx in eventList {
             if let day = xxx.weekday {
                 if day.contains("M"){ data[1].append(xxx)}
@@ -154,25 +154,25 @@ class ScheduleVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
                 if day.contains("F"){ data[5].append(xxx)}
             }
         }
-        
+
         //TODO: sort data based on start time
     }
-    
+
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         print(date)      //date selected
         weekday = NSCalendar.current.component(.weekday, from: date)
         print(weekday)  //weekdate selected   1-Sunday,  7-Saturday
         tableView.reloadData()
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data[weekday-1].count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+
         let stringToPass : String
-        
+
         if let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as? EventCell {
             if let start = data[weekday-1][indexPath.row].start {
                 let end = data[weekday-1][indexPath.row].end ?? ""
@@ -182,19 +182,19 @@ class ScheduleVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
                 return cell
             }
         }
-        
+
         return UITableViewCell()
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         eventTodisplay = data[weekday-1][indexPath.row]
         performSegue(withIdentifier: "displayEvent", sender: self)
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let eventDetailVC = segue.destination as? EventDetailVC {
             eventDetailVC.eventDetail = eventTodisplay
@@ -210,7 +210,7 @@ class ScheduleVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
             searchResultVC.end_value = end_value
         }
     }
-    
+
     @IBAction func save_screenshot(_ sender: Any) {
         let layer = UIApplication.shared.keyWindow!.layer
         let scale = UIScreen.main.scale
@@ -222,27 +222,27 @@ class ScheduleVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
         // THIS IS TO SAVE SCREENSHOT TO PHOTOS
         UIImageWriteToSavedPhotosAlbum(screenshot!, nil, nil, nil)
     }
-    
+
     @objc func handleShowPopUp() {
-        
+
         view.addSubview(popUpWindow)
         popUpWindow.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -40).isActive = true
         popUpWindow.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         popUpWindow.heightAnchor.constraint(equalToConstant: view.frame.width - 64).isActive = true
         popUpWindow.widthAnchor.constraint(equalToConstant: view.frame.width - 64).isActive = true
-        
+
         popUpWindow.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
         popUpWindow.alpha = 0
-        
+
         UIView.animate(withDuration: 0.5) {
             self.visualEffectView.alpha = 1
             self.popUpWindow.alpha = 1
             self.popUpWindow.transform = CGAffineTransform.identity
         }
-        
+
         print("Show pop up window..")
     }
-    
+
 }
 
 
@@ -259,7 +259,7 @@ extension ScheduleVC: PopUpDelgate {
             print("remove pop up ios")
         }
     }
-    
+
     func handleDismissalGoogle() {
         UIView.animate(withDuration: 0.5, animations: {
             self.visualEffectView.alpha = 0
