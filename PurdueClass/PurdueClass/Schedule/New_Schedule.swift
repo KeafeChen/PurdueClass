@@ -12,6 +12,8 @@ var hahaha = 0
 
 var clicked = -1
 
+var eventToDelete : Event? = nil
+
 class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     
@@ -74,7 +76,7 @@ class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionView
     var start_value: String = ""
     var end_value : String = ""
     var eventTodisplay = Event()
-    var eventToDelete : Event? = nil
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,7 +105,7 @@ class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionView
             local_store = defaults.array(forKey: "schedule") as! Array<Array<String>>
         }
         
-        if eventList.count != local_store.count {
+        if eventList.count < local_store.count {
             eventList = []
             for i in local_store{
                 var newEvent = Event();
@@ -116,6 +118,22 @@ class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionView
                 newEvent.end = i[6]
                 newEvent.detail = i[7]
                 eventList.append(newEvent)
+            }
+        }
+        
+        if eventList.count > local_store.count {
+            local_store = []
+            for i in 0...eventList.count-1{
+                var temp : Array<String> = []
+                temp.append(eventList[i].semester!)
+                temp.append(eventList[i].course!)
+                temp.append(eventList[i].professor!)
+                temp.append(eventList[i].department!)
+                temp.append(eventList[i].weekday!)
+                temp.append(eventList[i].start!)
+                temp.append(eventList[i].end!)
+                temp.append(eventList[i].detail!)
+                local_store.append(temp)
             }
         }
         
@@ -133,7 +151,7 @@ class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionView
             
             var flag = true
             for xxx in eventList {
-                if xxx.course == newEvent.course && xxx.semester == newEvent.semester {flag = false}
+                if xxx.course == newEvent.course && xxx.start == newEvent.start {flag = false}
             }
             if flag {
                 eventList.append(newEvent)
@@ -150,14 +168,12 @@ class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionView
                 defaults.set(local_store, forKey:"schedule")
             }
         }
-    
+        
         block_index = []
         block_content = []
         block_color = []
         for event in local_store{
-            var current : Array<Int> = []
-            print(event)
-            
+            var current : Array<Int> = []            
             var newnew : Array<String> = []
             
             if event[4].contains("M"){
@@ -214,7 +230,7 @@ class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionView
         if eventToDelete != nil {
             for indexi in 0...(eventList.count-1){
                 let xxx = eventList[indexi]
-                if xxx.course == eventToDelete!.course && xxx.semester == eventToDelete!.semester {
+                if xxx.course == eventToDelete!.course && xxx.start == eventToDelete!.start {
                     eventList.remove(at: indexi)
                     local_store.remove(at: indexi)
                     defaults.set(local_store, forKey:"schedule")
@@ -226,7 +242,6 @@ class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionView
                 }
             }
             eventToDelete = nil
-            
         }
         
         //
@@ -322,7 +337,6 @@ class New_Schedule: UIViewController, UICollectionViewDelegate, UICollectionView
             self.popUpWindow.alpha = 1
             self.popUpWindow.transform = CGAffineTransform.identity
         }
-        
         print("Show pop up window..")
     }
     
@@ -459,6 +473,8 @@ extension New_Schedule: PopUpDelgate {
 
 extension New_Schedule: PopUpBlockDelgate {
     func handleDismissal() {
+        viewDidLoad()
+        Schedule.reloadData()
         UIView.animate(withDuration: 0.5, animations: {
             self.visualEffectView.alpha = 0
             self.popUpBlockWindow.alpha = 0
@@ -469,7 +485,7 @@ extension New_Schedule: PopUpBlockDelgate {
         }
     }
     func handleDelete(){
-        self.eventToDelete = eventList[clicked]
+        eventToDelete = eventList[clicked]
         viewDidLoad()
         Schedule.reloadData()
         UIView.animate(withDuration: 0.5, animations: {
