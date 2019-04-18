@@ -85,11 +85,11 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource , c
             }else{
                 let todoo = data2[index].todoCheck
                 if(todoo){
-                    data1[index].todoCheck = false
+                    data2[index].todoCheck = false
                     sender.setTitle("DONE", for: .normal)
 
                 }else{
-                    data1[index].todoCheck = true
+                    data2[index].todoCheck = true
                     sender.setTitle("TODO", for: .normal)
 
                 }
