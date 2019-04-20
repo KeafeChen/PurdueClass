@@ -28,9 +28,14 @@ class EventDetailVC: UIViewController {
     @IBOutlet weak var department_name: UITextView!
     @IBOutlet weak var start_name: UITextView!
     @IBOutlet weak var end_name: UITextView!
+    @IBOutlet weak var detailbutton: UIButton!
+    @IBOutlet weak var back: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addBackground()
+        detailbutton.addButtonDesign()
+        back.addButtonDesign()
         if eventDetail != nil {
             course_name.text = eventDetail.course
             semester_name.text = eventDetail.semester

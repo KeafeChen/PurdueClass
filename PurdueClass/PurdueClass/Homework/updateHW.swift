@@ -18,11 +18,15 @@ class updateHW: UIViewController {
     
     var index=Int()
     
+    @IBOutlet weak var back: UIButton!
+    @IBOutlet weak var updatebutton: UIButton!
     private var datePicker = UIDatePicker()
     //private var ddate = Date
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.addBackground()
+        updatebutton.addButtonDesign()
+        back.addButtonDesign()
         description1.text = descriptionTxt
         date.text=dateTxt
         note.text=notTxt

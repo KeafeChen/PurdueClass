@@ -17,6 +17,7 @@ class HomePage: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UITa
     
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var schedule: UIButton!
     
     @IBOutlet weak var hw1: UIButton!
     
@@ -39,6 +40,8 @@ class HomePage: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UITa
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addBackground()
+        schedule.addButtonDesign()
         print(data1)
         let dateFormattor = DateFormatter()
         dateFormattor.dateFormat = "MMMM-dd HH:mm"

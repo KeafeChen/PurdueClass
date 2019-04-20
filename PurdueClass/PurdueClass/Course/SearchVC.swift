@@ -13,6 +13,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var back: UIButton!
     let sourcedata = Data()
     var data: [String] = []
     var fetch = false
@@ -26,6 +27,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addBackground()
+        back.addButtonDesign()
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self

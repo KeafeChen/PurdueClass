@@ -15,6 +15,7 @@ class SignUp: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var SignButton: UIButton!
     
     
+    @IBOutlet weak var back: UIButton!
     @IBOutlet weak var select: UIButton!
     @IBOutlet weak var selections: UITableView!
     
@@ -30,6 +31,7 @@ class SignUp: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addBackground()
+        back.addButtonDesign()
         SignButton.addButtonDesign()
         let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
                                                                 identityPoolId:"us-east-1:b3912726-6290-4b03-9457-021d6d836bea")

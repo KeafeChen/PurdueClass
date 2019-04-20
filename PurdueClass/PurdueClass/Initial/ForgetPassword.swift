@@ -19,6 +19,7 @@ import AWSSNS
 class ForgetPassword: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var ForgetButton: UIButton!
+    @IBOutlet weak var back: UIButton!
     
     let dispatchGroup = DispatchGroup()
     var check = 0
@@ -39,6 +40,7 @@ class ForgetPassword: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.view.addBackground()
         ForgetButton.addButtonDesign()
+        back.addButtonDesign()
         // Do any additional setup after loading the view.
         selections.isHidden = true
         

@@ -26,7 +26,8 @@ typealias ResponseCompletion = ([AWSDynamoDBObjectModel & AWSDynamoDBModeling]) 
 
 class ClassInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var classTable: UITableView!
-
+    @IBOutlet weak var searchbutton: UIButton!
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -83,6 +84,7 @@ class ClassInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         self.classTable.allowsSelection = true
         super.viewDidLoad()
         self.view.addBackground()
+        searchbutton.addButtonDesign()
         classTable.delegate = self
         let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
                                                                 identityPoolId:"us-east-1:b3912726-6290-4b03-9457-021d6d836bea")

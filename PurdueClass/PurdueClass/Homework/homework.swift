@@ -23,6 +23,8 @@ class HWcell: UITableViewCell {
     @IBOutlet weak var HWdate: UILabel!
     @IBOutlet weak var HWdescription: UILabel!
     @IBOutlet weak var btn: UIButton!
+    
+    
     @IBAction func buttonPressed(_ sender: UIButton) {
         let button = sender
         
@@ -171,12 +173,23 @@ class homework: UIViewController, UITableViewDelegate, UITableViewDataSource , c
 //    var newMin = Int()
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var notifbutton: UIButton!
+    @IBOutlet weak var exportbutton: UIButton!
+    @IBOutlet weak var refreshbutton: UIButton!
     
+    @IBOutlet weak var due: UIButton!
     
+    @IBOutlet weak var add: UIButton!
     
     // var data = [HW]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addBackground()
+        notifbutton.addButtonDesign()
+        exportbutton.addButtonDesign()
+        refreshbutton.addButtonDesign()
+        due.addButtonDesign()
+        add.addButtonDesign()
         tableView.delegate=self
         tableView.dataSource=self
         

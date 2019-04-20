@@ -16,7 +16,8 @@ class forgetCurrentPassword: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var select: UIButton!
     @IBOutlet weak var selections: UITableView!
     @IBOutlet weak var currentPass: UILabel!
-
+    @IBOutlet weak var GetMyPassword: UIButton!
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true;
@@ -28,6 +29,8 @@ class forgetCurrentPassword: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addBackground()
+        GetMyPassword.addButtonDesign()
         let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
                                                                 identityPoolId:"us-east-1:b3912726-6290-4b03-9457-021d6d836bea")
         let configuration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:credentialsProvider)

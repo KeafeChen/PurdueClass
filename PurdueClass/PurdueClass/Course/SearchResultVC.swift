@@ -30,6 +30,10 @@ class SearchResultVC: UIViewController {
     @IBOutlet weak var start_name: UITextView!
     @IBOutlet weak var end_name: UITextView!
     
+    @IBOutlet weak var addtomyclass: UIButton!
+    @IBOutlet weak var ratebutton: UIButton!
+    
+    @IBOutlet weak var back: UIButton!
     var course_value:String = ""
     var semester_value:String = ""
     var department_value:String = ""
@@ -41,6 +45,10 @@ class SearchResultVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addBackground()
+        addtomyclass.addButtonDesign()
+        ratebutton.addButtonDesign()
+        back.addButtonDesign()
         user = (UserDefaults.standard.string(forKey: "username")!)
         self.view.addBackground()
         course_name.text = course_value

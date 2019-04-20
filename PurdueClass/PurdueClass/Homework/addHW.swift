@@ -14,11 +14,15 @@ class addHW: UIViewController {
     var dateTxt = String()
     var notTxt = String()
     
+    @IBOutlet weak var back: UIButton!
+    @IBOutlet weak var submitbutton: UIButton!
     private var datePicker = UIDatePicker()
     //private var ddate = Date
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.addBackground()
+        back.addButtonDesign()
+        submitbutton.addButtonDesign()
         description1.text = descriptionTxt
         date.text=dateTxt
         note.text=notTxt
